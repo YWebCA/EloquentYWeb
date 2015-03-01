@@ -1,0 +1,32 @@
+{
+  "name": "EloquentYWeb",
+  "version": "0.0.1",
+  "homepage": "https://github.com/TehNatha/EloquentYweb",
+  "authors": [
+    "Nathan Stier and Annalise Haynes"
+  ],
+  "description": "Worksheets for YWeb Career Academy Eloquent Javascript",
+  "main": "index.html",
+  "keywords": [
+    "Eloquent",
+    "Javascript",
+    "Javascript",
+    "YWeb"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "font-awesome": "~4.3.0",
+    "jasmine": "~2.2.1",
+    "underscore": "~1.8.2",
+    "jquery": "~2.1.3"
+  }
+}
