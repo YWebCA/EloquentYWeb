@@ -23,6 +23,7 @@
   "homepage": "https://github.com/TehNatha/EloquentYweb",
   "devDependencies": {
     "bower": "^1.3.12",
+    "factoryb": "^0.3.2",
     "grunt": "^0.4.5"
   }
 }
