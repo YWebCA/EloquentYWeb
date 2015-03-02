@@ -144,20 +144,41 @@ You can play around with Node REPL by typing
 
 It will give you a prompt (`>`) that you can use like a JS console. Quit the REPL by pressing `^c` (Control+C) twice.
 
-### Clone the Workbook
+### Fork the Workbook
 
-The workbook lives in&mdash;or, actually *is* this very repository on GitHub. You need a local copy to work on, so you'll have to clone it.
+The workbook lives in&mdash;or, actually *is* this very repository on GitHub. You need your own, local copy to work on, so you'll have to fork it and then clone it.
 
-Navigate to [the workbook at https://github.com/TehNatha/EloquentYweb](https://github.com/TehNatha/EloquentYweb). In the right column, change the clone URL to SSH and then click the clipboard button.
+Navigate to [the workbook at https://github.com/YWebCA/EloquentYweb](https://github.com/YWebCA/EloquentYweb). At the top-right of the page, click the **Fork** button. If asked what account to fork it under, select your personal account.
+
+Your browser will be moved to your fork of the repo on GitHub. The following steps will then make a local clone of your fork. In the right column, change the clone URL to SSH and then click the clipboard button.
 
 In the terminal type the following:
 
     mkdir ~/git
     cd ~/git
 
-Then type `git clone ` and paste the SSH clone URL. Your full command should look like this:
+Then type `git clone ` and paste the SSH clone URL. Your full command should look something like this:
 
-    git clone git@github.com:TehNatha/EloquentYWeb.git
+    git clone git@github.com:YourName/EloquentYWeb.git
+
+Normally forks are meant to diverge from the original repo such that if changes are made to the original, they won't affect your fork. However, for this workbook you want to make sure to receive changes made to the "mothership," so you have to tell git to listen for them. Type
+
+    git remote add upstream git@github.com:YWebCA/EloquentYWeb.git
+
+Verify your list of your remote addresses with
+
+    git remove -v
+
+You should get something like this:
+
+    YWebCA    git@github.com:YWebCA/EloquentYWeb.git (fetch)
+    YWebCA    git@github.com:YWebCA/EloquentYWeb.git (push)
+    origin    git@github.com:YourName/EloquentYWeb.git (fetch)
+    origin    git@github.com:YourName/EloquentYWeb.git (push)
+    upstream  git@github.com:YWebCA/EloquentYWeb.git (fetch)
+    upstream  git@github.com:YWebCA/EloquentYWeb.git (push)
+
+The remote origin is your fork, and the remote upstream is the "mothership." Because the YWebCA organization owns the EloquentYWeb repo, YWebCA will show up as a remote if you are a member of the organization.
 
 ### Bower Components
 
