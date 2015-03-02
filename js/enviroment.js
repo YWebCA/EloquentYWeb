@@ -1,5 +1,5 @@
 // World enviroment file
-  var customMatchers = {};
+var customMatchers = {};
 
 // JSHint Matcher
 customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
