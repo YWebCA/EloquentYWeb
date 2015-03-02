@@ -194,6 +194,8 @@ Here are the included packages:
 
 * **Jasmine**: A JavaScript testing framework. The workbook uses it to check your work and to help you troubleshoot problems.
 
+* **JSHint**: A JavaScript linter, which checks that code follows validity and stylistic rules. It's a good way to catch (some) errors before scripts are actually run.
+
 * **JQuery**: A framework that drastically simplifies DOM querying and manipulation with JavaScript. In addition to being useful on its own, many other components require it.
 
 * **Underscore.js**: A JavaScript library that provides utility functions for common programming tasks.
