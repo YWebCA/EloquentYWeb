@@ -42,7 +42,7 @@ If you get something like
 
     git version 2.x.x
 
-go on to the next step. Otherwise, let's use Homebrew to install Git with
+go on to the next step. Otherwise, use Homebrew to install Git with
 
     brew install git
 
@@ -75,7 +75,7 @@ and you'll see something like
 
     /Users/YourName/.ssh/id_rsa
 
-which means you're done with this step (move on to the GitHub section). If you get a `No such file or directory` message, we have to generate a new key.
+which means you're done with this step (move on to the GitHub section). If you get a `No such file or directory` message, you'll have to generate a new key.
 
 Again, be absolutely certain you use the same email address for configuring Git, and type the following, substituting your actual email address:
 
@@ -120,9 +120,9 @@ Navigate to http://github.com and make sure you are logged in. Click the black g
 
 On the account setting page, select **SSH Keys** from the column on the left.
 
-If you've installed GitHub for Mac already, you should see your key here, in which case you're done with this step.
+If you've installed *GitHub for Mac* already, you should see your key here, in which case you're done with this step.
 
-If you don't see a key assigned to your computer, click the button that says Add SSH key. In the title field, give a name for your key that makes sense, such as your computer's name. In the key field, paste the key you copied.
+If you don't see a key assigned to your computer, click the button that says **Add SSH Key**. In the title field give a name for your key that makes sense, such as your computer's name. In the key field, paste the key you copied.
 
 Click **Add Key**.
 
@@ -156,7 +156,7 @@ The workbook lives in&mdash;or, actually *is* this very repository on GitHub. Yo
 
 Navigate to [the workbook at https://github.com/YWebCA/EloquentYweb](https://github.com/YWebCA/EloquentYweb). At the top-right of the page, click the **Fork** button. If asked what account to fork it under, select your personal account.
 
-Your browser will be moved to your fork of the repo on GitHub. The following steps will then make a local clone of your fork. In the right column, change the clone URL to SSH and then click the clipboard button.
+Your browser will be moved to your fork of the repo on GitHub (if not, go there now. The URL should be in the form of https://github.com/YourName/EloquentYWeb). The following steps will then make a local clone of your fork. In the right column, change the clone URL to SSH and then click the clipboard button.
 
 In the terminal type the following:
 
@@ -167,7 +167,7 @@ Then type `git clone ` and paste the SSH clone URL. Your full command should loo
 
     git clone git@github.com:YourName/EloquentYWeb.git
 
-Normally forks are meant to diverge from the original repo such that if changes are made to the original, they won't affect your fork. However, for this workbook you want to make sure to receive changes made to the "mothership," so you have to tell git to listen for them. Type
+Normally forks are meant to diverge from the original repo such that if changes are made to the original, they won't affect your fork. However, for this workbook you want to make sure to receive changes made to the "mothership," so you have to tell Git to listen for them. Type
 
     git remote add upstream git@github.com:YWebCA/EloquentYWeb.git
 
@@ -188,7 +188,7 @@ The remote origin is your fork, and the remote upstream is the "mothership." Bec
 
 ### Bower Components
 
-The workbook includes a lot of other useful components that were, themselves, installed by Bower, a package manager for front-end libraries and frameworks. Because they're already included, you don't need to install Bower yourself, although you may want to in the future.
+The workbook includes a lot of other useful components that were, themselves, installed by Bower, a package manager for front-end libraries and frameworks. Because they're already included, you don't need to install Bower, yourself, although you may want to in the future.
 
 Here are the included packages:
 
@@ -231,7 +231,7 @@ or start a new branch with
 
 Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
 
-*See below for nformation about how to do the extercises themselves.*
+***See below for nformation about how to do the exercises, themselves.***
 
 When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
 
