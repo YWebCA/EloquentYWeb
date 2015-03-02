@@ -257,4 +257,18 @@ Write a meaningful message and leave any comments if necessary. Then submit the 
 
 ## How to Complete Your Workbook
 
-*Coming soon...*
+For each chapter...
+
+1. Create and/or check out a branch that corresponds to the chapter.
+
+2. Open `index.html` in your browser and read the instructions for the exercises.
+
+3. Open `spec.html` in your browser and see how all the tests are currently failing. Your task is to make them all pass.
+
+4. Open `exercises.js` in your text editor. All your JavaScript will go in here. It should have some functions skeletoned out for you so the tests run properly.
+
+    1. If the exercises include DOM manipulation, use the `exercises.html` file as your HTML workspace.
+
+5. As you complete the exercises, save your work and refresh `spec.html` to watch your tests start passing!
+
+    1. If you're having trouble figuring out what the tests want, open `spec.js` in a text editor and take a look. (Do not edit the tests&mdash;that is super cheating and we will notice.)
