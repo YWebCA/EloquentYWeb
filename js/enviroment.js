@@ -14,7 +14,9 @@ customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
         eqeqeq: true,
         nonew: true,
         newcap: true,
-        };
+        maxstatements: 6,
+        notypeof: true,
+      };
       var pass = JSHINT(actual, options);
       var message = "";
       console.log(JSHINT.errors);
