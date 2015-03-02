@@ -10,3 +10,11 @@ describe("Exercise file", function() {
     })
   });
 });
+
+describe("Numbers exercises", function () {
+  describe("Numbers 1", function () {
+    it("should return a value that is a number", function() {
+      expect(typeof Exercises.numbers1()).toBe('number');
+    });
+  });
+});
