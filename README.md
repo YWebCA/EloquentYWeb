@@ -88,10 +88,10 @@ Hit enter to accept blank passphrase, then hit enter again.
 You should get some output like this:
 
     Generating public/private rsa key pair.
-    Enter file in which to save the key (/Users/student/.ssh/id_rsa): 
+    Enter file in which to save the key (/Users/student/.ssh/id_rsa):
     Created directory '/Users/student/.ssh'.
-    Enter passphrase (empty for no passphrase): 
-    Enter same passphrase again: 
+    Enter passphrase (empty for no passphrase):
+    Enter same passphrase again:
     Your identification has been saved in /Users/student/.ssh/id_rsa.
     Your public key has been saved in /Users/student/.ssh/id_rsa.pub.
     The key fingerprint is:
@@ -140,7 +140,7 @@ Verify your installation with
 
     node --version
 
-You should expect some output like this:    
+You should expect some output like this:
 
     v0.10.35
 
@@ -201,6 +201,14 @@ Here are the included packages:
 * **Bootstrap**: A framework created by Twitter that gives access to a large library of visual components, including responsive grids, interactive widgets, and a comprehensive theme.
 
 * **Font Awesome**: A library of common, easy-to-use icons.
+
+### Install Dependencies
+
+Type this into the terminal:
+
+    npm install
+
+`npm` is short for Node Package Manager, another package management tool that searches, installs, and updates modules just for Node.js. `npm install` reads the `package.json` file in the repo and installs all the things the package file says it needs. In addition to Bower and Grunt, useful build tools, it installs FactoryB, a tool that helps you generate dummy data to test on (elsewhere known as "fixtures").
 
 ## Usage
 
