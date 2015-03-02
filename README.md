@@ -198,4 +198,42 @@ Here are the included packages:
 
 ## Usage
 
+First, it's vitally important to keep both your fork and your local clone of your fork updated:
+
+    git checkout master
+    git pull --rebase upstream master
+
+This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
+
+Next, go back to your working branch with
+
+    git checkout yourBranchName
+
+or start a new branch with
+
+    git checkout -b ChapterXX
+
+(where ChapterXX is a name that relates to the mothership updates you pulled).
+
+Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
+
+When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
+
+    git checkout master
+    git merge ChapterXX
+    git push origin master
+
+When you're ready to submit your exercises, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
+
+> Base fork: YWebCA/EloquentYWeb
+
+> Base: YourName
+
+> Head fork: YourName/EloquentYWeb
+
+> Compare: master
+
+This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
+
+Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
 *Coming soon...*
