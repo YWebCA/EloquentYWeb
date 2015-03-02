@@ -4,6 +4,12 @@ A companion workbook for [_Eloquent JavaScript, Second Edition_ by Marijn Haverb
 
 This workbook is a true-to-industry environment chock full of exercises to drill beginning JavaScript and practice using common build tools, versioning and source control, and automated testing.
 
+**Table of Contents:**
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [How to Complete Your Workbook](#how-to-complete-your-workbook)
+
 ## Installation
 
 ### Install Homebrew
@@ -217,6 +223,8 @@ or start a new branch with
 
 Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
 
+*See below for nformation about how to do the extercises themselves.*
+
 When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
 
     git checkout master
@@ -236,4 +244,7 @@ When you're ready to submit your exercises, go to your workbook fork on GitHub a
 This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
 
 Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
+
+## How to Complete Your Workbook
+
 *Coming soon...*
