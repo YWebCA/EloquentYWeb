@@ -233,7 +233,7 @@ or start a new branch with
 
 Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
 
-***See below for nformation about how to do the exercises, themselves.***
+***See below for information about how to do the exercises, themselves.***
 
 When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
 
@@ -254,6 +254,16 @@ When you're ready to submit your exercises, go to your workbook fork on GitHub a
 This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
 
 Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
+
+## Preparing Chrome
+
+Chrome, for your protection restricts Ajax calls to your local files. We will need to enable this in order to do our work and test our work.
+
+ 1. Open Chrome and the developer console.
+ 2. Hit the gear icon for settings.
+ 3. Hit the workspace tab.
+ 4. Under folders hit the add folder... button.
+ 5. In the folder select dialogue surf to and select your EloquentYWeb directory and hit select.
 
 ## How to Complete Your Workbook
 
