@@ -173,7 +173,7 @@ Normally forks are meant to diverge from the original repo such that if changes 
 
 Verify your list of your remote addresses with
 
-    git remove -v
+    git remote -v
 
 You should get something like this:
 
