@@ -218,13 +218,14 @@ Type this into the terminal:
 
 ### Preparing Chrome
 
-Chrome, for your protection restricts Ajax calls to your local files. We will need to enable this in order to do our work and test our work.
+For your protection, by default, Chrome restricts Ajax calls to your local files. You will need to selectively enable this in order to run tests on your our work.
 
- 1. Open Chrome and the developer console.
- 2. Hit the gear icon for settings.
- 3. Hit the workspace tab.
- 4. Under folders hit the add folder... button.
- 5. In the folder select dialogue surf to and select your EloquentYWeb directory and hit select.
+ 1. Open Chrome
+ 2. Open DevTools.
+ 2. Click the gear icon (settings) in the upper right of the panel.
+ 3. Click the worksplace tab.
+ 4. Click the **Add folder...** button.
+ 5. In the dialog surf to and select your `~git/EloquentYWeb` directory and click the **Select** button.
 
 ## Your First Pull Request
 
