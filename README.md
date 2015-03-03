@@ -221,15 +221,13 @@ First, it's vitally important to keep both your fork and your local clone of you
 
 This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
 
-Next, go back to your working branch with
-
-    git checkout yourBranchName
-
-or start a new branch with
+Next, start a new branch with
 
     git checkout -b ChapterXX
 
-(where ChapterXX is a name that relates to the mothership updates you pulled).
+(where ChapterXX is a name that relates to the mothership updates you pulled), or go back to your working branch with
+
+    git checkout whateverYouNamedIt
 
 Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
 
