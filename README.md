@@ -216,16 +216,17 @@ Type this into the terminal:
 
 `npm` is short for Node Package Manager, another package management tool that searches, installs, and updates modules just for Node.js. `npm install` reads the `package.json` file in the repo and installs all the things the package file says it needs. In addition to Bower and Grunt, useful build tools, it installs FactoryB, a tool that helps you generate dummy data to test on (elsewhere known as "fixtures").
 
-### Preparing Chrome
+### Hosting EloquentYWeb from Your Computer
 
-For your protection, by default, Chrome restricts Ajax calls to your local files. You will need to selectively enable this in order to run tests on your our work.
+Some of the exercises and test for EloquentYWeb require for the worksheets to be hosted as a website. We will need to download an easy to use app to do this for us.
 
- 1. Open Chrome
- 2. Open DevTools.
- 2. Click the gear icon (settings) in the upper right of the panel.
- 3. Click the worksplace tab.
- 4. Click the **Add folder...** button.
- 5. In the dialog surf to and select your `~git/EloquentYWeb` directory and click the **Select** button.
+ 1. Go [here](http://anvilformac.com) and hit the download link.
+ 2. Once you have downloaded the app move it to your Applications directory and run it.
+ 3. I small anvil shaped icon will appear in your status bar. Click it.
+ 4. A button saying that you need to install pow will pop up below the icon. Click that and wait for the install.
+ 5. Once Pow is installed the popup dialog under the anvil will have a button to add a a site. Click it.
+ 6. Browser to and then select the EloquentYWeb directory.
+ 7. You can got to you EloquentYWeb site anytime Anvil is running by clicking on it in Anvil or going to [eloquentyweb.dev](http://eloquentyweb.dev).
 
 ## Your First Pull Request
 
