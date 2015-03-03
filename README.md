@@ -7,7 +7,7 @@ This workbook is a true-to-industry environment chock full of exercises to drill
 **Table of Contents:**
 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [Your First Pull Request](#your-first-pull-request) (and all future submissions)
 3. [How to Complete Your Workbook](#how-to-complete-your-workbook)
 
 ## Installation
@@ -216,48 +216,7 @@ Type this into the terminal:
 
 `npm` is short for Node Package Manager, another package management tool that searches, installs, and updates modules just for Node.js. `npm install` reads the `package.json` file in the repo and installs all the things the package file says it needs. In addition to Bower and Grunt, useful build tools, it installs FactoryB, a tool that helps you generate dummy data to test on (elsewhere known as "fixtures").
 
-## Usage
-
-First, it's vitally important to keep both your fork and your local clone of your fork updated:
-
-    git checkout master
-    git pull --rebase upstream master
-
-This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
-
-Next, start a new branch with
-
-    git checkout -b ChapterXX
-
-(where ChapterXX is a name that relates to the mothership updates you pulled), or go back to your working branch with
-
-    git checkout whateverYouNamedIt
-
-Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
-
-***See below for information about how to do the exercises, themselves.***
-
-When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
-
-    git checkout master
-    git merge ChapterXX
-    git push origin master
-
-When you're ready to submit your exercises, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
-
-> Base fork: YWebCA/EloquentYWeb
-
-> Base: YourName
-
-> Head fork: YourName/EloquentYWeb
-
-> Compare: master
-
-This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
-
-Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
-
-## Preparing Chrome
+### Preparing Chrome
 
 Chrome, for your protection restricts Ajax calls to your local files. We will need to enable this in order to do our work and test our work.
 
@@ -266,6 +225,69 @@ Chrome, for your protection restricts Ajax calls to your local files. We will ne
  3. Hit the workspace tab.
  4. Under folders hit the add folder... button.
  5. In the folder select dialogue surf to and select your EloquentYWeb directory and hit select.
+
+## Your First Pull Request
+
+First, it's vitally important to keep both your fork and your local clone of your fork updated:
+
+    git checkout master
+    git pull --rebase upstream master
+
+This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
+
+See your current branches with
+
+    git branch
+
+Next, start a new branch with
+
+    git checkout -b first-pr
+
+(If you omit the `-b`, you can checkout a pre-existing branch.)
+
+Do your work in this new branch (not on master). Open the `README.md` file in your text editor. At the very bottom of the file, make a few blank lines and then
+
+    # This Fork Belongs To...
+
+and then put your name. Save the file.
+
+You can see your modifications by typing this in the terminal:
+
+    git status
+
+Unstaged changes are in red, which means that they won't be part of your commit. Stage all modified files with
+
+    git add .
+
+Try `git status` again to see that your modified files have been staged (in green). Now you're ready to commit.
+
+    git commit -m "Write a commit message"
+
+Commit messages should be quite short.
+
+In general, remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
+
+When you're done with your branch, merge it into your local master and push all your changes to your remote origin (your fork of EloquentYWeb out on GitHub):
+
+    git checkout master
+    git merge first-pr
+    git push origin master
+
+When you're ready to submit your pull request, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
+
+> Base fork: YWebCA/EloquentYWeb
+
+> Base: YourGitHubUserName
+
+> Head fork: YourGitHubUserName/EloquentYWeb
+
+> Compare: master
+
+This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
+
+Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
+
+Any time you work on some homework and turn it in, do it this way!
 
 ## How to Complete Your Workbook
 
@@ -284,7 +306,3 @@ For each chapter...
 5. As you complete the exercises, save your work and refresh `spec.html` to watch your tests start passing!
 
     1. If you're having trouble figuring out what the tests want, open `spec.js` in a text editor and take a look. (Do not edit the tests&mdash;that is super cheating and we will notice.)
-
-
-## Sign your name here
-
