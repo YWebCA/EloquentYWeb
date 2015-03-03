@@ -167,6 +167,10 @@ Then type `git clone ` and paste the SSH clone URL. Your full command should loo
 
     git clone git@github.com:YourName/EloquentYWeb.git
 
+When it's done, change into your repo's directory:
+
+    cd EloquentYWeb/
+
 Normally forks are meant to diverge from the original repo such that if changes are made to the original, they won't affect your fork. However, for this workbook you want to make sure to receive changes made to the "mothership," so you have to tell Git to listen for them. Type
 
     git remote add upstream git@github.com:YWebCA/EloquentYWeb.git
