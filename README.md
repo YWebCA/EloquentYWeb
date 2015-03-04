@@ -269,6 +269,10 @@ Commit messages should be quite short.
 
 In general, remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
 
+Make sure your last commit is the way you want it with
+
+    git show
+
 When you're done with your branch, merge it into your local master and push all your changes to your remote origin (your fork of EloquentYWeb out on GitHub):
 
     git checkout master
