@@ -40,3 +40,37 @@ describe("Numbers exercises", function() {
   });
 
 });
+
+describe("Arithmetic exercises", function() {
+
+  describe("Arithmetic 1", function() {
+    it("should return a value of 10", function() {
+      expect( Exercises.arithmetic1() ).toEqual(10);
+    });
+  });
+
+  describe("Arithmetic 2", function() {
+    it("should return a value of 7", function() {
+      expect( Exercises.arithmetic2() ).toEqual(7);
+    });
+  });
+
+  describe("Arithmetic 3", function() {
+    it("should return a value of -4", function() {
+      expect( Exercises.arithmetic3() ).toEqual(-4);
+    });
+  });
+
+  describe("Arithmetic 4", function() {
+    it("should return a value of 3", function() {
+      expect( Exercises.arithmetic4() ).toEqual(3);
+    });
+  });
+
+  describe("Arithmetic 5", function() {
+    it("should return the answer", function() {
+      expect( Exercises.arithmetic5() ).toEqual(13.5);
+    });
+  });
+
+});
