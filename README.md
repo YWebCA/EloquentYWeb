@@ -259,7 +259,7 @@ You can see your modifications by typing this in the terminal:
 
 Unstaged changes are in red, which means that they won't be part of your commit. Stage all modified files with
 
-    git add .
+    git add --all
 
 Try `git status` again to see that your modified files have been staged (in green). Now you're ready to commit.
 
