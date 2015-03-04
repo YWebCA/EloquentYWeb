@@ -7,7 +7,7 @@ This workbook is a true-to-industry environment chock full of exercises to drill
 **Table of Contents:**
 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [Your First Pull Request](#your-first-pull-request) (and all future submissions)
 3. [How to Complete Your Workbook](#how-to-complete-your-workbook)
 
 ## Installation
@@ -167,13 +167,17 @@ Then type `git clone ` and paste the SSH clone URL. Your full command should loo
 
     git clone git@github.com:YourName/EloquentYWeb.git
 
+When it's done, change into your repo's directory:
+
+    cd EloquentYWeb/
+
 Normally forks are meant to diverge from the original repo such that if changes are made to the original, they won't affect your fork. However, for this workbook you want to make sure to receive changes made to the "mothership," so you have to tell Git to listen for them. Type
 
     git remote add upstream git@github.com:YWebCA/EloquentYWeb.git
 
 Verify your list of your remote addresses with
 
-    git remove -v
+    git remote -v
 
 You should get something like this:
 
@@ -212,7 +216,19 @@ Type this into the terminal:
 
 `npm` is short for Node Package Manager, another package management tool that searches, installs, and updates modules just for Node.js. `npm install` reads the `package.json` file in the repo and installs all the things the package file says it needs. In addition to Bower and Grunt, useful build tools, it installs FactoryB, a tool that helps you generate dummy data to test on (elsewhere known as "fixtures").
 
-## Usage
+### Hosting EloquentYWeb from Your Computer
+
+Some of the exercises and test for EloquentYWeb require for the worksheets to be hosted as a website. We will need to download an easy to use app to do this for us.
+
+ 1. Go [here](http://anvilformac.com) and hit the download link.
+ 2. Once you have downloaded the app move it to your Applications directory and run it.
+ 3. I small anvil shaped icon will appear in your status bar. Click it.
+ 4. A button saying that you need to install pow will pop up below the icon. Click that and wait for the install.
+ 5. Once Pow is installed the popup dialog under the anvil will have a button to add a a site. Click it.
+ 6. Browser to and then select the EloquentYWeb directory.
+ 7. You can got to you EloquentYWeb site anytime Anvil is running by clicking on it in Anvil or going to [eloquentyweb.dev](http://eloquentyweb.dev).
+
+## Your First Pull Request
 
 First, it's vitally important to keep both your fork and your local clone of your fork updated:
 
@@ -221,39 +237,63 @@ First, it's vitally important to keep both your fork and your local clone of you
 
 This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
 
-Next, go back to your working branch with
+See your current branches with
 
-    git checkout yourBranchName
+    git branch
 
-or start a new branch with
+Next, start a new branch with
 
-    git checkout -b ChapterXX
+    git checkout -b first-pr
 
-(where ChapterXX is a name that relates to the mothership updates you pulled).
+(If you omit the `-b`, you can checkout a pre-existing branch.)
 
-Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
+Do your work in this new branch (not on master). Open the `README.md` file in your text editor. At the very bottom of the file, make a few blank lines and then
 
-***See below for nformation about how to do the exercises, themselves.***
+    # This Fork Belongs To...
 
-When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
+and then put your name. Save the file.
+
+You can see your modifications by typing this in the terminal:
+
+    git status
+
+Unstaged changes are in red, which means that they won't be part of your commit. Stage all modified files with
+
+    git add --all
+
+Try `git status` again to see that your modified files have been staged (in green). Now you're ready to commit.
+
+    git commit -m "Write a commit message"
+
+Commit messages should be quite short.
+
+In general, remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
+
+Make sure your last commit is the way you want it with
+
+    git show
+
+When you're done with your branch, merge it into your local master and push all your changes to your remote origin (your fork of EloquentYWeb out on GitHub):
 
     git checkout master
-    git merge ChapterXX
+    git merge first-pr
     git push origin master
 
-When you're ready to submit your exercises, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
+When you're ready to submit your pull request, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
 
 > Base fork: YWebCA/EloquentYWeb
 
-> Base: YourName
+> Base: YourGitHubUserName
 
-> Head fork: YourName/EloquentYWeb
+> Head fork: YourGitHubUserName/EloquentYWeb
 
 > Compare: master
 
 This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
 
 Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
+
+Any time you work on some homework and turn it in, do it this way!
 
 ## How to Complete Your Workbook
 
