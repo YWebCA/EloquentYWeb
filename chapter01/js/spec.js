@@ -280,7 +280,20 @@ describe("Automatic Type Conversion exercises", function() {
 
 });
 
-describe("Short-Circuting exercises", function() {});
+describe("Short-Circuting exercises", function() {
+
+  describe("Circuit 1", function() {
+    it("should not throw an exception", function() {
+      expect( Exercises.circuit1 ).not.toThrow();
+    });
+  });
+  describe("Circuit 2", function() {
+    it("should not throw an exception", function() {
+      expect( Exercises.circuit2 ).not.toThrow();
+    });
+  });
+
+});
 
 describe("Exercise file", function() {
   it("should pass JSHint", function(done) {

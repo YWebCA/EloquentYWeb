@@ -417,3 +417,17 @@ Exercises.coercion8 = function () {
   return "" == false;
   
 };
+
+/*-------------------------    SHORT-CIRCUTING    --------------------------*/
+
+// Circuit 1
+// Short-circut the expression so the bad function does not get called.
+Exercises.circuit1 = function () {
+  return true && true && true && badFunction();
+};
+
+// Circuit 2
+// Short-circut the expression so the bad function does not get called.
+Exercises.circuit2 = function () {
+  return false || false || false || badFunction();
+};
