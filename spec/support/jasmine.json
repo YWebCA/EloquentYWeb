@@ -1,0 +1,12 @@
+{
+  "spec_dir": "chapter*",
+  "spec_files": [
+    "js/*spec.js"
+  ],
+  "helpers": [
+    "js/enviroment.js",
+    "js/exercises.js",
+    "../spec/helpers/*.js",
+    "../js/enviroment.js"
+  ]
+}
