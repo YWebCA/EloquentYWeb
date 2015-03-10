@@ -67,7 +67,7 @@ describe("Numbers exercises", function() {
     });
     describe("Special Numbers 2", function() {
       it("should return the value of a number divided by zero", function() {
-        expect( Exercises.special2() ).toEqual(NaN);
+        expect( Exercises.special2() ).toEqual(Infinity);
       });
     });
     describe("Special Numbers 3", function() {
