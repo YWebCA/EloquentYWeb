@@ -1,5 +1,5 @@
 // World enviroment file
-var customMatchers = {};
+customMatchers = {};
 var jsHintOptions = {
   curly: true,
   white: true,
