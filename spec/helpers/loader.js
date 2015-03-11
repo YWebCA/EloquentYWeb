@@ -1,0 +1,1 @@
+JSHINT = require('jshint').JSHINT;
