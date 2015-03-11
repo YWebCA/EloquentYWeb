@@ -22,8 +22,8 @@ describe("Numbers exercises", function() {
     });
     describe("Numbers 4", function() {
       it("should return a value that is between 10e4 and 10e5", function() {
-        expect( Exercises.numbers3() ).toBeGreaterThan(10e4);
-        expect( Exercises.numbers3() ).toBeLessThan(10e5);
+        expect( Exercises.numbers4() ).toBeGreaterThan(10e4);
+        expect( Exercises.numbers4() ).toBeLessThan(10e5);
       });
     });
 
@@ -67,7 +67,7 @@ describe("Numbers exercises", function() {
     });
     describe("Special Numbers 2", function() {
       it("should return the value of a number divided by zero", function() {
-        expect( Exercises.special2() ).toEqual(NaN);
+        expect( Exercises.special2() ).toEqual(Infinity);
       });
     });
     describe("Special Numbers 3", function() {
@@ -139,7 +139,7 @@ describe("Boolean Values exercises", function() {
       });
     });
     describe("Boolean 1", function () {
-      it("should return true", function () {
+      it("should return false", function () {
         expect( Exercises.boolean2() === false ).toBeTruthy();
       });
     });
