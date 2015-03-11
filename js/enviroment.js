@@ -26,19 +26,3 @@ customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
     }
   }
 }
-
-// getFile method
-function getFile(path, callback) {
-  if (typeof require !== "undefined" && require !== null && (fs = require('fs'))) {
-    fs.readFile(__dirname + "/../" + path, function(err, data) {
-      callback(err, data.toString());
-    });
-  } else if (typeof $ !== "undefined" && $ !== null && typeof $.ajax !== "undefined" && $.ajax !== null) {
-    $.ajax(path, {
-      success: function(data) {callback(null, data);},
-      error: function(xhr, err) {callbacl(err, null);}
-    });
-  } else {
-    console.log("No method to retrieve file exists");
-  }
-}
