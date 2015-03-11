@@ -1,3 +1,4 @@
+
 // Chapter 1 Exercises
 
 /*-----------------------------    NUMBERS    ------------------------------*/
@@ -6,7 +7,7 @@
 // Make the function return a value that is a number.
 Exercises.numbers1 = function() {
 
-  return /* your answer here */ ;
+  return 5;
 
 };
 
@@ -14,7 +15,7 @@ Exercises.numbers1 = function() {
 // Make the function return a value that is a negative number.
 Exercises.numbers2 = function() {
 
-  return /* your answer here */ ;
+  return -4 ;
 
 };
 
@@ -22,7 +23,7 @@ Exercises.numbers2 = function() {
 // Make the function return a value that is between 4 and 5.
 Exercises.numbers3 = function() {
 
-  return /* your answer here */ ;
+  return 4.5 ;
 
 };
 
@@ -30,7 +31,7 @@ Exercises.numbers3 = function() {
 // Make the function return a value that is between 10e4 and 10e5.
 Exercises.numbers4 = function() {
 
-  return /* your answer here */ ;
+  return 9e5;
 
 };
 
@@ -40,7 +41,7 @@ Exercises.numbers4 = function() {
 // Make the function return an expression that evaluates to 10.
 Exercises.arithmetic1 = function() {
 
-  return /* your answer here */ ;
+  return  5 + 5 ;
 
 };
 
@@ -48,7 +49,7 @@ Exercises.arithmetic1 = function() {
 // Fix the operators so the expression evaluates to 7.
 Exercises.arithmetic2 = function() {
 
-  return 2 - 3 * 5 + 4 ;
+  return 2 * 3 + 5 - 4 ;
   
 };
 
@@ -56,7 +57,7 @@ Exercises.arithmetic2 = function() {
 // Add parentheses to the expression so that it evaluates to -4.
 Exercises.arithmetic3 = function() {
 
-  return -1 * 6 * 1 - 4 / 1 * 2;
+  return (-1 * 6) * 1 + (4 / (1 * 2));
   
 };
 
@@ -64,7 +65,7 @@ Exercises.arithmetic3 = function() {
 // Fix the values so the expression evaluates to 3.
 Exercises.arithmetic4 = function() {
 
-  return 17 % 11 ;
+  return 14 % 11 ;
   
 };
 
@@ -75,7 +76,8 @@ Exercises.arithmetic5 = function() {
   // ( 3 + -( 2 - 14 ) + 11 % 7 + 8 ) / 2
 
   // Return that value here:
-  return /* your answer here */ ;
+  return 13.5;
+ 
   
 };
 
@@ -86,8 +88,8 @@ Exercises.special1 = function () {
 
   // Use the console to subtract a number from Infinity.
 
-  // Return the result here:
-  return /* your answer here */ ;
+  
+  return Infinity ;
 
 };
 
@@ -96,28 +98,24 @@ Exercises.special2 = function () {
 
   // Use the console to divide a number by zero.
 
-  // Return the result here:
-  return /* your answer here */ ;
+  // 
+  return /* Infinity ;
 
 };
 
 // Special Numbers 3
 Exercises.special3 = function () {
 
-  // Use the console to subtract Infinity from Infinity.
+  // Use the console to subtract Infinity from Infinity ;
 
-  // Return the result here:
-  return /* your answer here */ ;
-
-};
+ NaN};
 
 // Special Numbers 4
 Exercises.special4 = function () {
 
   // Use the console to divide a number by Infinity.
 
-  // Return the result here:
-  return /* your answer here */ ;
+  0 ;
 
 };
 
