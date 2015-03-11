@@ -139,7 +139,7 @@ describe("Boolean Values exercises", function() {
       });
     });
     describe("Boolean 1", function () {
-      it("should return true", function () {
+      it("should return false", function () {
         expect( Exercises.boolean2() === false ).toBeTruthy();
       });
     });
