@@ -4,7 +4,7 @@
   "description": "Worksheets for YWeb Career Academy Eloquent Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "npm install; jasmine; jshint chapter0[0-1]/js/exercises.js"
+    "test": "./test.sh chapter01"
   },
   "repository": {
     "type": "git",
