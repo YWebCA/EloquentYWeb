@@ -6,7 +6,7 @@
 // Make the function return a value that is a number.
 Exercises.numbers1 = function() {
 
-  return /* your answer here */ ;
+  return 1000000000000000/* your answer here */ ;
 
 };
 
@@ -49,7 +49,7 @@ Exercises.arithmetic1 = function() {
 Exercises.arithmetic2 = function() {
 
   return 2 - 3 * 5 + 4 ;
-  
+
 };
 
 // Arithmetic 3
@@ -57,7 +57,7 @@ Exercises.arithmetic2 = function() {
 Exercises.arithmetic3 = function() {
 
   return -1 * 6 * 1 - 4 / 1 * 2;
-  
+
 };
 
 // Arithmetic 4
@@ -65,7 +65,7 @@ Exercises.arithmetic3 = function() {
 Exercises.arithmetic4 = function() {
 
   return 17 % 11 ;
-  
+
 };
 
 // Arithmetic 5
@@ -76,7 +76,7 @@ Exercises.arithmetic5 = function() {
 
   // Return that value here:
   return /* your answer here */ ;
-  
+
 };
 
 /*-------------------------    SPECIAL NUMBERS    --------------------------*/
@@ -162,7 +162,7 @@ Exercises.strings4 = function () {
   // answer = /* your answer here */ ;
 
   // Then check the console in spec.html to debug.
-  
+
   console.log( "Strings 4:\n" + answer );
   return answer;
 
@@ -238,7 +238,7 @@ Exercises.compare2 = function () {
   // Add one character to correct the operator such that the expression
   // returns true.
   return 2 < 2;
-  
+
 };
 
 // Comparisons 3
@@ -246,7 +246,7 @@ Exercises.compare2 = function () {
 Exercises.compare3 = function () {
 
   return "&" > "ampersand" ;
-  
+
 };
 
 // Comparisons 4
@@ -254,7 +254,7 @@ Exercises.compare3 = function () {
 Exercises.compare4 = function () {
 
   return true == true ;
-  
+
 };
 
 // Comparisons 5
@@ -262,7 +262,7 @@ Exercises.compare4 = function () {
 Exercises.compare5 = function () {
 
   return NaN != NaN ;
-  
+
 };
 
 // Comparisons 6
@@ -270,7 +270,7 @@ Exercises.compare5 = function () {
 Exercises.compare6 = function () {
 
   return "cake" != "lie" ;
-  
+
 };
 
 /*--------------------------    LOGICAL OPERATORS    -----------------------*/
@@ -363,7 +363,7 @@ Exercises.coercion1 = function () {
 Exercises.coercion2 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 3
@@ -372,7 +372,7 @@ Exercises.coercion2 = function () {
 Exercises.coercion3 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 4
@@ -381,7 +381,7 @@ Exercises.coercion3 = function () {
 Exercises.coercion4 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 5
@@ -390,7 +390,7 @@ Exercises.coercion4 = function () {
 Exercises.coercion5 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 6
@@ -398,7 +398,7 @@ Exercises.coercion5 = function () {
 Exercises.coercion6 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 7
@@ -407,7 +407,7 @@ Exercises.coercion6 = function () {
 Exercises.coercion7 = function () {
 
   return /* your answer here */ ;
-  
+
 };
 
 // Coercion 8
@@ -415,7 +415,7 @@ Exercises.coercion7 = function () {
 Exercises.coercion8 = function () {
 
   return "" == false;
-  
+
 };
 
 /*-------------------------    SHORT-CIRCUTING    --------------------------*/
