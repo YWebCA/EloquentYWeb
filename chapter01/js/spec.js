@@ -67,7 +67,7 @@ describe("Numbers exercises", function() {
     });
     describe("Special Numbers 2", function() {
       it("should return the value of a number divided by zero", function() {
-        expect( Exercises.special2() ).toEqual(NaN);
+        expect( Exercises.special2() ).toEqual(Infinity);
       });
     });
     describe("Special Numbers 3", function() {
@@ -139,7 +139,7 @@ describe("Boolean Values exercises", function() {
       });
     });
     describe("Boolean 1", function () {
-      it("should return true", function () {
+      it("should return false", function () {
         expect( Exercises.boolean2() === false ).toBeTruthy();
       });
     });
@@ -293,16 +293,4 @@ describe("Short-Circuting exercises", function() {
     });
   });
 
-});
-
-describe("Exercise file", function() {
-  it("should pass JSHint", function(done) {
-    jasmine.addMatchers(customMatchers);
-    $.ajax("js/exercises.js", {
-      success: function(data) {
-        expect(data).toPassJSHint();
-        done();
-      }
-    })
-  });
 });
