@@ -6,7 +6,7 @@
 // Make the function return a value that is a number.
 Exercises.numbers1 = function() {
 
-  return /* your answer here */ ;
+  return 4 ;
 
 };
 
