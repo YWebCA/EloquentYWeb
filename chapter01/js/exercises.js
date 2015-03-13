@@ -370,7 +370,7 @@ Exercises.coercion2 = function () {
 // expression that evaluates to "-32".
 Exercises.coercion3 = function () {
 
-  return ("-1" - -1) ||  '-' + "3" + "2" ;
+  return '-' + "3" + "2" || ("-1" + 1)  ;
   
 };
 
