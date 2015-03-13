@@ -4786,7 +4786,6 @@ var warnings = {
   W016: "Unexpected use of '{a}'.",
   W017: "Bad operand.",
   W018: "Confusing use of '{a}'.",
-  W019: "Use the isNaN function to compare with NaN.",
   W020: "Read only.",
   W021: "'{a}' is a function.",
   W022: "Do not assign to the exception parameter.",
@@ -8074,9 +8073,7 @@ var JSHINT = (function() {
       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);
       var right = expression(100);
 
-      if (isIdentifier(left, "NaN") || isIdentifier(right, "NaN")) {
-        warning("W019", this);
-      } else if (f) {
+      if (f) {
         f.apply(this, [left, right]);
       }
 
