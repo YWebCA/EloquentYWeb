@@ -91,7 +91,6 @@ var warnings = {
   W016: "Unexpected use of '{a}'.",
   W017: "Bad operand.",
   W018: "Confusing use of '{a}'.",
-  W019: "Use the isNaN function to compare with NaN.",
   W020: "Read only.",
   W021: "'{a}' is a function.",
   W022: "Do not assign to the exception parameter.",
