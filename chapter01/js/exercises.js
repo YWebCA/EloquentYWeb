@@ -144,7 +144,7 @@ Exercises.strings3 = function () {
 };
 
 // Strings 4
-// Return the string<br />
+// Return the string
 //     'If a string is in single quotes, like this,
 //     you can nest "double quotes".
 //     But don\'t forget to escape your \backslashes\
