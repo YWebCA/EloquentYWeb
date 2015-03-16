@@ -1,4 +1,4 @@
-// Exercise tests
+// Annalise
 describe("Expressions and Statements exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -7,6 +7,7 @@ describe("Expressions and Statements exercises", function() {
 	});
 });
 
+// Nate
 describe("Variables exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -15,6 +16,7 @@ describe("Variables exercises", function() {
 	});
 });
 
+// Zach
 describe("Keywords and Reserved Words exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -22,6 +24,8 @@ describe("Keywords and Reserved Words exercises", function() {
 		});
 	});
 });
+
+// Annalise
 describe("The Environment exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -30,6 +34,7 @@ describe("The Environment exercises", function() {
 	});
 });
 
+// Nate
 describe("Functions exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -37,6 +42,8 @@ describe("Functions exercises", function() {
 		});
 	});
 });
+
+// Zach
 describe("The console.log Function exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -44,6 +51,8 @@ describe("The console.log Function exercises", function() {
 		});
 	});
 });
+
+// Annalise
 describe("Return Values exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -51,6 +60,8 @@ describe("Return Values exercises", function() {
 		});
 	});
 });
+
+// Nate
 describe("Prompt and Confirm exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -58,6 +69,8 @@ describe("Prompt and Confirm exercises", function() {
 		});
 	});
 });
+
+// Zach
 describe("Control Flow exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -66,6 +79,7 @@ describe("Control Flow exercises", function() {
 	});
 });
 
+// Annalise
 describe("Conditional Execution exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -74,6 +88,7 @@ describe("Conditional Execution exercises", function() {
 	});
 });
 
+// Nate
 describe("while and dowhile Loops exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -82,6 +97,7 @@ describe("while and dowhile Loops exercises", function() {
 	});
 });
 
+// Zach
 describe("Indenting Code exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -90,6 +106,7 @@ describe("Indenting Code exercises", function() {
 	});
 });
 
+// Annalise
 describe("for Loops exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -98,6 +115,7 @@ describe("for Loops exercises", function() {
 	});
 });
 
+// Nate
 describe("Breaking Out of a Loop exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -106,6 +124,7 @@ describe("Breaking Out of a Loop exercises", function() {
 	});
 });
 
+// Zach
 describe("Updating Variables Succinctly exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -114,6 +133,7 @@ describe("Updating Variables Succinctly exercises", function() {
 	});
 });
 
+// Annalie
 describe("Dispatching on a Value with switch exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -122,6 +142,7 @@ describe("Dispatching on a Value with switch exercises", function() {
 	});
 });
 
+// Nate
 describe("Capitalization exercises", function() {
 	describe("", function() {
 		it("should ", function() {
@@ -130,6 +151,7 @@ describe("Capitalization exercises", function() {
 	});
 });
 
+// Zach
 describe("Comments exercises", function() {
 	describe("", function() {
 		it("should ", function() {
