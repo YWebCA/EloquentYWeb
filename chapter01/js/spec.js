@@ -72,7 +72,7 @@ describe("Numbers exercises", function() {
     });
     describe("Special Numbers 3", function() {
       it("should return the value of Infinity subtracted from Infinity", function() {
-        expect( Exercises.special3() ).toBe(NaN);
+        expect( Exercises.special3() ).toBeNaN());
       });
     });
     describe("Special Numbers 4", function() {
@@ -212,7 +212,7 @@ describe("Boolean Values exercises", function() {
         expect( Exercises.logic6(true) ).toBe(-4);
       });
       it("should return 7 if input is false", function() {
-        expect( Exercises.logic6(false) ).toBel(7);
+        expect( Exercises.logic6(false) ).toBe(7);
       });
     });
 
