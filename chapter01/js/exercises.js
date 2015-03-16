@@ -95,7 +95,7 @@ Exercises.special2 = function () {
   // Use the console to divide a number by zero.
   // Return the result here:
   /* your answer here */ 
-  return 0/0;
+  return 10/0;
 };
 
 // Special Numbers 3
@@ -103,7 +103,11 @@ Exercises.special3 = function () {
 
   // Use the console to subtract Infinity from Infinity.
   // Return the result here:
-  return  Infinity - Infinity ;
+  var output = Infinity - Infinity;
+
+  console.log(output);
+
+  return  output ;
 
 };
 
@@ -364,7 +368,7 @@ Exercises.coercion2 = function () {
 // expression that evaluates to "-32".
 Exercises.coercion3 = function () {
 
-  return ("-1"*("3" + "2")).toString() ; //find new solution if toString doesn't count
+  return ("-1" * "3" + "2") ; //find new solution if toString doesn't count
   
 };
 
