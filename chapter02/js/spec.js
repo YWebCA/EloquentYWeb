@@ -76,38 +76,109 @@ describe("Variables exercises", function() {
   });
 
   describe("Variables 3", function() {
+
     describe("should contain a statement that", function() {
+
       it("should declare a variable", function() {
         expect( Exer.variables3.toString().match(/\s*var\s*.*;/m) ).not.toBeNull();
       });
+
       it("should initialize it to a string", function() {
         expect( Exer.variables3.toString().match(/\s*var\s*.*=.*(?:'|").*(?:'|")\s*;/m) ).not.toBeNull();
       });
+
       it("should return a string", function() {
         expect( typeof Exer.variables3() ).toBe('string');
       });
+
     });
+
   });
+
   describe("Variables 4", function() {
-    it("should ", function() {
 
+    it("should return the parameter", function() {
+      expect( Exer.variables4(0) ).toBe(0);
     });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables4(3) ).toBe(3);
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables4(false) ).toBe(false);
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables4("Hello, world!") ).toBe("Hello, world!");
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables4(undefined) ).toBe(undefined);
+    });
+
   });
+
   describe("Variables 5", function() {
-    it("should ", function() {
 
+    it("should return the parameter", function() {
+      expect( Exer.variables5(0) ).toBe(0);
     });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables5(3) ).toBe(3);
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables5(false) ).toBe(false);
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables5("Hello, world!") ).toBe("Hello, world!");
+    });
+
+    it("should return the parameter", function() {
+      expect( Exer.variables5(undefined) ).toBe(undefined);
+    });
+
+    it("should not return the parameter directly", function() {
+      expect( Exer.variables5.toString().match(/^\s*return\s*n\s*;/m) ).toBeNull();
+    });
+
   });
+
   describe("Variables 6", function() {
-    it("should ", function() {
 
+    it("should return 3 plus Stacy's number", function() {
+      expect( Exer.variables6(0) ).toBe(3);
     });
+
+    it("should return 3 plus Stacy's number", function() {
+      expect( Exer.variables6(5) ).toBe(8);
+    });
+
+    it("should return 3 plus Stacy's number", function() {
+      expect( Exer.variables6(Infinity) ).toBe();
+    });
+
   });
+
   describe("Variables 7", function() {
-    it("should ", function() {
 
+    it("should return a string representing the change left when starting with $1.00", function() {
+      expect( Exer.variables7(1) ).toBe('$1.15');
     });
+
+    it("should return a string representing the change left when starting with $3.50", function() {
+      expect( Exer.variables7(3.50) ).toBe('$3.65');
+    });
+
+    it("should return a string representing the change left when starting with $0.01", function() {
+      expect( Exer.variables7(0.01) ).toBe('$0.16');
+    });
+    
   });
+
 });
 
 // Zach
