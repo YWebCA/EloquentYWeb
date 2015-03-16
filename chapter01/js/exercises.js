@@ -295,7 +295,7 @@ Exercises.logic2 = function () {
 // Return the result of ( true AND false ).
 Exercises.logic3 = function () {
 
-  return /* your answer here */ ;
+  return false ;
 
 };
 
@@ -303,7 +303,7 @@ Exercises.logic3 = function () {
 // Return the result of ( true OR false ).
 Exercises.logic4 = function () {
 
-  return /* your answer here */ ;
+  return true ;
 
 };
 
@@ -314,7 +314,7 @@ Exercises.logic5 = function () {
 // 1 + 1 == 2 && 10 * 10 > 50
 
   // Return the result:
-  return /* your answer here */ ;
+  return true ;
 
 };
 
@@ -325,7 +325,7 @@ Exercises.logic5 = function () {
 Exercises.logic6 = function ( input ) {
 
   // Remove the comments and type your answer:
-  return input /* ? ifTrue : ifFalse */ ;
+  return input ? -4 : 7 ;
 
 };
 
@@ -335,7 +335,7 @@ Exercises.logic6 = function ( input ) {
 Exercises.undef1 = function () {
 
   // Fix the statements so that undefined is returned.
-  return false ;
+  return undefined ;
 
 };
 
@@ -343,7 +343,7 @@ Exercises.undef1 = function () {
 // Return the value null.
 Exercises.undef2 = function () {
 
-  return /* your answer here */ ;
+  return null ;
 
 };
 
@@ -353,7 +353,7 @@ Exercises.undef2 = function () {
 // Use null in an arithmetic operation that evaluates to 0.
 Exercises.coercion1 = function () {
 
-  return /* your answer here */ ;
+  return null * 0;
 
 };
 
@@ -362,7 +362,7 @@ Exercises.coercion1 = function () {
 // expression that evaluates to -5.
 Exercises.coercion2 = function () {
 
-  return /* your answer here */ ;
+  return -1 * 2 - 3 ;
   
 };
 
@@ -371,7 +371,7 @@ Exercises.coercion2 = function () {
 // expression that evaluates to "-32".
 Exercises.coercion3 = function () {
 
-  return /* your answer here */ ;
+  return ("-1" * "3" + "2") ;
   
 };
 
@@ -380,7 +380,7 @@ Exercises.coercion3 = function () {
 // expression that evaluates to true.
 Exercises.coercion4 = function () {
 
-  return /* your answer here */ ;
+  return "hey!" != null ;
   
 };
 
@@ -389,7 +389,7 @@ Exercises.coercion4 = function () {
 // evaluates to false.
 Exercises.coercion5 = function () {
 
-  return /* your answer here */ ;
+  return null == 0 ;
   
 };
 
@@ -397,7 +397,7 @@ Exercises.coercion5 = function () {
 // Compare true and "true" in an expression that evaluates to false.
 Exercises.coercion6 = function () {
 
-  return /* your answer here */ ;
+  return true == "true" ;
   
 };
 
@@ -406,7 +406,7 @@ Exercises.coercion6 = function () {
 // to true.
 Exercises.coercion7 = function () {
 
-  return /* your answer here */ ;
+  return 0 == "0" == "" == undefined == null == NaN == false;
   
 };
 
@@ -414,7 +414,7 @@ Exercises.coercion7 = function () {
 // Fix the operator to make the expression return false.
 Exercises.coercion8 = function () {
 
-  return "" == false;
+  return "" != false;
   
 };
 
@@ -423,11 +423,11 @@ Exercises.coercion8 = function () {
 // Circuit 1
 // Short-circut the expression so the bad function does not get called.
 Exercises.circuit1 = function () {
-  return true && true && true && badFunction();
+  return true && true && true || badFunction();
 };
 
 // Circuit 2
 // Short-circut the expression so the bad function does not get called.
 Exercises.circuit2 = function () {
-  return false || false || false || badFunction();
+  return false || false || false && badFunction();
 };
