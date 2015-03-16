@@ -22,8 +22,8 @@ describe("Numbers exercises", function() {
     });
     describe("Numbers 4", function() {
       it("should return a value that is between 10e4 and 10e5", function() {
-        expect( Exercises.numbers3() ).toBeGreaterThan(10e4);
-        expect( Exercises.numbers3() ).toBeLessThan(10e5);
+        expect( Exercises.numbers4() ).toBeGreaterThan(10e4);
+        expect( Exercises.numbers4() ).toBeLessThan(10e5);
       });
     });
 
