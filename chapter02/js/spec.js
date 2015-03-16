@@ -39,7 +39,7 @@ describe("Expressions and Statements exercises", function() {
   });
 });
 
-// Nate
+// Annalise
 describe("Variables exercises", function() {
   describe("", function() {
     it("should ", function() {
@@ -57,7 +57,7 @@ describe("Keywords and Reserved Words exercises", function() {
   });
 });
 
-// Annalise
+// Nate
 describe("The Environment exercises", function() {
   describe("", function() {
     it("should ", function() {
