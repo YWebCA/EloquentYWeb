@@ -96,6 +96,19 @@ Exer.variables7 = function ( change ) {
 
 /*--------------------    KEYWORDS AND RESERVED WORDS    ---------------------*/
 
+// Keywords 1
+// Uncomment the following function.
+// Fix the function so no keywords or reserved words are improperly used.
+/*
+Exer.keywords1 = function ( true, two ) {
+  var new = 2;
+  var const = two+2;
+  true += "2";
+  var function = new + const + true + two;
+  return function;
+};
+*/
+
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
 /*------------------------------    FUNCTIONS    -----------------------------*/

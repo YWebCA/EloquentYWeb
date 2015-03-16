@@ -1,4 +1,3 @@
-// Annalise
 describe("Expressions and Statements exercises", function() {
 
   describe("Expressions 1", function() {
@@ -39,7 +38,6 @@ describe("Expressions and Statements exercises", function() {
   });
 });
 
-// Annalise
 describe("Variables exercises", function() {
 
   describe("Variables 1", function() {
@@ -176,18 +174,39 @@ describe("Variables exercises", function() {
     it("should return a string representing the change left when starting with $0.01", function() {
       expect( Exer.variables7(0.01) ).toBe('$0.16');
     });
-    
+
   });
 
 });
 
-// Zach
 describe("Keywords and Reserved Words exercises", function() {
-  describe("", function() {
-    it("should ", function() {
 
+  describe("Keywords 1", function() {
+
+    beforeAll( function() {
+      this.helper = function (tue, two) {
+        var newt = 2;
+        var aconst = two+2;
+        tue += "2";
+        var func = newt + aconst + tue + two;
+        return func;
+      };
     });
+
+    it("should return the string '5121'", function() {
+      expect( Exer.keywords2(1,1) ).toBe( this.helper(1,1) );
+    });
+
+    it("should return the string '332-1'", function() {
+      expect( Exer.keywords2(3,-1) ).toBe( this.helper(3,-1) );
+    });
+
+    it("should return the string '9025'", function() {
+      expect( Exer.keywords2(0,5) ).toBe( this.helper(0,5) );
+    });
+
   });
+
 });
 
 // Nate
