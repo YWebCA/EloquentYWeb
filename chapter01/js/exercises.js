@@ -261,7 +261,7 @@ Exercises.compare4 = function () {
 // Correct the comparison operators to return false.
 Exercises.compare5 = function () {
 
-  return NaN < NaN ;
+  return isNaN(NaN) ;
   
 };
 
@@ -279,7 +279,7 @@ Exercises.compare6 = function () {
 // Use NOT (!) to return false.
 Exercises.logic1 = function () {
 
-  return 3 != 3 ;
+  return 3 !== 3 ;
 
 };
 
@@ -287,7 +287,7 @@ Exercises.logic1 = function () {
 // Use NOT (!) to return true.
 Exercises.logic2 = function () {
 
-  return 3 != 4 ;
+  return 3 !== 4 ;
 
 };
 
@@ -380,7 +380,7 @@ Exercises.coercion3 = function () {
 // expression that evaluates to true.
 Exercises.coercion4 = function () {
 
-  return "hey!" != null ;
+  return "hey!" !== null ;
   
 };
 
@@ -389,7 +389,7 @@ Exercises.coercion4 = function () {
 // evaluates to false.
 Exercises.coercion5 = function () {
 
-  return null == 0 ;
+  return null === 0 ;
   
 };
 
@@ -397,7 +397,7 @@ Exercises.coercion5 = function () {
 // Compare true and "true" in an expression that evaluates to false.
 Exercises.coercion6 = function () {
 
-  return true == "true" ;
+  return true === "true" ;
   
 };
 
@@ -406,7 +406,7 @@ Exercises.coercion6 = function () {
 // to true.
 Exercises.coercion7 = function () {
 
-  return 0 == "0" == "" == undefined == null == NaN == false;
+  return isNan(0 === "0" === "" === undefined === null === false);
   
 };
 
@@ -414,7 +414,7 @@ Exercises.coercion7 = function () {
 // Fix the operator to make the expression return false.
 Exercises.coercion8 = function () {
 
-  return "" != false;
+  return "" !== false;
   
 };
 
