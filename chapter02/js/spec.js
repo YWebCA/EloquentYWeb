@@ -41,7 +41,69 @@ describe("Expressions and Statements exercises", function() {
 
 // Annalise
 describe("Variables exercises", function() {
-  describe("", function() {
+
+  describe("Variables 1", function() {
+    it("should declare a variable", function() {
+      expect( Exer.variables1.toString().match(/^\s*var\s.*;/mg) ).not.toBeNull();
+    });
+  });
+
+  describe("Variables 2", function() {
+
+    beforeAll(function() {
+      this.dec = Exer.variables2.toString().match(/^\s*var\s*(.*)\s*;/m);
+      this.vari2 = this.dec[1];
+    });
+
+    it("should declare a variable", function() {
+      expect( this.dec ).not.toBeNull();
+    });
+
+    it("should make an assignment", function() {
+      var re = new RegExp('^\\s*' + this.vari2 + '\\s*=.*;', 'm');
+      expect( Exer.variables2.toString().match(re) ).not.toBeNull();
+    });
+
+    it("should return the variable", function() {
+      var re = new RegExp('^\\s*return\\s' + this.vari2 + '\\s*;', 'm');
+      expect( Exer.variables2.toString().match(re) ).not.toBeNull();
+    });
+
+    it("should return a number", function() {
+      expect( typeof Exer.variables2() ).toBe('number');
+    });
+
+  });
+
+  describe("Variables 3", function() {
+    describe("should contain a statement that", function() {
+      it("should declare a variable", function() {
+        expect( Exer.variables3.toString().match(/\s*var\s*.*;/m) ).not.toBeNull();
+      });
+      it("should initialize it to a string", function() {
+        expect( Exer.variables3.toString().match(/\s*var\s*.*=.*(?:'|").*(?:'|")\s*;/m) ).not.toBeNull();
+      });
+      it("should return a string", function() {
+        expect( typeof Exer.variables3() ).toBe('string');
+      });
+    });
+  });
+  describe("Variables 4", function() {
+    it("should ", function() {
+
+    });
+  });
+  describe("Variables 5", function() {
+    it("should ", function() {
+
+    });
+  });
+  describe("Variables 6", function() {
+    it("should ", function() {
+
+    });
+  });
+  describe("Variables 7", function() {
     it("should ", function() {
 
     });
