@@ -15,11 +15,11 @@ describe("Expressions and Statements exercises", function() {
   describe("Statements 1", function() {
 
     beforeAll(function() {
-      this.work = Exer.statements1.toString().match(/^.*$/mg);  // break into lines
-      for ( var i = 0; i < this.work.length; i++ ) {
-        if ( !this.work[i] ) {
-          this.work.splice(i, 1);  // remove empty lines
-        }
+      this.work = Exer.statements1.toString().match(/^.+?$/mg);  // break into lines
+      for ( var i = 0; i < this.work.length; ) {
+        if ( this.work[i].match(/^\s*\/\//) ) {
+          this.work.splice(i, 1);
+        } else { i++; }
       }
       this.work = this.work.slice(1, length - 1);  // remove function expression wrapper
     });
