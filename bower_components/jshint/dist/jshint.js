@@ -8072,9 +8072,9 @@ var JSHINT = (function() {
       nobreaknonadjacent(state.tokens.prev, state.tokens.curr);
       var right = expression(100);
 
-      if (isIdentifier(left, "NaN") || isIdentifier(right, "NaN")) {
+      if(isIdentifier(left, "NaN") || isIdentifier(right, "NaN")) {
         warning("W019", this);
-      } else if (f) {
+      } else if(f) {
         f.apply(this, [left, right]);
       }
 
