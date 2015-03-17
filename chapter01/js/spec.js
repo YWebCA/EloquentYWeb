@@ -53,7 +53,7 @@ describe("Numbers exercises", function() {
     });
     describe("Arithmetic 5", function() {
       it("should return the value of the expression ( 3 + -( 2 - 14 ) + 11 % 7 + 8 ) / 2", function() {
-        expect( Exercises.arithmetic5() ).toEqual(( 3 + -( 2 - 14 ) + 11 % 7 + 8 ) / 2);
+        expect( Exercises.arithmetic5() ).toBe(( 3 + -( 2 - 14 ) + 11 % 7 + 8 ) / 2);
       });
     });
 
@@ -62,22 +62,22 @@ describe("Numbers exercises", function() {
   describe("Special numbers exercises", function() {
     describe("Special Numbers 1", function() {
       it("should return the value of a number subtracted from Infinity", function() {
-        expect( Exercises.special1() ).toEqual(Infinity);
+        expect( Exercises.special1() ).toBe(Infinity);
       });
     });
     describe("Special Numbers 2", function() {
       it("should return the value of a number divided by zero", function() {
-        expect( Exercises.special2() ).toEqual(Infinity);
+        expect( Exercises.special2() ).toBe(Infinity);
       });
     });
     describe("Special Numbers 3", function() {
       it("should return the value of Infinity subtracted from Infinity", function() {
-        expect( Exercises.special3() ).toEqual(NaN);
+        expect( Exercises.special3() ).toBeNaN();
       });
     });
     describe("Special Numbers 4", function() {
       it("should return the value of a number divided by Infinity", function() {
-        expect( Exercises.special4() ).toEqual(0);
+        expect( Exercises.special4() ).toBe(0);
       });
     });
   });
@@ -107,7 +107,7 @@ describe("Strings exercises", function() {
   });
   describe("Strings 5", function() {
     it("should return the sample string", function() {
-      expect( Exercises.strings5() ).toEqual("supercalifragilisticexpialidocious");
+      expect( Exercises.strings5() ).toBe("supercalifragilisticexpialidocious");
     });
   });
 });
@@ -135,12 +135,12 @@ describe("Boolean Values exercises", function() {
   describe("Basic exercises", function() {
     describe("Boolean 1", function () {
       it("should return true", function () {
-        expect( Exercises.boolean1() ).toBeTruthy();
+        expect( Exercises.boolean1() ).toBe(true);
       });
     });
     describe("Boolean 1", function () {
-      it("should return true", function () {
-        expect( Exercises.boolean2() === false ).toBeTruthy();
+      it("should return false", function () {
+        expect( Exercises.boolean2() ).toBe(false);
       });
     });
   });
@@ -149,32 +149,32 @@ describe("Boolean Values exercises", function() {
 
     describe("Comparisons 1", function() {
       it("should return true", function() {
-        expect( Exercises.compare1() === true ).toBeTruthy();
+        expect( Exercises.compare1() ).toBe(true);
       });
     });
     describe("Comparisons 2", function() {
       it("should return true", function() {
-        expect( Exercises.compare2() === true ).toBeTruthy();
+        expect( Exercises.compare2() ).toBe(true);
       });
     });
     describe("Comparisons 3", function() {
       it("should return true", function() {
-        expect( Exercises.compare3() === true ).toBeTruthy();
+        expect( Exercises.compare3() ).toBe(true);
       });
     });
     describe("Comparisons 4", function() {
       it("should return false", function() {
-        expect( Exercises.compare4() === false ).toBeTruthy();
+        expect( Exercises.compare4() ).toBe(false);
       });
     });
     describe("Comparisons 5", function() {
       it("should return false", function() {
-        expect( Exercises.compare5() === false ).toBeTruthy();
+        expect( Exercises.compare5() ).toBe(false);
       });
     });
     describe("Comparisons 6", function() {
       it("should return false", function() {
-        expect( Exercises.compare6() === false ).toBeTruthy();
+        expect( Exercises.compare6() ).toBe(false);
       });
     });
 
@@ -184,22 +184,22 @@ describe("Boolean Values exercises", function() {
 
     describe("Logical 1", function() {
       it("it should return false", function() {
-        expect( Exercises.logic1() === false ).toBeTruthy();
+        expect( Exercises.logic1() ).toBe(false);
       });
     });
     describe("Logical 2", function() {
       it("should return true", function() {
-        expect( Exercises.logic2() === true ).toBeTruthy();
+        expect( Exercises.logic2() ).toBe(true);
       });
     });
     describe("Logical 3", function() {
       it("should return the result of true && false", function() {
-        expect( Exercises.logic3() === false ).toBeTruthy();
+        expect( Exercises.logic3() ).toBe(false);
       });
     });
     describe("Logical 4", function() {
       it("should return the result of true || false", function() {
-        expect( Exercises.logic4() === true ).toBeTruthy();
+        expect( Exercises.logic4() ).toBe(true);
       });
     });
     describe("Logical 5", function() {
@@ -209,10 +209,10 @@ describe("Boolean Values exercises", function() {
     });
     describe("Logical 6", function() {
       it("should return -4 if input is true", function() {
-        expect( Exercises.logic6(true) ).toEqual(-4);
+        expect( Exercises.logic6(true) ).toBe(-4);
       });
       it("should return 7 if input is false", function() {
-        expect( Exercises.logic6(false) ).toEqual(7);
+        expect( Exercises.logic6(false) ).toBe(7);
       });
     });
 
@@ -239,42 +239,42 @@ describe("Automatic Type Conversion exercises", function() {
 
   describe("Coercion 1", function() {
     it("should return 0", function() {
-      expect( Exercises.coercion1() === 0 ).toBeTruthy();
+      expect( Exercises.coercion1() ).toBe(0);
     });
   });
   describe("Coercion 2", function() {
     it("should return -5", function() {
-      expect( Exercises.coercion2() === -5 ).toBeTruthy();
+      expect( Exercises.coercion2() ).toBe(-5);
     });
   });
   describe("Coercion 3", function() {
     it("should return \"-32\"", function() {
-      expect( Exercises.coercion3() === "-32" ).toBeTruthy();
+      expect( Exercises.coercion3() ).toBe("-32");
     });
   });
   describe("Coercion 4", function() {
     it("should return true", function() {
-      expect( Exercises.coercion4() === true ).toBeTruthy();
+      expect( Exercises.coercion4() ).toBe(true);
     });
   });
   describe("Coercion 5", function() {
     it("should return false", function() {
-      expect( Exercises.coercion5() === false ).toBeTruthy();
+      expect( Exercises.coercion5() ).toBe(false);
     });
   });
   describe("Coercion 6", function() {
     it("should return false", function() {
-      expect( Exercises.coercion6() === false ).toBeTruthy();
+      expect( Exercises.coercion6() ).toBe(false);
     });
   });
   describe("Coercion 7", function() {
     it("should return true", function() {
-      expect( Exercises.coercion7() === true ).toBeTruthy();
+      expect( Exercises.coercion7() ).toBe(true);
     });
   });
   describe("Coercion 8", function() {
     it("should return false", function() {
-      expect( Exercises.coercion8() === false ).toBeTruthy();
+      expect( Exercises.coercion8() ).toBe(false);
     });
   });
 
@@ -293,16 +293,4 @@ describe("Short-Circuting exercises", function() {
     });
   });
 
-});
-
-describe("Exercise file", function() {
-  it("should pass JSHint", function(done) {
-    jasmine.addMatchers(customMatchers);
-    $.ajax("js/exercises.js", {
-      success: function(data) {
-        expect(data).toPassJSHint();
-        done();
-      }
-    })
-  });
 });
