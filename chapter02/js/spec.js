@@ -227,13 +227,165 @@ describe("Functions exercises", function() {
   });
 });
 
-// Zach
+// Annalise
 describe("The console.log Function exercises", function() {
-  describe("", function() {
-    it("should ", function() {
+
+  describe("Console 1", function() {
+
+    it("should make one call to the console", function() {
+      spyOn(console, 'log');
+      Exer.console1();
+      expect( console.log.calls.count() ).toEqual(1);
+    });
+
+    it("should not return anything", function() {
+      expect( Exer.console1() ).toBe(undefined);
+    });
+
+  });
+
+  describe("Console 2", function() {
+
+    describe("structure", function () {
+
+      beforeEach(function () {
+        spyOn(console, 'log');
+      });
+
+      it("should make one call to the console", function() {
+        Exer.console2();
+        expect( console.log.calls.count() ).toEqual(1);
+      });
+
+      it("should not return anything", function() {
+        expect( Exer.console2() ).toBe(undefined);
+      });
 
     });
+
+    describe("with parameters", function () {
+
+      beforeEach(function() {
+        spyOn(console, 'log').and.callThrough();
+      });
+
+      it("should print the parameter", function() {
+        var test = 3;
+        Exer.console2(test);
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+      it("should print the parameter", function() {
+        var test = "Hello, world!";
+        Exer.console2(test);
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+      it("should print the parameter", function() {
+        var test = {
+          foo: "bar",
+          baz: "bat"
+        };
+        Exer.console2(test);
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+    });
+
   });
+
+  describe("Console 3", function () {
+
+    describe("structure", function () {
+
+      beforeEach(function() {
+        spyOn(console, 'log');
+      });
+
+      it("should make one call to the console", function () {
+        Exer.console3();
+        expect( console.log.calls.count() ).toEqual(1);
+      });
+
+      it("should not return anything", function () {
+        expect( Exer.console3() ).toBe(undefined);
+      });
+
+    });
+
+    describe("with parameters", function() {
+
+      beforeEach(function () {
+        spyOn(console, 'log').and.callThrough();
+      });
+
+      it("should print 'The magic word is \"Abracadabra!\"'", function () {
+        var test = "Abracadabra!";
+        Exer.console3(test);
+        test = 'The magic word is "' + test + '"';
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+      it("should print 'The magic word is \"Shazam!\"'", function () {
+        var test = "Shazam!";
+        Exer.console3(test);
+        test = 'The magic word is "' + test + '"';
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+      it("should print 'The magic word is \"Please\"'", function () {
+        var test = "Please";
+        Exer.console3(test);
+        test = 'The magic word is "' + test + '"';
+        expect( console.log.calls.allArgs() ).toEqual([[test]]);
+      });
+
+    });
+
+  });
+
+  describe("Console 4", function() {
+
+    it("should make one call to the console", function () {
+      spyOn(console, 'log');
+      Exer.console4();
+      expect( console.log.calls.count() ).toEqual(1);
+    });
+
+    it("should provide two parameters", function () {
+      spyOn(console, 'log').and.callThrough();
+      Exer.console4();
+      expect( console.log.calls.allArgs()[0].length ).toEqual(2);
+    });
+
+  });
+
+  describe("Console 5", function() {
+    it("should make one call to the console", function () {
+      spyOn(console, 'log');
+      Exer.console5();
+      expect( console.log.calls.count() ).toEqual(1);
+    });
+
+    describe("outputs", function () {
+      beforeAll(function() {
+        this.test1 = "secret passphrase";
+        this.test2 = -6;
+        spyOn(console, 'log').and.callThrough();
+      });
+      
+      it("should return the second parameter plus 1", function () {
+        expect( Exer.console5(this.test1, this.test2) ).toEqual( this.test2+1 );
+      });
+
+      it("should print the first parameter", function () {
+        expect( console.log.calls.allArgs() ).toEqual([[this.test1]]);
+      });
+
+    });
+    
+  });
+
 });
 
 // Annalise
@@ -317,7 +469,7 @@ describe("Updating Variables Succinctly exercises", function() {
   });
 });
 
-// Annalie
+// Zach
 describe("Dispatching on a Value with switch exercises", function() {
   describe("", function() {
     it("should ", function() {
