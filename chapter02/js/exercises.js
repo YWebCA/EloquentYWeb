@@ -118,7 +118,6 @@ Exer.keywords1 = function ( true, two ) {
 Exer.console1 = function () {
 
   // Output something to the console.
-  console.log("hey");
 
 };
 
@@ -126,7 +125,6 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
-  console.log(printme);
 
 };
 
@@ -138,7 +136,6 @@ Exer.console2 = function ( printme ) {
 Exer.console3 = function ( data ) {
 
   // your answer here
-  console.log( 'The magic word is "' + data + '"' );
 
 };
 
@@ -147,7 +144,6 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
-  console.log("this", "that");
 
 };
 
