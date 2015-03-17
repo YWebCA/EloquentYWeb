@@ -194,15 +194,15 @@ describe("Keywords and Reserved Words exercises", function() {
     });
 
     it("should return the string '5121'", function() {
-      expect( Exer.keywords2(1,1) ).toBe( this.helper(1,1) );
+      expect( Exer.keywords1(1,1) ).toBe( this.helper(1,1) );
     });
 
     it("should return the string '332-1'", function() {
-      expect( Exer.keywords2(3,-1) ).toBe( this.helper(3,-1) );
+      expect( Exer.keywords1(3,-1) ).toBe( this.helper(3,-1) );
     });
 
     it("should return the string '9025'", function() {
-      expect( Exer.keywords2(0,5) ).toBe( this.helper(0,5) );
+      expect( Exer.keywords1(0,5) ).toBe( this.helper(0,5) );
     });
 
   });
