@@ -156,7 +156,7 @@ describe("Variables exercises", function() {
     });
 
     it("should return 3 plus Stacy's number", function() {
-      expect( Exer.variables6(Infinity) ).toBe();
+      expect( Exer.variables6(Infinity) ).toBe(Infinity);
     });
 
   });
