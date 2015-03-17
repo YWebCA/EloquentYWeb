@@ -10,10 +10,9 @@ Exer.expressions1 = function () {
 };
 
 // Statements 1
-// Write a statement that is not undefined.
 Exer.statements1 = function () {
 
-  /* your answer here */
+  // Write a statement that is not undefined.
 
 };
 
@@ -114,6 +113,49 @@ Exer.keywords1 = function ( true, two ) {
 /*------------------------------    FUNCTIONS    -----------------------------*/
 
 /*----------------------    THE CONSOLE.LOG FUNCTION    ----------------------*/
+
+// Console 1
+Exer.console1 = function () {
+
+  // Output something to the console.
+
+};
+
+// Console 2
+Exer.console2 = function ( printme ) {
+
+  // Print the parameter `printme` to the console.
+
+};
+
+// Console 3
+// Use the provided parameter `data` and string concatenation to output
+//     The magic word is "xxxxx"
+// to the console, where the `xxxxx` is the value provided in `data`. Do not
+// change the value of the variable `data`.
+Exer.console3 = function ( data ) {
+
+  // your answer here
+
+};
+
+// Console 4
+Exer.console4 = function () {
+
+  // Use comma-separated values to output two things to the console with one
+  // call.
+
+};
+
+// Console 5
+// Do not change the value of the variable `y`.
+Exer.console5 = function ( x, y ) {
+
+  // Output the first parameter `x` to the console.
+
+  // Make the function return the parameter `y` plus 1.
+
+};
 
 /*---------------------------    RETURN VALUES    ----------------------------*/
 
