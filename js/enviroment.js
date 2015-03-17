@@ -1,25 +1,24 @@
 // World enviroment file
-var customMatchers = {};
+customMatchers = {};
+var jsHintOptions = {
+  curly: true,
+  white: true,
+  indent: 2,
+  maxdepth: 3,
+  bitwise: true,
+  eqeqeq: true,
+  nonew: true,
+  newcap: true,
+  maxstatements: 6,
+  notypeof: true,
+};
 
 // JSHint Matcher
 customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
   return {
     compare: function(actual, expected) {
-      var options = {
-        curly: true,
-        white: true,
-        indent: 2,
-        maxdepth: 3,
-        bitwise: true,
-        eqeqeq: true,
-        nonew: true,
-        newcap: true,
-        maxstatements: 6,
-        notypeof: true,
-      };
-      var pass = JSHINT(actual, options);
+      var pass = JSHINT(actual, jsHintOptions);
       var message = "";
-      console.log(JSHINT.errors);
       for (error of JSHINT.errors) {
         message += "line " + error.line + " character " + error.character + ' - ' + error.reason + ' - ' + error.evidence + "\n";
       }

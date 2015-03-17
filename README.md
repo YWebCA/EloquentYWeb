@@ -7,7 +7,7 @@ This workbook is a true-to-industry environment chock full of exercises to drill
 **Table of Contents:**
 
 1. [Installation](#installation)
-2. [Usage](#usage)
+2. [Your First Pull Request](#your-first-pull-request) (and all future submissions)
 3. [How to Complete Your Workbook](#how-to-complete-your-workbook)
 
 ## Installation
@@ -216,60 +216,34 @@ Type this into the terminal:
 
 `npm` is short for Node Package Manager, another package management tool that searches, installs, and updates modules just for Node.js. `npm install` reads the `package.json` file in the repo and installs all the things the package file says it needs. In addition to Bower and Grunt, useful build tools, it installs FactoryB, a tool that helps you generate dummy data to test on (elsewhere known as "fixtures").
 
-## Usage
+### Hosting EloquentYWeb from Your Computer
 
-First, it's vitally important to keep both your fork and your local clone of your fork updated:
+Some of the exercises and tests for EloquentYWeb require for the project to be hosted as a website. You will need to download an easy-to-use app to host the project as a website on your local machine.
 
-    git checkout master
-    git pull --rebase upstream master
+ 1. Go to [Anvil for Mac](http://anvilformac.com) and click the download link.
+ 2. Once the download has completed, unzip the file.
+ 3. Find the unzipped app and drag it into your Applications directory.
+ 4. Run Anvil.
+ 5. A small anvil-shaped icon will appear in your status bar. Click it.
+ 4. The fly-out menu has a button to install Pow. Click it and wait for Pow to install.
+ 5. Click the anvil icon again. The fly-out menu has a button to host a site. Click it.
+ 6. Use the file browser to find the EloquentYWeb directory and select it.
+ 7. Any time Anvil is running you can open the workbook by selecting EloquentYWeb from the Anvil fly-out menu or browsing to [eloquentyweb.dev](http://eloquentyweb.dev) in Chrome.
 
-This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
+## Working on the Workbook
 
-Next, start a new branch with
+### Keep Updated
 
-    git checkout -b ChapterXX
+Commit or stash everything you're working on, then checkout the branch you want to update.
 
-(where ChapterXX is a name that relates to the mothership updates you pulled), or go back to your working branch with
+    git fetch upstream master
+    git merge -s recursive -X theirs upstream/master -m "Your commit message"
 
-    git checkout whateverYouNamedIt
-
-Do your work in this branch (not on master). Remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
-
-***See below for information about how to do the exercises, themselves.***
-
-When you're done with your branch, merge it into your local master and push all your changes to your remote origin:
-
-    git checkout master
-    git merge ChapterXX
-    git push origin master
-
-When you're ready to submit your exercises, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
-
-> Base fork: YWebCA/EloquentYWeb
-
-> Base: YourName
-
-> Head fork: YourName/EloquentYWeb
-
-> Compare: master
-
-This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
-
-Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
-
-## Preparing Chrome
-
-Chrome, for your protection restricts Ajax calls to your local files. We will need to enable this in order to do our work and test our work.
-
- 1. Open Chrome and the developer console.
- 2. Hit the gear icon for settings.
- 3. Hit the workspace tab.
- 4. Under folders hit the add folder... button.
- 5. In the folder select dialogue surf to and select your EloquentYWeb directory and hit select.
-
-## How to Complete Your Workbook
+### Doing Exercises
 
 For each chapter...
+
+0. Update your local repo (see "Keep Updated" above).
 
 1. Create and/or check out a branch that corresponds to the chapter.
 
@@ -285,7 +259,41 @@ For each chapter...
 
     1. If you're having trouble figuring out what the tests want, open `spec.js` in a text editor and take a look. (Do not edit the tests&mdash;that is super cheating and we will notice.)
 
+5. Commit early and often.
 
-## Sign your name here
-Dawn Deransburg
-Hello world.
+6. If you find a typo or mistake in the workbook, submit an issue on ywebca/EloquentYweb.
+
+### Branch Naming Conventions
+
+Please name your branches `chapterXX` where `XX` is the number of the chapter you're working on. Only do work on the appropriate branches.
+
+### Submitting Work
+
+You will submit work with a pull request to the upstream repo.
+
+First, update your chapter branch you're submitting (see "Keep Updated" above). Then merge chapter branch into master:
+
+    git checkout master
+    git merge chapterXX
+
+Please only merge and submit one chapter at a time.
+
+Push your master branch to GitHub:
+
+    git push origin master
+
+Now go to GitHub. You should be able to submit a pull request from either ywebca/EloquentYWeb or yourGitHubUserName/EloquentYWeb. Use the following options:
+
+> Base fork: ywebca/EloquentYWeb
+
+> Base: yourGitHubUserName
+
+This is a branch we've created for you. If you don't see your name, ask an instructor to make you one.
+
+> Head fork: yourGitHubUserName/EloquentYWeb
+
+> Compare: master
+
+This will merge your remote origin (your current, theoretically unbroken fork) into your personal branch on the upstream repo.
+
+Write a meaningful message and leave any comments if necessary. Then submit the pull request. Your PR will be reviewed by an instructor or volunteer and merged if accepted. If your PR is not accepted, it will be closed and you can submit another one after correcting your work.
