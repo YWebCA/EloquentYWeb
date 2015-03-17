@@ -261,7 +261,7 @@ Exercises.compare4 = function () {
 // Correct the comparison operators to return false.
 Exercises.compare5 = function () {
 
-  return isNaN(NaN) ;
+  return !isNaN(NaN) ;
   
 };
 
@@ -406,7 +406,7 @@ Exercises.coercion6 = function () {
 // to true.
 Exercises.coercion7 = function () {
 
-  return isNan(0 === "0" === "" === undefined === null === false);
+  return !isNaN(0 === "0" === "" === undefined === null === false);
   
 };
 
@@ -414,7 +414,7 @@ Exercises.coercion7 = function () {
 // Fix the operator to make the expression return false.
 Exercises.coercion8 = function () {
 
-  return "" !== false;
+  return "" === false;
   
 };
 
