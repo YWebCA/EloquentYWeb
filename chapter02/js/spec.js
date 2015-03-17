@@ -32,7 +32,7 @@ describe("Expressions and Statements exercises", function() {
     });
 
     it("should evaluate to something other than undefined", function() {
-      expect( eval(this.work.match(/\s*(.*);/)[1]) ).not.toBeUndefined();
+      expect( eval(this.work[0].match(/\s*(.*);/)[1]) ).not.toBeUndefined();
     });
 
   });
@@ -383,7 +383,7 @@ describe("The console.log Function exercises", function() {
       });
 
     });
-    
+
   });
 
 });
