@@ -1,7 +1,7 @@
 {
   "spec_dir": "",
   "spec_files": [
-    "js/spec.js"
+    "js/*spec.js"
   ],
   "helpers": [
     "js/enviroment.js",
