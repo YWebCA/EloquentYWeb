@@ -279,7 +279,7 @@ Exercises.compare6 = function () {
 // Use NOT (!) to return false.
 Exercises.logic1 = function () {
 
-  return /* your answer here */5 !== 5 ;
+  return 5 !== 5 ;
 };
 
 // Logical 2
