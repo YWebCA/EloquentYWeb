@@ -26,3 +26,21 @@ customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
     }
   }
 }
+
+//JSHint spec runner
+jsHintSpec = function(file) {
+  if (!file) {
+    file = "js/exercises.js";
+  }
+  describe(file, function() {
+    it("should pass JSHint", function(done) {
+      jasmine.addMatchers(customMatchers);
+      $.ajax(file, {
+        success: function(data) {
+          expect(data).toPassJSHint();
+          done();
+        }
+      });
+    });
+  });
+}
