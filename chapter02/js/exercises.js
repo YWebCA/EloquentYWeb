@@ -163,6 +163,15 @@ Exer.console5 = function ( x, y ) {
 
 /*----------------------------    CONTROL FLOW    ----------------------------*/
 
+// Control flow 1
+Exer.control1 = function() {
+
+  // Use prompt to get a number from a user
+
+  // Print that number to the console
+
+}
+
 /*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
 
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/

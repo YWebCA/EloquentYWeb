@@ -408,9 +408,13 @@ describe("Prompt and Confirm exercises", function() {
 
 // Zach
 describe("Control Flow exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
+  describe("Control Flow 1", function() {
+    it("should ask the user for a number and then log it to the console", function() {
+      spyOn(window, 'prompt').and.returnValue('5');
+      spyOn(console, 'log');
+      Exer.control1();
+      expect(window.prompt).toHaveBeenCalled();
+      expect(console.log).toHaveBeenCalledWith('5');
     });
   });
 });
