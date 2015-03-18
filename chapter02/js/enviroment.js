@@ -1,8 +1,8 @@
 // Provided Resources for Chapter Exercises
-var Exer = {};
-var Triangle = {};
-var Fizz = {};
-var Chess = {};
+Exer = {};
+Triangle = {};
+Fizz = {};
+Chess = {};
 
 // returns a numerical value
 var magicFunc = function () {
