@@ -390,11 +390,7 @@ describe("The console.log Function exercises", function() {
 
 // Annalise
 describe("Return Values exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
+  describe("Return 1");
 });
 
 // Nate
