@@ -373,7 +373,7 @@ describe("The console.log Function exercises", function() {
         this.test2 = -6;
         spyOn(console, 'log').and.callThrough();
       });
-      
+
       it("should return the second parameter plus 1", function () {
         expect( Exer.console5(this.test1, this.test2) ).toEqual( this.test2+1 );
       });
@@ -507,3 +507,5 @@ describe("Exercise file", function() {
     })
   });
 });
+
+jsHintSpec();
