@@ -158,6 +158,7 @@ Exer.console5 = function ( x, y ) {
 };
 
 /*---------------------------    RETURN VALUES    ----------------------------*/
+Exer.return1 = function () {};
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
 
