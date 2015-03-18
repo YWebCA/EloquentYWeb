@@ -5,7 +5,7 @@
 // evaluated value is not undefined.
 Exer.expressions1 = function () {
 
-  return /* your answer here */ ;
+  return (0/0)/* your answer here */ ;
 
 };
 
@@ -13,7 +13,7 @@ Exer.expressions1 = function () {
 // Statements 1
 Exer.statements1 = function () {
 
-  // Write a statement that is not undefined.
+  true;
 
 };
 /* jshint ignore:end */
@@ -23,45 +23,43 @@ Exer.statements1 = function () {
 // Variables 1
 Exer.variables1 = function () {
 
-  // Write a statement that declares a variable.
-
-  // Return that variable.
+var god = 'Hello';
 
 };
 
 // Variables 2
 Exer.variables2 = function () {
 
-  // Write a statement that declares a variable.
+var state;  // Write a statement that declares a variable.
 
-  // Write a statement to assign a number value to your variable.
+state = 5 ;  // Write a statement to assign a number value to your variable.
 
-  // Return the variable.
+return state; // Return the variable.
 
 };
 
 // Variables 3
 Exer.variables3 = function () {
 
-  // Write a statement that declares a variable and initializes it to a string.
+  var stringy = 'init';// Write a statement that declares a variable and initializes it to a string.
 
-  // Return the variable.
+  return stringy;// Return the variable.
 
 };
 
 // Variables 4
 Exer.variables4 = function ( n ) {
 
-  // Return the parameter.
+  return n// Return the parameter.
 
 };
 
 // Variables 5
 Exer.variables5 = function ( n ) {
 
-  // Declare a new variable and initialize it to the value of `n`.
+  var doggy = n;// Declare a new variable and initialize it to the value of `n`.
 
-  // Return the new variable.
+  return doggy// Return the new variable.
 
 };
 
@@ -69,12 +67,12 @@ Exer.variables5 = function ( n ) {
 Exer.variables6 = function ( stacys ) {
 
   // You have 3 apples
-  // (declare a variable named `apples` and initialize it to `3`)
+  var apples = 3;// (declare a variable named `apples` and initialize it to `3`)
 
   // Stacy gives you more apples
-  // (the parameter `stacys`)
+  apples += stacys;// (the parameter `stacys`)
 
-  // Return the total number of apples you have.
+  return apples// Return the total number of apples you have.
 
 };
 
@@ -87,10 +85,10 @@ Exer.variables7 = function ( change ) {
   // Then you spend a dime on old fashioned candy.
   // How much money do you have now?
 
-  // Use type coercion to turn your pocket change into a string add a dollar
+  var moneh = '$' + (0.15 + change);// Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-  // Return that string.
+  return moneh// Return that string.
 
 };
 
@@ -100,15 +98,15 @@ Exer.variables7 = function ( change ) {
 // Keywords 1
 // Uncomment the following function by removing the slash-asterisk pairs.
 // Fix the function so no keywords or reserved words are improperly used.
-/*
-Exer.keywords1 = function ( true, two ) {
-  var new = 2;
-  var const = two+2;
-  true += "2";
-  var function = new + const + true + two;
-  return function;
+
+Exer.keywords1 = function ( truubb, two ) {
+  var mew = 2;
+  var consty = two + 2;
+  truubb += "2";
+  var functionz = mew + consty + truubb + two;
+  return functionz;
 };
-*/
+
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
@@ -142,14 +140,14 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 // Console 1
 Exer.console1 = function () {
 
-  // Output something to the console.
+  console.log('pets');// Output something to the console.
 
 };
 
 // Console 2
 Exer.console2 = function ( printme ) {
 
-  // Print the parameter `printme` to the console.
+  console.log(printme)// Print the parameter `printme` to the console.
 
 };
 
@@ -160,14 +158,15 @@ Exer.console2 = function ( printme ) {
 // change the value of the variable `data`.
 Exer.console3 = function ( data ) {
 
-  // your answer here
+  console.log('The magic word is "'+data+'"')// your answer here
 
 };
 
 // Console 4
 Exer.console4 = function () {
-
-  // Use comma-separated values to output two things to the console with one
+  var penguin = 'mehrrr';
+  var doggies = 'wooff swag';
+  console.log(penguin,doggies);// Use comma-separated values to output two things to the console with one
   // call.
 
 };
@@ -176,9 +175,9 @@ Exer.console4 = function () {
 // Do not change the value of the variable `y`.
 Exer.console5 = function ( x, y ) {
 
-  // Output the first parameter `x` to the console.
+  console.log(x);// Output the first parameter `x` to the console.
 
-  // Make the function return the parameter `y` plus 1.
+  return (y + 1)// Make the function return the parameter `y` plus 1.
 
 };
 
