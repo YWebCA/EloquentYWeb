@@ -1,4 +1,4 @@
-/*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
+    /*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
 
 // Expressions 1
 // Make the function return a nested expression (use parentheses) whose
@@ -13,7 +13,7 @@ Exer.expressions1 = function () {
 // Statements 1
 Exer.statements1 = function () {
 
-  true;
+ var dog; dog = false;
 
 };
 /* jshint ignore:end */
@@ -50,7 +50,7 @@ Exer.variables3 = function () {
 // Variables 4
 Exer.variables4 = function ( n ) {
 
-  return n// Return the parameter.
+  return n;// Return the parameter.
 
 };
 
@@ -59,7 +59,7 @@ Exer.variables5 = function ( n ) {
 
   var doggy = n;// Declare a new variable and initialize it to the value of `n`.
 
-  return doggy// Return the new variable.
+  return doggy;// Return the new variable.
 
 };
 
@@ -72,7 +72,7 @@ Exer.variables6 = function ( stacys ) {
   // Stacy gives you more apples
   apples += stacys;// (the parameter `stacys`)
 
-  return apples// Return the total number of apples you have.
+  return apples;// Return the total number of apples you have.
 
 };
 
@@ -88,7 +88,7 @@ Exer.variables7 = function ( change ) {
   var moneh = '$' + (0.15 + change);// Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-  return moneh// Return that string.
+  return moneh;// Return that string.
 
 };
 
@@ -147,7 +147,7 @@ Exer.console1 = function () {
 // Console 2
 Exer.console2 = function ( printme ) {
 
-  console.log(printme)// Print the parameter `printme` to the console.
+  console.log(printme);// Print the parameter `printme` to the console.
 
 };
 
@@ -158,7 +158,7 @@ Exer.console2 = function ( printme ) {
 // change the value of the variable `data`.
 Exer.console3 = function ( data ) {
 
-  console.log('The magic word is "'+data+'"')// your answer here
+  console.log('The magic word is "'+data+'"');// your answer here
 
 };
 
@@ -177,7 +177,7 @@ Exer.console5 = function ( x, y ) {
 
   console.log(x);// Output the first parameter `x` to the console.
 
-  return (y + 1)// Make the function return the parameter `y` plus 1.
+  return (y + 1);// Make the function return the parameter `y` plus 1.
 
 };
 
