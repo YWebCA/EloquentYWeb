@@ -96,7 +96,7 @@ Exer.variables7 = function ( change ) {
 /*--------------------    KEYWORDS AND RESERVED WORDS    ---------------------*/
 
 // Keywords 1
-// Uncomment the following function.
+// Uncomment the following function by removing the slash-asterisk pairs.
 // Fix the function so no keywords or reserved words are improperly used.
 /*
 Exer.keywords1 = function ( true, two ) {
