@@ -4,7 +4,7 @@
   "description": "Worksheets for YWeb Career Academy Eloquent Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "./test.sh chapter01"
+    "test": "./test.sh chapter01 chapter02"
   },
   "repository": {
     "type": "git",
