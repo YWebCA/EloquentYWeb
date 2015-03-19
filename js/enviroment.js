@@ -15,8 +15,12 @@ var jsHintOptions = {
 
 // JSHint Matcher
 customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
+
   return {
     compare: function(actual, expected) {
+      if (weAreInNode()) {
+        JSHINT = require('jshint').JSHINT;
+      }
       var pass = JSHINT(actual, jsHintOptions);
       var message = "";
       for (error of JSHINT.errors) {
@@ -29,18 +33,39 @@ customMatchers.toPassJSHint =  function(util, customEqualityTesters) {
 
 //JSHint spec runner
 jsHintSpec = function(file) {
+  var hintUp;
   if (!file) {
-    file = "js/exercises.js";
+    file = "exercises.js";
   }
-  describe(file, function() {
-    it("should pass JSHint", function(done) {
-      jasmine.addMatchers(customMatchers);
-      $.ajax(file, {
+
+  if (typeof require === 'undefined') {
+    hintUp = function(done) {
+      $.ajax("js/" + file, {
         success: function(data) {
           expect(data).toPassJSHint();
           done();
         }
       });
+    };
+  } else {
+    hintUp = function(done) {
+      var fs = require('fs');
+      varjshint = require('jshint');
+      var data = fs.readFileSync(process.cwd() + "/js/" + file).toString();
+      expect(data).toPassJSHint();
+      done();
+    }
+  }
+
+  describe(file, function() {
+    it("should pass JSHint", function(done) {
+      jasmine.addMatchers(customMatchers);
+      hintUp(done);
     });
   });
+}
+
+//Helper Functions
+weAreInNode = function() {
+  return typeof require !== 'undefined' && require !== null;
 }
