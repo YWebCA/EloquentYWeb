@@ -14,4 +14,4 @@ describe("Looping a Triangle solution", function() {
   });
 });
 
-jsHintSpec("js/triangle.js");
+jsHintSpec("triangle.js");
