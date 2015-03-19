@@ -30,4 +30,4 @@ describe("FizzBuzz solution", function() {
 
 });
 
-jsHintSpec("js/fizzbuzz.js");
+jsHintSpec("fizzbuzz.js");
