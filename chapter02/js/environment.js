@@ -50,4 +50,5 @@ window.strShuffle = function ( str1, str2 ) {
 };
 
 // Mock environment variables
-browser = null;
+browser = 'browser';
+window.browser = browser;
