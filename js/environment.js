@@ -1,4 +1,4 @@
-// World enviroment file
+// World environment file
 customMatchers = {};
 var jsHintOptions = {
   curly: true,
