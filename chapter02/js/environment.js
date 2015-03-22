@@ -4,7 +4,18 @@ Triangle = {};
 Fizz = {};
 Chess = {};
 
-if ( !window ) { window = {}; }
+// Mock window if is does not exist
+if ( !window ) {
+  navigator = {};
+  document = {};
+  history = {};
+  window = {
+    navigator: navigator,
+    document: document,
+    history: history,
+    console: console
+  };
+}
 
 // returns a numerical value
 window.magicFunc = function () {
@@ -42,3 +53,6 @@ window.strShuffle = function ( str1, str2 ) {
   }
   return output;
 };
+
+// Mock environment variables
+browser = null;
