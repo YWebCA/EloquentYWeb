@@ -5,16 +5,11 @@ Fizz = {};
 Chess = {};
 
 // Mock window if is does not exist
-if ( !window ) {
+if ( weAreInNode() ) {
+  window = this;
   navigator = {};
   document = {};
   history = {};
-  window = {
-    navigator: navigator,
-    document: document,
-    history: history,
-    console: console
-  };
 }
 
 // returns a numerical value
