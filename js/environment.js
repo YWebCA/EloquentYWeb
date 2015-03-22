@@ -1,3 +1,8 @@
+// Test for being in node
+weAreInNode = function() {
+  return typeof require !== 'undefined' && require !== null;
+}
+
 // World environment file
 customMatchers = {};
 var jsHintOptions = {
@@ -63,9 +68,4 @@ jsHintSpec = function(file) {
       hintUp(done);
     });
   });
-}
-
-//Helper Functions
-weAreInNode = function() {
-  return typeof require !== 'undefined' && require !== null;
 }
