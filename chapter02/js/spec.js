@@ -210,22 +210,10 @@ describe("Keywords and Reserved Words exercises", function() {
 });
 
 // Nate
-describe("The Environment exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("The Environment exercises");
 
 // Nate
-describe("Functions exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Functions exercises");
 
 // Annalise
 describe("The console.log Function exercises", function() {
@@ -394,13 +382,7 @@ describe("Return Values exercises", function() {
 });
 
 // Nate
-describe("Prompt and Confirm exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Prompt and Confirm exercises");
 
 // Zach
 describe("Control Flow exercises", function() {
@@ -416,85 +398,31 @@ describe("Control Flow exercises", function() {
 });
 
 // Annalise
-describe("Conditional Execution exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Conditional Execution exercises");
 
 // Nate
-describe("while and dowhile Loops exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("while and dowhile Loops exercises");
 
 // Zach
-describe("Indenting Code exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Indenting Code exercises");
 
 // Annalise
-describe("for Loops exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("for Loops exercises");
 
 // Nate
-describe("Breaking Out of a Loop exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Breaking Out of a Loop exercises");
 
 // Zach
-describe("Updating Variables Succinctly exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Updating Variables Succinctly exercises");
 
 // Zach
-describe("Dispatching on a Value with switch exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Dispatching on a Value with switch exercises");
 
 // Nate
-describe("Capitalization exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Capitalization exercises");
 
 // Zach
-describe("Comments exercises", function() {
-  describe("", function() {
-    it("should ", function() {
-
-    });
-  });
-});
+describe("Comments exercises");
 
 describe("Exercise file", function() {
   it("should pass JSHint", function(done) {
