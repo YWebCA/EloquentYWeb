@@ -3,6 +3,14 @@ weAreInNode = function() {
   return typeof require !== 'undefined' && require !== null;
 }
 
+// Mock window if is does not exist
+if ( weAreInNode() ) {
+  window = global;
+  window.navigator = {};
+  window.document = {};
+  window.history = {};
+}
+
 // World environment file
 customMatchers = {};
 var jsHintOptions = {
