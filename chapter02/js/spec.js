@@ -377,8 +377,45 @@ describe("The console.log Function exercises", function() {
 });
 
 // Annalise
-describe("Return Values exercises", function() {
-  describe("Return 1");
+describe("Return Values exercises", function () {
+  describe("Return 1", function () {
+    it("should call magicFunc", function () {
+      spyOn( window, 'magicFunc' ).and.callThrough();
+      Exer.return1();
+      expect( window.magicFunc ).toHaveBeenCalled();
+    });
+    it("should call console.log", function () {
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.return1();
+      expect( console.log ).toHaveBeenCalled();
+    });
+    it("should log something that looks like a typical result of magicFunc", function () {
+      var foo = Exer.return1();
+      expect( foo >= 0 ).toBeTruthy();
+      expect( foo < 100 ).toBeTruthy();
+    });
+  });
+  describe("Return 2", function () {
+    it("should call magicFunc");
+    it("should return something that looks like a typical result of magicFunc");
+  });
+  describe("Return 3", function () {
+    it("should call strShift");
+    it("should call strShift with argument abczABCZ");
+    it("should return REPLACE ME WITH THE ANSWER");
+    it("should call strShift only once");
+  });
+  describe("Return 4", function () {
+    it("should call magicFunc twice");
+    it("should call console.log once");
+    it("should log something that looks sane");
+  });
+  describe("Return 5", function () {
+    it("should call strShift three times total");
+    it("should call strShuffle once");
+    it("should return the correct result");
+    it("should contain three statements");
+  });
 });
 
 // Nate

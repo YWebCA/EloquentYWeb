@@ -158,7 +158,26 @@ Exer.console5 = function ( x, y ) {
 };
 
 /*---------------------------    RETURN VALUES    ----------------------------*/
-Exer.return1 = function () {};
+
+// Return 1
+// Call and log out the result of `magicFunc`.
+Exer.return1 = function () {
+
+  console.log( magicFunc() );
+
+};
+
+// Return 2
+Exer.return2 = function () {};
+
+// Return 2
+Exer.return2 = function () {};
+
+// Return 2
+Exer.return2 = function () {};
+
+// Return 2
+Exer.return2 = function () {};
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
 

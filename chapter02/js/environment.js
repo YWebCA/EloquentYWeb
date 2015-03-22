@@ -4,15 +4,17 @@ Triangle = {};
 Fizz = {};
 Chess = {};
 
+if ( !window ) { window = {}; }
+
 // returns a numerical value
-var magicFunc = function () {
+window.magicFunc = function () {
   return Math.floor( Math.random() * 1000 ) / 10;
 };
 
 // str - a string primitive
 // returns a new string with all the letters of str shifted down the alphabet
 //     one place
-var strShift = function ( str ) {
+window.strShift = function ( str ) {
   if (!str) return;
   var output = "";
   for ( var i = 0; i < str.length; i++ ) {
@@ -31,7 +33,7 @@ var strShift = function ( str ) {
 // str2 - a string primitive
 // returns a new string with all the letters of str1 and str2 shuffled
 //     together
-var strShuffle = function ( str1, str2 ) {
+window.strShuffle = function ( str1, str2 ) {
   if ( !str1 || !str2 ) return;
   var output = "";
   for ( var i = 0; i < Math.max( str1.length, str2.length ); i++ ) {
