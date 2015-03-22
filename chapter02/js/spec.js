@@ -396,6 +396,7 @@ describe("Return Values exercises", function () {
     });
 
     it("should log something that looks like a typical result of magicFunc", function () {
+      expect( console.log.calls.argsFor(0).length ).toBeGreaterThan(0); 
       expect( console.log.calls.argsFor(0) >= 0 ).toBeTruthy();
       expect( console.log.calls.argsFor(0) < 100 ).toBeTruthy();
     });
@@ -508,7 +509,6 @@ describe("Return Values exercises", function () {
           work.splice( i, 1 );
         } else { i++; }
       }
-      console.log(work);
       expect( work.length ).toEqual(3);
     } );
 
