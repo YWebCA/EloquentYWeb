@@ -163,21 +163,51 @@ Exer.console5 = function ( x, y ) {
 // Call and log out the result of `magicFunc`.
 Exer.return1 = function () {
 
-  console.log( magicFunc() );
+  // your work goes here
 
 };
 
 // Return 2
-Exer.return2 = function () {};
+// Call and return the result of `magicFunc`.
+Exer.return2 = function () {
 
-// Return 2
-Exer.return2 = function () {};
+  // your work goes here
 
-// Return 2
-Exer.return2 = function () {};
+};
 
-// Return 2
-Exer.return2 = function () {};
+// Return 3
+Exer.return3 = function () {
+
+  // Call `strShift` with the argument "abczABCZ". Log the result.
+
+  // Return that same result with "123" concatenated to the end.
+
+};
+
+// Return 4
+// Log the result of the string concatenation of two separate calls to
+// `magicFunc`.
+Exer.return4 = function () {
+
+  // your work goes here
+
+};
+
+// Return 5
+// Shift the string "abcABC123!@#" with strShift.
+// Shift the string "a S d F j K l" with strShift twice.
+// Return the result of these two shifted strings passed into `strShuffle` with
+// the first string as the first argument and the second string as the second
+// argument.
+Exer.return5 = function () {
+
+  // Declare and initialize a variable for the first string.
+
+  // Declare and initialize a variable for the second string.
+
+  // A return statement.
+
+};
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
 

@@ -378,44 +378,142 @@ describe("The console.log Function exercises", function() {
 
 // Annalise
 describe("Return Values exercises", function () {
+
   describe("Return 1", function () {
-    it("should call magicFunc", function () {
+
+    beforeAll(function () {
       spyOn( window, 'magicFunc' ).and.callThrough();
-      Exer.return1();
-      expect( window.magicFunc ).toHaveBeenCalled();
-    });
-    it("should call console.log", function () {
       spyOn( console, 'log' ).and.callThrough();
       Exer.return1();
+    });
+
+    it("should call magicFunc", function () {
+      expect( magicFunc ).toHaveBeenCalled();
+    });
+
+    it("should call console.log", function () {
       expect( console.log ).toHaveBeenCalled();
     });
+
     it("should log something that looks like a typical result of magicFunc", function () {
-      var foo = Exer.return1();
-      expect( foo >= 0 ).toBeTruthy();
-      expect( foo < 100 ).toBeTruthy();
+      expect( console.log.calls.argsFor(0) >= 0 ).toBeTruthy();
+      expect( console.log.calls.argsFor(0) < 100 ).toBeTruthy();
     });
+
   });
+
   describe("Return 2", function () {
-    it("should call magicFunc");
-    it("should return something that looks like a typical result of magicFunc");
+
+    it("should call magicFunc", function () {
+      spyOn( window, 'magicFunc' );
+      Exer.return2();
+      expect( magicFunc ).toHaveBeenCalled();
+    });
+
+    it("should return something that looks like a typical result of magicFunc", function () {
+      expect( Exer.return2() >= 0 ).toBeTruthy();
+      expect( Exer.return2() < 100 ).toBeTruthy();
+    });
+
   });
+
   describe("Return 3", function () {
-    it("should call strShift");
-    it("should call strShift with argument abczABCZ");
-    it("should return REPLACE ME WITH THE ANSWER");
-    it("should call strShift only once");
+
+    var foo;
+
+    beforeAll(function () {
+      spyOn( window, 'strShift' ).and.callThrough();
+      spyOn( console, 'log' ).and.callThrough();
+      foo = Exer.return3();
+    });
+
+    it("should call strShift", function () {
+      expect( strShift ).toHaveBeenCalled();
+    });
+
+    it("should call strShift with argument abczABCZ", function () {
+      expect( strShift.calls.argsFor(0) ).toEqual(["abczABCZ"]);
+    });
+
+    it('should log "bcdaBCDA"', function () {
+      expect( console.log.calls.allArgs() ).toEqual([["bcdaBCDA"]]);
+    });
+
+    it('should return "bcdaBCDA123"', function () {
+      expect( foo ).toEqual( "bcdaBCDA123" );
+    });
+
+    it("should call strShift only once", function () {
+      expect( strShift.calls.count() ).toEqual(1);
+    });
+
   });
-  describe("Return 4", function () {
-    it("should call magicFunc twice");
-    it("should call console.log once");
-    it("should log something that looks sane");
-  });
-  describe("Return 5", function () {
-    it("should call strShift three times total");
-    it("should call strShuffle once");
-    it("should return the correct result");
-    it("should contain three statements");
-  });
+
+  describe( "Return 4", function () {
+
+    beforeAll( function () {
+      spyOn( window, 'magicFunc' ).and.callThrough();
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.return4();
+    } );
+
+    it( "should call magicFunc twice", function () {
+      expect( magicFunc.calls.count() ).toEqual(2);
+    } );
+
+    it( "should call console.log once", function () {
+      expect( console.log.calls.count() ).toEqual(1);
+    } );
+
+    it( "should log something that looks sane", function () {
+      expect( console.log.calls.argsFor(0)[0].match(/^\d{1,2}\.?\d{1,3}\.?\d?$/) ).not.toBeNull();
+    } );
+
+  } );
+
+  describe( "Return 5", function () {
+
+    var foo;
+
+    beforeAll( function () {
+      spyOn( window, 'strShift' ).and.callThrough();
+      spyOn( window, 'strShuffle' ).and.callThrough();
+      foo = Exer.return5();
+    } );
+
+    it( "should call strShift three times total", function () {
+      expect( strShift.calls.count() ).toEqual(3);
+    } );
+
+    it( "should call strShuffle once", function () {
+      expect( strShuffle.calls.count() ).toEqual(1);
+    } );
+
+    it( "should return the correct result", function () {
+      expect( foo ).toEqual("bcc dUB CfD 1H2 3l! @M# n");
+    } );
+
+    it( "should contain three statements", function () {
+      var work = Exer.return5.toString();
+      work = work.match(/^.+?$/mg);  // break into lines
+      var i = 0;
+      while ( i < work.length ) {
+        if ( work[i].match(/^\s*\/\//) ) {  // remove comments
+          work.splice( i, 1 );
+        } else { i++; }
+      }
+      i = 0;
+      while ( i < work.length ) {
+        if ( work[i].match(/^.+;(?:\s*\/\/.*)?$/) === null ) {  // remove non-statements
+          work.splice( i, 1 );
+        } else { i++; }
+      }
+      console.log(work);
+      expect( work.length ).toEqual(3);
+    } );
+
+  } );
+
 });
 
 // Nate

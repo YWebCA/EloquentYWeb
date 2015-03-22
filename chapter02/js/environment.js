@@ -21,7 +21,7 @@ window.strShift = function ( str ) {
     if ( 65 <= str.charCodeAt(i) && str.charCodeAt(i) <= 90 ) {
       output += String.fromCharCode( ( str.charCodeAt(i) - 64 ) % ( 90 - 64 ) + 65 );
     } else if ( 97 <= str.charCodeAt(i) && str.charCodeAt(i) <= 122 ) {
-      output += String.fromCharCode( ( str.charCodeAt(i) - 96 ) % ( 90 - 96 ) + 97 );
+      output += String.fromCharCode( ( str.charCodeAt(i) - 96 ) % ( 122 - 96 ) + 97 );
     } else {
       output += str[i];
     }
