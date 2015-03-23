@@ -546,7 +546,25 @@ describe("Return Values exercises", function () {
 });
 
 // Nate
-describe("Prompt and Confirm exercises");
+describe("Prompt and Confirm exercises", function () {
+  describe("Prompt 1", function () {
+    it("should prompt for user input and return it", function () {
+      spyOn(window, 'prompt').and.returnValue('42');
+      result = Exer.prompt1();
+      expect( window.prompt.calls.argsFor(0)[0] ).toEqual("What is the answer to the meaning of life the universe and everything?");
+      expect( result ).toEqual( '42' );
+    });
+  });
+
+  describe("Confirm 1", function () {
+    it("should get user confirmation and return it", function () {
+      spyOn(window, 'confirm').and.returnValue(true);
+      result = Exer.prompt1();
+      expect( window.prompt.calls.argsFor(0)[0] ).toEqual("I'ma let you finish, but is Javascript the best programming language ever?");
+      expect( result ).toEqual( true );
+    });
+  });
+});
 
 describe("Control Flow exercises", function() {
 

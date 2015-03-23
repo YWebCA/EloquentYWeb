@@ -232,6 +232,22 @@ Exer.return5 = function () {
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
 
+// Prompt 1
+// Prompt with the string
+// "What is the answer to the meaning of life the universe and everything?" and
+// return the result.
+Exer.prompt1 = function () {
+
+};
+
+// Confirm 1
+// Prompt with the string
+// "I'ma let you finish, but is Javascript the best programming language ever?"
+// and return the result.
+Exer.confirm1 = function () {
+
+};
+
 /*----------------------------    CONTROL FLOW    ----------------------------*/
 
 // Control 1
