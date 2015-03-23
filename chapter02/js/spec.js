@@ -614,7 +614,20 @@ describe("Control Flow exercises", function() {
 });
 
 // Annalise
-describe("Conditional Execution exercises");
+describe( "Conditional Execution exercises", function () {
+  describe( "Conditional 1", function () {
+    it( "should test things" );
+  } );
+  describe( "Conditional 2", function () {
+    it( "should test things" );
+  } );
+  describe( "Conditional 3", function () {
+    it( "should test things" );
+  } );
+  describe( "Conditional 4", function () {
+    it( "should test things" );
+  } );
+} );
 
 // Nate
 describe("while and dowhile Loops exercises");

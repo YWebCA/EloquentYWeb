@@ -281,6 +281,18 @@ Exer.control2 = function ( bar ) {
 
 /*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
 
+// Conditional 1
+Exer.condition1 = function () {};
+
+// Conditional 2
+Exer.condition2 = function () {};
+
+// Conditional 3
+Exer.condition3 = function () {};
+
+// Conditional 4
+Exer.condition4 = function () {};
+
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
