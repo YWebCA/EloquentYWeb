@@ -548,7 +548,6 @@ describe("Return Values exercises", function () {
 // Nate
 describe("Prompt and Confirm exercises");
 
-// Zach
 describe("Control Flow exercises", function() {
 
   describe("Control 1", function() {
@@ -614,8 +613,36 @@ describe("Breaking Out of a Loop exercises");
 // Zach
 describe("Updating Variables Succinctly exercises");
 
-// Zach
-describe("Dispatching on a Value with switch exercises");
+// Annalise
+describe( "Dispatching on a Value with switch exercises", function () {
+  describe( "Switch 1", function () {
+
+    beforeEach( function () {
+      spyOn( console, 'log' ).and.callThrough();
+    } );
+
+    it( 'should say "foo"', function () {
+      Exer.switch1('cow');
+      expect( console.log ).toHaveBeenCalledWith( 'The cow goes "foo"!' );
+    } );
+
+    it( 'should say "bar"', function () {
+      Exer.switch1('sheep');
+      expect( console.log ).toHaveBeenCalledWith( 'The sheep goes "bar"!' );
+    } );
+
+    it( 'should say "quux"', function () {
+      Exer.switch1('duck');
+      expect( console.log ).toHaveBeenCalledWith( 'The duck goes "quux"!' );
+    } );
+
+    it( 'But what does the fox say?', function () {
+      Exer.switch1('fox');
+      expect( console.log ).toHaveBeenCalledWith( 'The fox goes "ring-a-ding-ding-dingding-ding-a-ding-ding"!' );
+    } );
+    
+  } );
+} );
 
 // Nate
 describe("Capitalization exercises");
