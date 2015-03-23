@@ -559,8 +559,8 @@ describe("Prompt and Confirm exercises", function () {
   describe("Confirm 1", function () {
     it("should get user confirmation and return it", function () {
       spyOn(window, 'confirm').and.returnValue(true);
-      result = Exer.prompt1();
-      expect( window.prompt.calls.argsFor(0)[0] ).toEqual("I'ma let you finish, but is Javascript the best programming language ever?");
+      result = Exer.confirm1();
+      expect( window.confirm.calls.argsFor(0)[0] ).toEqual("I'ma let you finish, but is Javascript the best programming language ever?");
       expect( result ).toEqual( true );
     });
   });
@@ -658,7 +658,7 @@ describe( "Dispatching on a Value with switch exercises", function () {
       Exer.switch1('fox');
       expect( console.log ).toHaveBeenCalledWith( 'The fox goes "ring-a-ding-ding-dingding-ding-a-ding-ding"!' );
     } );
-    
+
   } );
 } );
 
