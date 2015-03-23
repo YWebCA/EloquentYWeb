@@ -110,6 +110,18 @@ Exer.keywords1 = function ( true, two ) {
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
+// Enviroment 1
+// Uncomment the line that does not return an evironment variable.
+Exer.environment1 = function () {
+
+  // return window;
+  // return document;
+  // return history;
+  // return browser;
+  // return navigator;
+
+};
+
 /*------------------------------    FUNCTIONS    -----------------------------*/
 
 /*----------------------    THE CONSOLE.LOG FUNCTION    ----------------------*/

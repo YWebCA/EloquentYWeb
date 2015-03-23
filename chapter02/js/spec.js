@@ -210,7 +210,15 @@ describe("Keywords and Reserved Words exercises", function() {
 });
 
 // Nate
-describe("The Environment exercises");
+describe("The Environment exercises", function() {
+  describe("Evironment 1", function(){
+    it("should return the variable that is not an environment variable", function() {
+      window.browser = 'browser';
+      var result = Exer.environment1();
+      expect( result ).toEqual( "browser" );
+    });
+  });
+});
 
 // Nate
 describe("Functions exercises");
