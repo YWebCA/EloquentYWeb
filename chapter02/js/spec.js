@@ -210,7 +210,7 @@ describe("Keywords and Reserved Words exercises", function() {
 });
 
 // Nate
-describe("The Environment exercises", function() {
+describe("The environment exercises", function() {
   describe("Evironment 1", function(){
     it("should return the variable that is not an environment variable", function() {
       window.browser = 'browser';
@@ -221,7 +221,28 @@ describe("The Environment exercises", function() {
 });
 
 // Nate
-describe("Functions exercises");
+describe("the functions exercises", function() {
+  describe("Function 1", function() {
+    it("should call three specific functions with specific arguments", function () {
+      var recombobulate = jasmine.createSpy('recombobulate');
+      var setPowerLevel = jasmine.createSpy('setPowerLevel');
+      var cornTortilla = jasmine.createSpy('cornTortilla');
+      Exer.functions1(recombobulate, setPowerLevel, cornTortilla);
+
+      expect(recombobulate).toHaveBeenCalled();
+      expect(recombobulate.calls.count()).toEqual(1);
+      expect(recombobulate.calls.argsFor(0).length).toEqual(0);
+
+      expect(setPowerLevel).toHaveBeenCalled();
+      expect(setPowerLevel.calls.count()).toEqual(1);
+      expect(setPowerLevel.calls.argsFor(0)[0]).toBeGreaterThan(9000);
+
+      expect(cornTortilla).toHaveBeenCalled();
+      expect(cornTortilla.calls.count()).toEqual(1);
+      expect(cornTortilla.calls.argsFor(0)).toEqual(["chicken", "queso", "bacon", "lime"]);
+    });
+  });
+});
 
 // Annalise
 describe("The console.log Function exercises", function() {
@@ -404,7 +425,7 @@ describe("Return Values exercises", function () {
     });
 
     it("should log something that looks like a typical result of magicFunc", function () {
-      expect( console.log.calls.argsFor(0).length ).toBeGreaterThan(0); 
+      expect( console.log.calls.argsFor(0).length ).toBeGreaterThan(0);
       expect( console.log.calls.argsFor(0) >= 0 ).toBeTruthy();
       expect( console.log.calls.argsFor(0) < 100 ).toBeTruthy();
     });

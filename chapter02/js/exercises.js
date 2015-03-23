@@ -124,6 +124,15 @@ Exer.environment1 = function () {
 
 /*------------------------------    FUNCTIONS    -----------------------------*/
 
+// Functions 1
+// Call setPowerLevel and pass it a value over 9000.
+// Call cornTortilla and pass it the values "chicken", "queso", "bacon", and
+// "lime".
+Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
+
+};
+
+
 /*----------------------    THE CONSOLE.LOG FUNCTION    ----------------------*/
 
 // Console 1
