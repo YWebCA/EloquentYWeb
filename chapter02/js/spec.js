@@ -551,7 +551,7 @@ describe("Prompt and Confirm exercises", function () {
     it("should prompt for user input and return it", function () {
       spyOn(window, 'prompt').and.returnValue('42');
       result = Exer.prompt1();
-      expect( window.prompt.calls.argsFor(0)[0] ).toEqual("What is the answer to the meaning of life the universe and everything?");
+      expect( window.prompt.calls.argsFor(0)[0] ).toEqual("What is the answer to the meaning of life, the universe, and everything?");
       expect( result ).toEqual( '42' );
     });
   });
@@ -560,7 +560,7 @@ describe("Prompt and Confirm exercises", function () {
     it("should get user confirmation and return it", function () {
       spyOn(window, 'confirm').and.returnValue(true);
       result = Exer.confirm1();
-      expect( window.confirm.calls.argsFor(0)[0] ).toEqual("I'ma let you finish, but is Javascript the best programming language ever?");
+      expect( window.confirm.calls.argsFor(0)[0] ).toEqual("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
       expect( result ).toEqual( true );
     });
   });
