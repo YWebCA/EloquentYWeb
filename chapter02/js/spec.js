@@ -620,7 +620,57 @@ describe("Conditional Execution exercises");
 describe("while and dowhile Loops exercises");
 
 // Zach
-describe("Indenting Code exercises");
+describe("Indenting Code exercises", function() {
+  describe("Indenting Code 1", function() {
+    it("indents the code two spaces for each block", function() {
+      var work = Exer.indenting1.toString();
+      work = work.match(/^.+?$/mg);  // break into lines
+      var i = 0;
+      while ( i < work.length ) {
+        if ( work[i].match(/^\s*\/\//) ) {  // remove comments
+          work.splice( i, 1 );
+        } else { i++; }
+      }
+      i = 0;
+      var line1Correct = /^  var firstName/.test(work[1]),
+          line2Correct = /^  var lastName/.test(work[2]),
+          line3Correct = /^  if\(firstName/.test(work[3]),
+          line4Correct = /^    lastName \=/.test(work[4]),
+          line5Correct = /^  \}/.test(work[5]);
+
+      expect(line1Correct).toBe(true);
+      expect(line2Correct).toBe(true);
+      expect(line3Correct).toBe(true);
+      expect(line4Correct).toBe(true);
+      expect(line5Correct).toBe(true);
+    });
+  });
+
+  describe("Indenting Code 2", function() {
+    it("indents the code four spaces for each block", function() {
+      var work = Exer.indenting2.toString();
+      work = work.match(/^.+?$/mg);  // break into lines
+      var i = 0;
+      while ( i < work.length ) {
+        if ( work[i].match(/^\s*\/\//) ) {  // remove comments
+          work.splice( i, 1 );
+        } else { i++; }
+      }
+      i = 0;
+      var line1Correct = /^    var firstName/.test(work[1]),
+          line2Correct = /^    var lastName/.test(work[2]),
+          line3Correct = /^    if\(firstName/.test(work[3]),
+          line4Correct = /^        lastName \=/.test(work[4]),
+          line5Correct = /^    \}/.test(work[5]);
+
+      expect(line1Correct).toBe(true);
+      expect(line2Correct).toBe(true);
+      expect(line3Correct).toBe(true);
+      expect(line4Correct).toBe(true);
+      expect(line5Correct).toBe(true);
+    });
+  });
+});
 
 // Annalise
 describe("for Loops exercises");
