@@ -209,7 +209,6 @@ describe("Keywords and Reserved Words exercises", function() {
 
 });
 
-// Nate
 describe("The environment exercises", function() {
   describe("Evironment 1", function(){
     it("should return the variable that is not an environment variable", function() {
@@ -220,7 +219,6 @@ describe("The environment exercises", function() {
   });
 });
 
-// Nate
 describe("the functions exercises", function() {
   describe("Function 1", function() {
     it("should call three specific functions with specific arguments", function () {
@@ -405,7 +403,6 @@ describe("The console.log Function exercises", function() {
 
 });
 
-// Annalise
 describe("Return Values exercises", function () {
 
   describe("Return 1", function () {
@@ -545,7 +542,6 @@ describe("Return Values exercises", function () {
 
 });
 
-// Nate
 describe("Prompt and Confirm exercises", function () {
   describe("Prompt 1", function () {
     it("should prompt for user input and return it", function () {
@@ -632,7 +628,6 @@ describe( "Conditional Execution exercises", function () {
 // Nate
 describe("while and dowhile Loops exercises");
 
-// Zach
 describe("Indenting Code exercises", function() {
   describe("Indenting Code 1", function() {
     it("indents the code two spaces for each block", function() {

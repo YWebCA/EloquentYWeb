@@ -233,17 +233,13 @@ Exer.return5 = function () {
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
 
 // Prompt 1
-// Prompt with the string
-// "What is the answer to the meaning of life the universe and everything?" and
-// return the result.
+// Call prompt with the string and return the result.
 Exer.prompt1 = function () {
 
 };
 
 // Confirm 1
-// Prompt with the string
-// "I'ma let you finish, but is Javascript the best programming language ever?"
-// and return the result.
+// Call confirm with the string and return the result.
 Exer.confirm1 = function () {
 
 };
@@ -279,7 +275,7 @@ Exer.control2 = function ( bar ) {
 
 };
 
-/*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
+/*-----------------------    CONDITIONAL EXECUTION    ------------------------
 
 // Conditional 1
 Exer.condition1 = function () {};
@@ -292,6 +288,7 @@ Exer.condition3 = function () {};
 
 // Conditional 4
 Exer.condition4 = function () {};
+*/
 
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/
 
