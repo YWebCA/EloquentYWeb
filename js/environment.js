@@ -9,6 +9,12 @@ if ( weAreInNode() ) {
   window.navigator = {};
   window.document = {};
   window.history = {};
+  window.prompt = function() {
+    return "O brave new world, That has no browser in't.";
+  };
+  window.comfirm = function() {
+    return "cake" == "lie";
+  }
 }
 
 // World environment file
