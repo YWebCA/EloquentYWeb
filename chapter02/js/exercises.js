@@ -285,28 +285,14 @@ Exer.switch1 = function ( animal ) {
   // Create a switch that dispatches on the parameter `animal`.
   // In each case, concatenate the correct response to end of the `output`
   // string.
-  switch( animal ) {
 
     // "cow": "foo"
-    case 'cow':
-      output += 'foo';
-      break;
 
     // "sheep": "bar"
-    case 'sheep':
-      output += 'bar';
-      break;
 
     // "duck": "quux"
-    case 'duck':
-      output += 'quux';
-      break;
 
     // default: "ring-a-ding-ding-dingding-ding-a-ding-ding"
-    default:
-      output += 'ring-a-ding-ding-dingding-ding-a-ding-ding';
-      break;
-  }
 
   output += '"!';
   console.log( output );
