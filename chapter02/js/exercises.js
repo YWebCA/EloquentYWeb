@@ -13,7 +13,7 @@ Exer.expressions1 = function () {
 // Statements 1
 Exer.statements1 = function () {
 
-  // Write a statement that is not undefined.
+  5 + 5; 
 
 };
 /* jshint ignore:end */
@@ -23,20 +23,20 @@ Exer.statements1 = function () {
 // Variables 1
 Exer.variables1 = function () {
 
-  // Write a statement that declares a variable.
-
-  // Return that variable.
+  var age = 5;
 
 };
 
 // Variables 2
 Exer.variables2 = function () {
 
-  // Write a statement that declares a variable.
+  var five;
+  five = 5;
+  return five;
+  
 
-  // Write a statement to assign a number value to your variable.
+  
 
-  // Return the variable.
 
 };
 
@@ -46,6 +46,8 @@ Exer.variables3 = function () {
   // Write a statement that declares a variable and initializes it to a string.
 
   // Return the variable.
+var light = "light" ;
+return light;
 
 };
 
@@ -53,7 +55,7 @@ Exer.variables3 = function () {
 Exer.variables4 = function ( n ) {
 
   // Return the parameter.
-
+return n; 
 };
 
 // Variables 5
@@ -62,7 +64,8 @@ Exer.variables5 = function ( n ) {
   // Declare a new variable and initialize it to the value of `n`.
 
   // Return the new variable.
-
+var superer = n;
+return superer;
 };
 
 // Variables 6
@@ -75,7 +78,9 @@ Exer.variables6 = function ( stacys ) {
   // (the parameter `stacys`)
 
   // Return the total number of apples you have.
-
+var apples = 3;
+apples = apples + stacys;
+return apples;
 };
 
 // Variables 7
@@ -92,6 +97,10 @@ Exer.variables7 = function ( change ) {
 
   // Return that string.
 
+change += 0.25;
+change -= .1;
+change = "$"+ change;
+return change;
 };
 
 
@@ -100,15 +109,15 @@ Exer.variables7 = function ( change ) {
 // Keywords 1
 // Uncomment the following function by removing the slash-asterisk pairs.
 // Fix the function so no keywords or reserved words are improperly used.
-/*
-Exer.keywords1 = function ( true, two ) {
-  var new = 2;
-  var const = two+2;
-  true += "2";
-  var function = new + const + true + two;
-  return function;
+
+Exer.keywords1 = function ( truel, two ) {
+  var  blue = 2;
+  var consty = two+2;
+  truel += "2";
+  var functiong = blue + consty + truel+ two;
+  return functiong;
 };
-*/
+
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
@@ -142,7 +151,13 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 // Console 1
 Exer.console1 = function () {
 
-  // Output something to the console.
+    // Output something to the console.
+  function dawn(myString){
+    myOutput = myString;
+    console.log(myOutput);
+  };
+
+  dawn("Hello World");
 
 };
 
@@ -150,6 +165,7 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
+  console.log(printme);
 
 };
 
@@ -158,10 +174,12 @@ Exer.console2 = function ( printme ) {
 //     The magic word is "xxxxx"
 // to the console, where the `xxxxx` is the value provided in `data`. Do not
 // change the value of the variable `data`.
-Exer.console3 = function ( data ) {
+Exer.console3 = function (
+  data)  {
 
   // your answer here
-
+console.log("The magic word is \"" + data+'"');
+  
 };
 
 // Console 4
