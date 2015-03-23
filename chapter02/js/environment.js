@@ -1,4 +1,9 @@
 // Provided Resources for Chapter Exercises
+
+// Mock environment variables
+browser = 'browser';
+window.browser = browser;
+
 Exer = {};
 Triangle = {};
 Fizz = {};
@@ -41,6 +46,12 @@ window.strShuffle = function ( str1, str2 ) {
   return output;
 };
 
-// Mock environment variables
-browser = 'browser';
-window.browser = browser;
+// str - a string primitive
+// returns a new string that is the reverse of str
+window.strReverse = function ( str ) {
+  var output = "";
+  for( var i = str.length - 1; i >= 0; i-- ) {
+    output += str[i];
+  }
+  return output;
+};

@@ -225,14 +225,34 @@ Exer.return5 = function () {
 
 /*----------------------------    CONTROL FLOW    ----------------------------*/
 
-// Control flow 1
-Exer.control1 = function() {
+// Control 1
+Exer.control1 = function () {
 
   // Use prompt to get a number from a user
 
   // Print that number to the console
 
-}
+};
+
+// Control 2
+Exer.control2 = function ( bar ) {
+
+  // Declare a variable named `foo`.
+
+  // Initialize `foo` with a string.
+
+  // Log `foo` to the console.
+
+  // Concatenate the parameter `bar` to be beginning and end of `foo`
+  // Save the result in a new variable called `ding`.
+
+  // Call `strReverse` and pass it `ding` (as an argument).
+  // Send this result to the user in a confirm window.
+  // Save the user's response in a new variable called `quux`.
+
+  // Return the opposite of `quux`.
+
+};
 
 /*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
 

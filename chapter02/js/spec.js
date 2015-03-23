@@ -529,7 +529,9 @@ describe("Prompt and Confirm exercises");
 
 // Zach
 describe("Control Flow exercises", function() {
-  describe("Control Flow 1", function() {
+
+  describe("Control 1", function() {
+
     it("should ask the user for a number and then log it to the console", function() {
       spyOn(window, 'prompt').and.returnValue('5');
       spyOn(console, 'log');
@@ -537,7 +539,40 @@ describe("Control Flow exercises", function() {
       expect(window.prompt).toHaveBeenCalled();
       expect(console.log).toHaveBeenCalledWith('5');
     });
+
   });
+
+  describe( "Control 2", function () {
+
+    describe( 'given "hello"', function () {
+      var foo, bar;
+      beforeAll( function () {
+        spyOn( console, 'log' ).and.callThrough();
+        spyOn( window, 'strReverse' ).and.callThrough();
+        spyOn( window, 'confirm' );
+        bar = "hello";
+        Exer.control2(bar);
+        foo = console.log.calls.argsFor(0)[0];
+      } );
+      it( "should call strReverse with the proper arguments", function () {
+        expect( strReverse ).toHaveBeenCalledWith( bar + foo + bar );
+      } );
+      it( "should call confirm with the proper arguments", function () {
+        expect( confirm ).toHaveBeenCalledWith( strReverse(bar+foo+bar) );
+      } );
+    } );
+
+    it( "should return true when the user cancels", function () {
+      spyOn( window, 'confirm' ).and.returnValue(true);
+      expect( Exer.control2() ).toBe(false);
+    } );
+    it( "should return false when the user confirms", function () {
+      spyOn( window, 'confirm' ).and.returnValue(false);
+      expect( Exer.control2() ).toBe(true);
+    } );
+
+  } );
+
 });
 
 // Annalise
