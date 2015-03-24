@@ -208,7 +208,7 @@ Exercises.unary3 = function () {
 // Return true.
 Exercises.boolean1 = function () {
 
-  return (2.13) ;
+  return true ;
 
 };
 
