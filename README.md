@@ -218,74 +218,79 @@ Type this into the terminal:
 
 ### Hosting EloquentYWeb from Your Computer
 
-Some of the exercises and test for EloquentYWeb require for the worksheets to be hosted as a website. We will need to download an easy to use app to do this for us.
+Some of the exercises and tests for EloquentYWeb require for the project to be hosted as a website. You will need to download an easy-to-use app to host the project as a website on your local machine.
 
- 1. Go [here](http://anvilformac.com) and hit the download link.
- 2. Once you have downloaded the app move it to your Applications directory and run it.
- 3. I small anvil shaped icon will appear in your status bar. Click it.
- 4. A button saying that you need to install pow will pop up below the icon. Click that and wait for the install.
- 5. Once Pow is installed the popup dialog under the anvil will have a button to add a a site. Click it.
- 6. Browser to and then select the EloquentYWeb directory.
- 7. You can got to you EloquentYWeb site anytime Anvil is running by clicking on it in Anvil or going to [eloquentyweb.dev](http://eloquentyweb.dev).
+ 1. Go to [Anvil for Mac](http://anvilformac.com) and click the download link.
+ 2. Once the download has completed, unzip the file.
+ 3. Find the unzipped app and drag it into your Applications directory.
+ 4. Run Anvil.
+ 5. A small anvil-shaped icon will appear in your status bar. Click it.
+ 4. The fly-out menu has a button to install Pow. Click it and wait for Pow to install.
+ 5. Click the anvil icon again. The fly-out menu has a button to host a site. Click it.
+ 6. Use the file browser to find the EloquentYWeb directory and select it.
+ 7. Any time Anvil is running you can open the workbook by selecting EloquentYWeb from the Anvil fly-out menu or browsing to [eloquentyweb.dev](http://eloquentyweb.dev) in Chrome.
 
-## Your First Pull Request
+## Working on the Workbook
 
-First, it's vitally important to keep both your fork and your local clone of your fork updated:
+### Keep Updated
 
-    git checkout master
-    git pull --rebase upstream master
+Commit or stash everything you're working on, then checkout the branch you want to update.
 
-This changes to your master branch, unwinds any of your commits, plays the upstream changes, and then replays your commits.
+    git fetch upstream master
+    git merge -s recursive -X theirs upstream/master -m "Your commit message"
 
-See your current branches with
+### Doing Exercises
 
-    git branch
+For each chapter...
 
-Next, start a new branch with
+0. Update your local repo (see "Keep Updated" above).
 
-    git checkout -b first-pr
+1. Create and/or check out a branch that corresponds to the chapter.
 
-(If you omit the `-b`, you can checkout a pre-existing branch.)
+2. Open `index.html` in your browser and read the instructions for the exercises.
 
-Do your work in this new branch (not on master). Open the `README.md` file in your text editor. At the very bottom of the file, make a few blank lines and then
+3. Open `spec.html` in your browser and see how all the tests are currently failing. Your task is to make them all pass.
 
-    # This Fork Belongs To...
+4. Open `exercises.js` in your text editor. All your JavaScript will go in here. It should have some functions skeletoned out for you so the tests run properly.
 
-and then put your name. Save the file.
+    1. If the exercises include DOM manipulation, use the `exercises.html` file as your HTML workspace.
 
-You can see your modifications by typing this in the terminal:
+5. As you complete the exercises, save your work and refresh `spec.html` to watch your tests start passing!
 
-    git status
+    1. If you're having trouble figuring out what the tests want, open `spec.js` in a text editor and take a look. (Do not edit the tests&mdash;that is super cheating and we will notice.)
 
-Unstaged changes are in red, which means that they won't be part of your commit. Stage all modified files with
+5. Commit early and often.
 
-    git add --all
+6. If you find a typo or mistake in the workbook, submit an issue on ywebca/EloquentYweb.
 
-Try `git status` again to see that your modified files have been staged (in green). Now you're ready to commit.
+### Branch Naming Conventions
 
-    git commit -m "Write a commit message"
+Please name your branches `chapterXX` where `XX` is the number of the chapter you're working on. Only do work on the appropriate branches.
 
-Commit messages should be quite short.
+### Submitting Work
 
-In general, remember to make commits when you have finished a bite-sized problem. The goal is to move from working state, to working state&mdash;do not commit while your code is broken. Do not make huge commits.
+You will submit work with a pull request to the upstream repo.
 
-Make sure your last commit is the way you want it with
-
-    git show
-
-When you're done with your branch, merge it into your local master and push all your changes to your remote origin (your fork of EloquentYWeb out on GitHub):
+First, update your chapter branch you're submitting (see "Keep Updated" above). Then merge chapter branch into master:
 
     git checkout master
-    git merge first-pr
+    git merge chapterXX
+
+Please only merge and submit one chapter at a time.
+
+Push your master branch to GitHub:
+
     git push origin master
 
-When you're ready to submit your pull request, go to your workbook fork on GitHub and submit a pull request (click that green button). Then use the following options:
+Now go to GitHub. You should be able to submit a pull request from either ywebca/EloquentYWeb or yourGitHubUserName/EloquentYWeb. Use the following options:
 
-> Base fork: YWebCA/EloquentYWeb
+> Base fork: ywebca/EloquentYWeb
 
-> Base: YourGitHubUserName
+> Base: yourGitHubUserName
 
-> Head fork: YourGitHubUserName/EloquentYWeb
+This is a branch we've created for you. If you don't see your name, ask an instructor to make you one.
+
+> Head fork: yourGitHubUserName/EloquentYWeb
 
 > Compare: master
 
