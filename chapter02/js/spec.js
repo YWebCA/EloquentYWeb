@@ -621,18 +621,201 @@ describe("Control Flow exercises", function() {
 
 // Annalise
 describe( "Conditional Execution exercises", function () {
+
   describe( "Conditional 1", function () {
-    it( "should test things" );
+
+    describe( "if isSerious is true", function () {
+
+      beforeAll( function () {
+        spyOn( console, 'log' );
+        Exer.condition1( true );
+      } );
+
+      it( "should call console.log once", function () {
+        expect( console.log.calls.count() ).toBe(1);
+      } );
+
+      it( "should call console.log with the correct arguments", function () {
+        expect( console.log.calls.allArgs() ).toEqual( [["Welcome to Camelot!"]] );
+      } );
+
+    } );
+
+    describe( "if isSerious is false", function () {
+
+      beforeAll( function () {
+        spyOn( console, 'log' );
+        Exer.condition1( false );
+      } );
+
+      it( "should call console.log twice", function () {
+        expect( console.log.calls.count() ).toBe(2);
+      } );
+
+      it( "should also output King Arthur's quote", function () {
+        var foo = [
+          ["Welcome to Camelot!"],
+          ["On second thoughts, let's not go to Camelot. It is a silly place."]
+        ];
+        expect( console.log.calls.allArgs() ).toEqual( foo );
+      } );
+
+    } );
+
+    it( "should not return anything", function () {
+      expect( Exer.condition1( false ) ).toBeUndefined();
+    } );
+
   } );
+
   describe( "Conditional 2", function () {
-    it( "should test things" );
+
+    it( "should not return anything", function () {
+      expect( Exer.condition2( 0 ) ).toBeUndefined();
+    } );
+
+    describe( "if temperature is greater than or equal to 70", function () {
+
+      var foo = [
+        ["Hermit crab warning!"],
+        ["Thanks for visiting Pier One and Three Quarters!"]
+      ];
+      beforeEach( function () {
+        spyOn( console, 'log' );
+      } );
+
+      it( "should output the fun phrases for 70 degress", function () {
+        Exer.condition2( 70 );
+        expect( console.log.calls.allArgs() ).toEqual( foo );
+      } );
+
+      it( "should output the fun phrases for 100 degress", function () {
+        Exer.condition2( 100 );
+        expect( console.log.calls.allArgs() ).toEqual( foo );
+      } );
+
+    } );
+
+    describe( "if temperature is less than 70", function () {
+
+      var bar = [
+        ["Catch of the day: influenza, $14/lb."],
+        ["Thanks for visiting Pier One and Three Quarters!"]
+      ];
+      beforeEach( function () {
+        spyOn( console, 'log' );
+      } );
+
+      it( "should output the other fun phrases for 69.9 degrees", function () {
+        Exer.condition2( 69.9 );
+        expect( console.log.calls.allArgs() ).toEqual( bar );
+      } );
+
+      it( "should output the other fun phrases for -40 degrees", function () {
+        Exer.condition2( -40 );
+        expect( console.log.calls.allArgs() ).toEqual( bar );
+      } );
+
+    } );
+
   } );
+
   describe( "Conditional 3", function () {
-    it( "should test things" );
+
+    describe( 'if whatDay is "Mannersday"', function () {
+      it( "should return lucky number 11", function () {
+        expect( Exer.condition3( "Mannersday" ) ).toBe( 11 );
+      } );
+    } );
+
+    describe( 'if whatDay is "Fooday"', function () {
+      it( "should return lucky number 9", function () {
+        expect( Exer.condition3( "Foosday" ) ).toBe( 9 );
+      } );
+    } );
+
+    describe( 'if whatDay is "Heyday"', function () {
+      it( "should return lucky number 7!7" , function () {
+        expect( Exer.condition3( "Heyday" ) ).toBe( "7!7" );
+      } );
+    } );
+
+    describe( 'if whatDay is "Moop"', function () {
+      it( "should return lucky number Infinity", function () {
+        expect( Exer.condition3( "Moop" ) ).toBe( Infinity );
+      } );
+    } );
+
   } );
+
   describe( "Conditional 4", function () {
-    it( "should test things" );
+
+    describe( "structure", function () {
+
+      beforeEach( function () {
+        spyOn( window, 'prompt' ).and.returnValue(null);
+        spyOn( console, 'log' );
+      } );
+
+      it( "should prompt the user with the correct message", function () {
+        Exer.condition4();
+        expect( prompt.calls.allArgs() ).toEqual( [["Enter today's date, please."]] );
+      } );
+
+      it( "should not return anything", function () {
+        expect( Exer.condition4() ).toBeUndefined();
+      } );
+
+    } );
+
+    describe( "for inputs", function () {
+      beforeEach( function () {
+        spyOn( console, 'log' );
+      } );
+      describe( "if input is not a number", function () {
+        it( 'should output "What do you think this is, bub? Wonderland?"', function () {
+          spyOn( window, 'prompt' ).and.returnValue( NaN );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["What do you think this is, bub? Wonderland?"]] );
+        } );
+      } );
+      describe( "if input is less than 1", function () {
+        it( 'should output "Negativelaaaaaaand~!"', function () {
+          spyOn( window, 'prompt' ).and.returnValue( -2 );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["Negativelaaaaaaand~!"]] );
+        } );
+      } );
+      describe( "if input is greather than 31", function () {
+        it( 'should output "Are they paying you overtime for this?"', function () {
+          spyOn( window, 'prompt' ).and.returnValue( 40 );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["Are they paying you overtime for this?"]] );
+        } );
+      } );
+      describe( "if input is between 29 and 31 inclusive", function () {
+        it( 'should output "I sure hope it isn\'t February." for 29', function () {
+          spyOn( window, 'prompt' ).and.returnValue( 29 );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["I sure hope it isn't February."]] );
+        } );
+        it( 'should output "I sure hope it isn\'t February." for 31', function () {
+          spyOn( window, 'prompt' ).and.returnValue( 31 );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["I sure hope it isn't February."]] );
+        } );
+      } );
+      describe( "if input is between 1 and 28, inclusive", function () {
+        it( 'should output "Did you know? There are exactly ## ways to make today awesome!"', function () {
+          spyOn( window, 'prompt' ).and.returnValue( 7 );
+          Exer.condition4();
+          expect( console.log.calls.allArgs() ).toEqual( [["Did you know? There are exactly 7 ways to make today awesome!"]] );
+        } );
+      } );
+    } );
+
   } );
+
 } );
 
 // Nate

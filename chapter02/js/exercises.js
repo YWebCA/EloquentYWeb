@@ -275,20 +275,65 @@ Exer.control2 = function ( bar ) {
 
 };
 
-/*-----------------------    CONDITIONAL EXECUTION    ------------------------
+/*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
 
 // Conditional 1
-Exer.condition1 = function () {};
+// Expect `isSerious` to be a boolean
+Exer.condition1 = function ( isSerious ) {
+
+  console.log( "Welcome to Camelot!" );
+
+  // If `isSerious` is false, output the message:
+  //     On second thoughts, let's not go to Camelot. It is a silly place.
+
+};
 
 // Conditional 2
-Exer.condition2 = function () {};
+// Expect `temperature` to be a number
+Exer.condition2 = function ( temperature ) {
+
+  // If temperature is greater than or equal to 70
+  // Then output:
+  //     Hermit crab warning!
+
+  // Otherwise, output
+  //     Catch of the day: influenza, $14/lb.
+
+  // In either case, also print
+  //     Thanks for visiting Pier One and Three Quarters!
+
+};
 
 // Conditional 3
-Exer.condition3 = function () {};
+// Expect `whatDay` to be a string
+Exer.condition3 = function ( whatDay ) {
+
+  // Declare and initialize `luckyNumber`
+
+  // If the length of `whatDay` is 6 or less...
+
+  // If `whatDay` is "Mannersday"...
+  // If `whatDay` is "Foosday"...
+  // If `whatDay` is "Heyday"...
+  // Otherwise...
+  
+  // Return `luckyNumber`
+
+};
 
 // Conditional 4
-Exer.condition4 = function () {};
-*/
+Exer.condition4 = function () {
+
+  // Prompt the user
+
+  // If the user's input is not a number...
+  // Otherwise...
+    // If the user's input is less than 1...
+    // If the user's input is greater than 31...
+    // If the user's input between 29 and 31, inclusive...
+    // Otherwise...
+
+};
 
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/
 
