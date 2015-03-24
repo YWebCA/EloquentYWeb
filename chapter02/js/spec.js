@@ -223,28 +223,28 @@ describe("the functions exercises", function() {
   describe("Function 1", function() {
 
     beforeAll(function(){
-      var recombobulate = jasmine.createSpy('recombobulate');
-      var setPowerLevel = jasmine.createSpy('setPowerLevel');
-      var cornTortilla = jasmine.createSpy('cornTortilla');
-      Exer.functions1(recombobulate, setPowerLevel, cornTortilla);
+      this.recombobulate = jasmine.createSpy('recombobulate');
+      this.setPowerLevel = jasmine.createSpy('setPowerLevel');
+      this.cornTortilla = jasmine.createSpy('cornTortilla');
+      Exer.functions1(this.recombobulate, this.setPowerLevel, this.cornTortilla);
     });
 
     it("recombobulate should be called with no arguments", function () {
-      expect(recombobulate).toHaveBeenCalled();
-      expect(recombobulate.calls.count()).toEqual(1);
-      expect(recombobulate.calls.argsFor(0).length).toEqual(0);
+      expect(this.recombobulate).toHaveBeenCalled();
+      expect(this.recombobulate.calls.count()).toEqual(1);
+      expect(this.recombobulate.calls.argsFor(0).length).toEqual(0);
     });
 
     it("setPowerLevel should be called with a single argument that is greater than 9000", function () {
-      expect(setPowerLevel).toHaveBeenCalled();
-      expect(setPowerLevel.calls.count()).toEqual(1);
-      expect(setPowerLevel.calls.argsFor(0)[0]).toBeGreaterThan(9000);
+      expect(this.setPowerLevel).toHaveBeenCalled();
+      expect(this.setPowerLevel.calls.count()).toEqual(1);
+      expect(this.setPowerLevel.calls.argsFor(0)[0]).toBeGreaterThan(9000);
     });
 
     it("cornTortilla should be called with the arguments \"chicken\", \"queso\", \"bacon\", and \"lime\"", function () {
-      expect(cornTortilla).toHaveBeenCalled();
-      expect(cornTortilla.calls.count()).toEqual(1);
-      expect(cornTortilla.calls.argsFor(0)).toEqual(["chicken", "queso", "bacon", "lime"]);
+      expect(this.cornTortilla).toHaveBeenCalled();
+      expect(this.cornTortilla.calls.count()).toEqual(1);
+      expect(this.cornTortilla.calls.argsFor(0)).toEqual(["chicken", "queso", "bacon", "lime"]);
     });
   });
 });
