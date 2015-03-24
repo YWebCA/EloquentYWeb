@@ -428,11 +428,11 @@ describe("Return Values exercises", function () {
       expect( console.log ).toHaveBeenCalled();
     });
 
-    it("should log something that looks like a typical result of magicFunc", function () {
-      expect( console.log.calls.argsFor(0).length ).toBeGreaterThan(0);
-      expect( console.log.calls.argsFor(0) >= 0 ).toBeTruthy();
-      expect( console.log.calls.argsFor(0) < 100 ).toBeTruthy();
-    });
+    it( "should log a number", function () {
+      expect( console.log.calls.allArgs().length ).toBe( 1 );
+      expect( console.log.calls.allArgs()[0].length ).toBe( 1 );
+      expect( typeof console.log.calls.allArgs()[0][0] ).toBe( 'number' );
+    } );
 
   });
 
@@ -444,10 +444,13 @@ describe("Return Values exercises", function () {
       expect( magicFunc ).toHaveBeenCalled();
     });
 
-    it("should return something that looks like a typical result of magicFunc", function () {
-      expect( Exer.return2() >= 0 ).toBeTruthy();
-      expect( Exer.return2() < 100 ).toBeTruthy();
+    it("should return a number", function () {
+      expect( typeof Exer.return2() ).toBe( 'number' );
     });
+
+    it( "should return a typical output of magicFunc", function () {
+      expect( Exer.return2().toString().match(/^[1-9]\d\.[1-9]$/) ).not.toBeNull();
+    } );
 
   });
 
@@ -499,8 +502,8 @@ describe("Return Values exercises", function () {
       expect( console.log.calls.count() ).toEqual(1);
     } );
 
-    it( "should log something that looks sane", function () {
-      expect( console.log.calls.argsFor(0)[0].match(/^\d{1,2}\.?\d{1,3}\.?\d?$/) ).not.toBeNull();
+    it( "should log a string in the format of ##.###.#", function () {
+      expect( console.log.calls.argsFor(0)[0].match(/^[1-9]\d\.[1-9]{2}\d\.[1-9]$/) ).not.toBeNull();
     } );
 
   } );

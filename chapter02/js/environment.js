@@ -11,7 +11,10 @@ Chess = {};
 
 // returns a numerical value
 window.magicFunc = function () {
-  return Math.floor( Math.random() * 1000 ) / 10;
+  var output = Math.floor( Math.random() * 9 + 1 ) * 10;
+  output += Math.floor( Math.random() * 10 );
+  output += Math.floor( Math.random() * 9 + 1 ) / 10;
+  return output;
 };
 
 // str - a string primitive
