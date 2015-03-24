@@ -128,7 +128,7 @@ Exer.environment1 = function () {
   // return window;
   // return document;
   // return history;
-  // return browser;
+   return browser;
   // return navigator;
 
 };
@@ -136,14 +136,19 @@ Exer.environment1 = function () {
 /*------------------------------    FUNCTIONS    -----------------------------*/
 
 // Functions 1
+// Call recombobulate with no arguments
 // Call setPowerLevel and pass it a value over 9000.
 // Call cornTortilla and pass it the values "chicken", "queso", "bacon", and
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
+  recombobulate();
+  setPowerLevel(9001);
+  cornTortilla("chicken", "queso", "bacon", "lime");
 
   // Your work here
 
 };
+
 
 
 /*----------------------    THE CONSOLE.LOG FUNCTION    ----------------------*/
@@ -187,7 +192,8 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
-
+var x = 5, y = 2;
+console.log("the value of x is",x);
 };
 
 // Console 5
@@ -197,6 +203,8 @@ Exer.console5 = function ( x, y ) {
   // Output the first parameter `x` to the console.
 
   // Make the function return the parameter `y` plus 1.
+console.log(x);
+return y + 1;
 
 };
 
@@ -205,9 +213,8 @@ Exer.console5 = function ( x, y ) {
 // Return 1
 // Call and log out the result of `magicFunc`.
 Exer.return1 = function () {
-
-  // your work goes here
-
+  magicFunc();
+  console.log(magicFunc());
 };
 
 // Return 2
@@ -215,7 +222,8 @@ Exer.return1 = function () {
 Exer.return2 = function () {
 
   // your work goes here
-
+magicFunc();
+return magicFunc();
 };
 
 // Return 3
@@ -224,6 +232,10 @@ Exer.return3 = function () {
   // Call `strShift` with the argument "abczABCZ". Log the result.
 
   // Return that same result with "123" concatenated to the end.
+var result = strShift("abczABCZ");
+console.log(result);
+return result+"123";
+
 
 };
 
@@ -231,8 +243,10 @@ Exer.return3 = function () {
 // Log the result of the string concatenation of two separate calls to
 // `magicFunc`.
 Exer.return4 = function () {
+// magicFunc("result");
 
-  // your work goes here
+  console.log("" + magicFunc()+magicFunc());
+
 
 };
 
