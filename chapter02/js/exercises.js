@@ -259,10 +259,12 @@ Exer.return4 = function () {
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
-
+  var result1 = strShift("abcABC123!@#");
   // Declare and initialize a variable for the second string.
+  var result3 = strShift(strShift("a S d F j K l"));
 
   // A return statement.
+  return strShuffle(result1,result3);
 
 };
 
