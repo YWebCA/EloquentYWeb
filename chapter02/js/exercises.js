@@ -5,7 +5,7 @@
 // evaluated value is not undefined.
 Exer.expressions1 = function () {
 
-  return /* your answer here */ ;
+  return (3+4);
 
 };
 
@@ -14,6 +14,7 @@ Exer.expressions1 = function () {
 Exer.statements1 = function () {
 
   // Write a statement that is not undefined.
+  3+4;
 
 };
 /* jshint ignore:end */
@@ -24,8 +25,10 @@ Exer.statements1 = function () {
 Exer.variables1 = function () {
 
   // Write a statement that declares a variable.
+  var Result;
 
   // Return that variable.
+  return Result;
 
 };
 
@@ -33,10 +36,13 @@ Exer.variables1 = function () {
 Exer.variables2 = function () {
 
   // Write a statement that declares a variable.
+  var Result;
 
   // Write a statement to assign a number value to your variable.
+  Result = 12;
 
   // Return the variable.
+  return Result;
 
 };
 
@@ -44,8 +50,10 @@ Exer.variables2 = function () {
 Exer.variables3 = function () {
 
   // Write a statement that declares a variable and initializes it to a string.
+  var Result = "Hello World";
 
   // Return the variable.
+  return Result;
 
 };
 
@@ -53,6 +61,7 @@ Exer.variables3 = function () {
 Exer.variables4 = function ( n ) {
 
   // Return the parameter.
+  return n;
 
 };
 
@@ -60,8 +69,10 @@ Exer.variables4 = function ( n ) {
 Exer.variables5 = function ( n ) {
 
   // Declare a new variable and initialize it to the value of `n`.
+  var Result = n;
 
   // Return the new variable.
+  return Result;
 
 };
 
@@ -70,11 +81,14 @@ Exer.variables6 = function ( stacys ) {
 
   // You have 3 apples
   // (declare a variable named `apples` and initialize it to `3`)
+  var apples = 3;
 
   // Stacy gives you more apples
   // (the parameter `stacys`)
+  Result = stacys + apples;
 
   // Return the total number of apples you have.
+  return Result;
 
 };
 
@@ -83,15 +97,16 @@ Exer.variables6 = function ( stacys ) {
 Exer.variables7 = function ( change ) {
 
   // You find a quarter.
+  var newChange = .25 + change ;
 
   // Then you spend a dime on old fashioned candy.
+  newChange = newChange - 0.10;
   // How much money do you have now?
-
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
-
+  result = "$" + newChange + " ";
   // Return that string.
-
+  return result;
 };
 
 
@@ -100,15 +115,15 @@ Exer.variables7 = function ( change ) {
 // Keywords 1
 // Uncomment the following function by removing the slash-asterisk pairs.
 // Fix the function so no keywords or reserved words are improperly used.
-/*
-Exer.keywords1 = function ( true, two ) {
-  var new = 2;
-  var const = two+2;
-  true += "2";
-  var function = new + const + true + two;
-  return function;
+
+Exer.keywords1 = function ( True, two ) {
+  var New = 2;
+  var Const = two+2;
+  True += "2";
+  var func = New + Const + True + two;
+  return func;
 };
-*/
+
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
@@ -119,7 +134,7 @@ Exer.environment1 = function () {
   // return window;
   // return document;
   // return history;
-  // return browser;
+  return browser;
   // return navigator;
 
 };
@@ -143,6 +158,7 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 Exer.console1 = function () {
 
   // Output something to the console.
+  console.log("Hello World");
 
 };
 
@@ -150,6 +166,7 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
+  console.log(printme);
 
 };
 
@@ -161,6 +178,7 @@ Exer.console2 = function ( printme ) {
 Exer.console3 = function ( data ) {
 
   // your answer here
+  console.log('The magic word is ' + '"' + data + '"' );
 
 };
 
@@ -169,6 +187,7 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
+  console.log("Hello", "World");
 
 };
 
@@ -177,9 +196,10 @@ Exer.console4 = function () {
 Exer.console5 = function ( x, y ) {
 
   // Output the first parameter `x` to the console.
+  console.log(x);
 
   // Make the function return the parameter `y` plus 1.
-
+  return y+1;
 };
 
 /*---------------------------    RETURN VALUES    ----------------------------*/
@@ -189,6 +209,7 @@ Exer.console5 = function ( x, y ) {
 Exer.return1 = function () {
 
   // your work goes here
+  console.log(magicFunc());
 
 };
 
@@ -197,6 +218,7 @@ Exer.return1 = function () {
 Exer.return2 = function () {
 
   // your work goes here
+  return magicFunc();
 
 };
 
@@ -204,9 +226,10 @@ Exer.return2 = function () {
 Exer.return3 = function () {
 
   // Call `strShift` with the argument "abczABCZ". Log the result.
+  console.log(strShift("abczABCZ"));
 
   // Return that same result with "123" concatenated to the end.
-
+  return strShift("abczABCZ" + "123")
 };
 
 // Return 4
@@ -215,6 +238,11 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
+  magicFunc("String1");
+  magicFunc("String2");
+
+  console.log(magicFunc("String1" + "String2"));
+
 
 };
 
@@ -227,10 +255,12 @@ Exer.return4 = function () {
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
+  var result1 = strShift("abcABC123!@#");
 
   // Declare and initialize a variable for the second string.
-
+  var result2 = strShift(strShift(" S d F j K l"));
   // A return statement.
+  return strShuffle(result1, result2);
 
 };
 
@@ -247,6 +277,7 @@ Exer.prompt1 = function () {
 // Confirm 1
 // Call confirm with the string and return the result.
 Exer.confirm1 = function () {
+  return confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
 
   // Your work here
 
@@ -258,28 +289,36 @@ Exer.confirm1 = function () {
 Exer.control1 = function () {
 
   // Use prompt to get a number from a user
+  var number = prompt("What is your number?");
 
   // Print that number to the console
-
+  console.log(number);
 };
 
 // Control 2
 Exer.control2 = function ( bar ) {
 
   // Declare a variable named `foo`.
+  var foo;
 
   // Initialize `foo` with a string.
+  foo = "Hello World"; 
 
   // Log `foo` to the console.
+  console.log(foo);
 
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.
+  var ding = console.log(bar + foo + bar);
 
   // Call `strReverse` and pass it `ding` (as an argument).
+  strReverse(ding);
   // Send the result to the user in a confirm window.
   // Save the user's response in a new variable called `quux`.
+  var quux = confirm(strReverse(ding));
 
   // Return the opposite of `quux`.
+  return strReverse(quux);
 
 };
 
@@ -293,6 +332,9 @@ Exer.condition1 = function ( isSerious ) {
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
+  if (isSerious === true){
+    console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+  }
 
 };
 
