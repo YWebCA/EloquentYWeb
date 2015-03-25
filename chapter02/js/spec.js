@@ -956,7 +956,49 @@ describe("Indenting Code exercises", function() {
 });
 
 // Annalise
-describe("for Loops exercises");
+describe( "for Loops exercises", function () {
+
+  describe( "For 1", function () {
+
+    var args = [];
+    beforeAll( function () {
+      var scream = "...";
+      while ( scream.length < 28 ) {
+        args.push( [ scream ] );
+        scream = "    " + scream + "AA";
+      }
+      scream += "H!"
+      args.push( [ scream ] );
+    } );
+
+    it( "should maintain the correct output", function () {
+      spyOn( console, 'log' ).and.callThrough();
+      console.log( "For 1:" );
+      Exer.for1();
+      expect( console.log.calls.allArgs() ).toEqual( args );
+    } );
+
+    it( "should make six explicit calls to console.log", function () {
+      expect( Exer.for1.toString().match(/console\.log/g).length ).toBe( 6 );
+    } );
+
+  } );
+
+  describe( "For 2", function () {
+    it( "should run", function () {
+      Exer.for2();
+      expect( false ).toBeTruthy();
+    } );
+  } );
+
+  describe( "For 3", function () {
+    it( "should run", function () {
+      Exer.for3();
+      expect( false ).toBeTruthy();
+    } );
+  } );
+
+} );
 
 // Nate
 describe("Breaking Out of a Loop exercises");

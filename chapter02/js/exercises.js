@@ -400,6 +400,29 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
 
+// For 1
+// Rewrite the loop as a linear sequence of statements.
+Exer.for1 = function () {
+
+  var scream;
+  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
+    console.log( scream );
+    scream = "    " + scream;
+  }
+  scream += "H!"
+  console.log( scream );
+
+};
+
+// For 2
+// Rewrite the repetative code with a for loop.
+Exer.for2 = function () {};
+
+// For 3
+// Write a loop that counts backwards from 20 to 5 (inclusive) and prints
+// "even" if the number is even and prints "odd" if the number is odd.
+Exer.for3 = function () {};
+
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
 
 /*-------------------    UPDATING VARIABLES SUCCINCTLY    --------------------*/
