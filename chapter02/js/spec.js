@@ -581,7 +581,7 @@ describe("Control Flow exercises", function() {
       spyOn(console, 'log');
       Exer.control1();
       expect(window.prompt).toHaveBeenCalled();
-      expect(console.log).toHaveBeenCalledWith('5');
+      expect( console.log.calls.allArgs()[0][0].toString() ).toBe('5');
     });
 
   });
