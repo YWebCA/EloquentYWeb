@@ -541,7 +541,7 @@ describe("Return Values exercises", function () {
       }
       i = 0;
       while ( i < work.length ) {
-        if ( work[i].match(/^.+;(?:\s*\/\/.*)?$/) === null ) {  // remove non-statements
+        if ( work[i].match(/^.+;\s*(?:\/\/.*)?$/) === null ) {  // remove non-statements
           work.splice( i, 1 );
         } else { i++; }
       }
