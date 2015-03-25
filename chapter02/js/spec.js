@@ -289,6 +289,7 @@ describe("The console.log Function exercises", function() {
 
       beforeEach(function() {
         spyOn(console, 'log').and.callThrough();
+        console.log( "Console 2:" );
       });
 
       it("should print the parameter", function() {
@@ -339,6 +340,7 @@ describe("The console.log Function exercises", function() {
 
       beforeEach(function () {
         spyOn(console, 'log').and.callThrough();
+        console.log( "Console 3:" );
       });
 
       it("should print 'The magic word is \"Abracadabra!\"'", function () {
@@ -376,6 +378,7 @@ describe("The console.log Function exercises", function() {
 
     it("should provide two parameters", function () {
       spyOn(console, 'log').and.callThrough();
+      console.log( "Console 4:" );
       Exer.console4();
       expect( console.log.calls.allArgs()[0].length ).toEqual(2);
     });
@@ -394,6 +397,7 @@ describe("The console.log Function exercises", function() {
         this.test1 = "secret passphrase";
         this.test2 = -6;
         spyOn(console, 'log').and.callThrough();
+        console.log( "Console 5:" );
       });
 
       it("should return the second parameter plus 1", function () {
@@ -417,6 +421,7 @@ describe("Return Values exercises", function () {
     beforeAll(function () {
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
+      console.log( "Return 1:" );
       Exer.return1();
     });
 
@@ -461,6 +466,7 @@ describe("Return Values exercises", function () {
     beforeAll(function () {
       spyOn( window, 'strShift' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
+      console.log( "Return 3:" );
       foo = Exer.return3();
     });
 
@@ -491,6 +497,7 @@ describe("Return Values exercises", function () {
     beforeAll( function () {
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
+      console.log( "Return 4:" );
       Exer.return4();
     } );
 
@@ -595,6 +602,7 @@ describe("Control Flow exercises", function() {
         spyOn( window, 'strReverse' ).and.callThrough();
         spyOn( window, 'confirm' );
         bar = "hello";
+        console.log( "Control 2:" );
         Exer.control2(bar);
         foo = console.log.calls.argsFor(0)[0];
       } );
@@ -619,7 +627,6 @@ describe("Control Flow exercises", function() {
 
 });
 
-// Annalise
 describe( "Conditional Execution exercises", function () {
 
   describe( "Conditional 1", function () {
@@ -769,9 +776,11 @@ describe( "Conditional Execution exercises", function () {
     } );
 
     describe( "for inputs", function () {
+
       beforeEach( function () {
         spyOn( console, 'log' );
       } );
+
       describe( "if input is not a number", function () {
         it( 'should output "What do you think this is, bub? Wonderland?"', function () {
           spyOn( window, 'prompt' ).and.returnValue( NaN );
@@ -779,6 +788,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["What do you think this is, bub? Wonderland?"]] );
         } );
       } );
+
       describe( "if input is less than 1", function () {
         it( 'should output "Negativelaaaaaaand~!"', function () {
           spyOn( window, 'prompt' ).and.returnValue( -2 );
@@ -786,6 +796,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Negativelaaaaaaand~!"]] );
         } );
       } );
+
       describe( "if input is greather than 31", function () {
         it( 'should output "Are they paying you overtime for this?"', function () {
           spyOn( window, 'prompt' ).and.returnValue( 40 );
@@ -793,6 +804,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Are they paying you overtime for this?"]] );
         } );
       } );
+
       describe( "if input is between 29 and 31 inclusive", function () {
         it( 'should output "I sure hope it isn\'t February." for 29', function () {
           spyOn( window, 'prompt' ).and.returnValue( 29 );
@@ -805,6 +817,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["I sure hope it isn't February."]] );
         } );
       } );
+
       describe( "if input is between 1 and 28, inclusive", function () {
         it( 'should output "Did you know? There are exactly ## ways to make today awesome!"', function () {
           spyOn( window, 'prompt' ).and.returnValue( 7 );
@@ -812,6 +825,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Did you know? There are exactly 7 ways to make today awesome!"]] );
         } );
       } );
+
     } );
 
   } );
@@ -939,7 +953,6 @@ describe("Indenting Code exercises", function() {
           work.splice( i, 1 );
         } else { i++; }
       }
-      i = 0;
       var line1Correct = /^    var firstName/.test(work[1]),
           line2Correct = /^    var lastName/.test(work[2]),
           line3Correct = /^    if\(firstName/.test(work[3]),
@@ -1006,12 +1019,12 @@ describe("Breaking Out of a Loop exercises");
 // Zach
 describe("Updating Variables Succinctly exercises");
 
-// Annalise
 describe( "Dispatching on a Value with switch exercises", function () {
   describe( "Switch 1", function () {
 
     beforeEach( function () {
       spyOn( console, 'log' ).and.callThrough();
+      console.log( "Switch 1:");
     } );
 
     it( 'should say "foo"', function () {
