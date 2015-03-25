@@ -337,6 +337,53 @@ Exer.condition4 = function () {
 
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/
 
+// While 1
+// Turn the code in the function into a while loop.
+Exer.while1 = function () {
+  console.log("10 sheep");
+  console.log("9 sheep");
+  console.log("8 sheep");
+  console.log("7 sheep");
+  console.log("6 sheep");
+  console.log("5 sheep");
+  console.log("4 sheep");
+  console.log("3 sheep");
+  console.log("2 sheep");
+  console.log("1 sheep");
+};
+
+// While 2
+// Recreate the code in the function without a loop
+Exer.while2 = function () {
+  var deadWitch = "I'm melting!";
+  while(deadWitch.length > 0) {
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+  }
+  console.log("What a world!");
+};
+
+// doWhile 1
+// Turn the code in the function into a single do while loop.
+// Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
+Exer.doWhile1 = function () {
+  console.log(0);
+  console.log(1);
+  console.log(2);
+  console.log(0);
+  console.log(1);
+  console.log(2);
+};
+
+// doWhile 2
+// Recreate the code in the function without a loop
+Exer.doWhile2 = function () {
+  var trainNum = 1;
+  do {
+    console.log("Train# " + trainNum + ": In flight!?");
+  } while (trainNum++ < 7);
+};
+
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
 // Indenting 1

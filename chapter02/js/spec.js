@@ -819,7 +819,89 @@ describe( "Conditional Execution exercises", function () {
 } );
 
 // Nate
-describe("while and dowhile Loops exercises");
+describe("While and dowhile Loops exercises", function() {
+
+  describe("While 1", function() {
+    beforeAll(function() {
+      spyOn(console, 'log').and.callThrough();
+      Exer.while1();
+    });
+
+    it("should contain a while ... do loop", function() {
+      expect( Exer.while1.toString().match(/while/) ).toBeTruthy();
+    });
+    it("should call console.log 10 times with the arguments \"10 sheep\", \"9 sheep\", \"8 sheep\", \"7 sheep\", etc. ", function() {
+      expect( console.log.calls.count() ).toEqual(10);
+      for(var i = 10; i > 0; i--) {
+        expect(console.log.calls.argsFor(10 - i)[0]).toEqual(i + " sheep");
+      }
+    });
+    it("should have console.log appear only once", function() {
+        expect( Exer.while1.toString().match(/console\.log/gm).length ).toEqual(1);
+    });
+  });
+
+  describe("while 2", function() {
+    beforeAll(function() {
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.while2();
+    });
+
+    it("should not contain a loop", function() {
+      expect( Exer.while2.toString().match(/(while|for)/) ).not.toBeTruthy();
+    });
+    it("should call console.log 7 times with the arguments \"I'm melting!\", \"m melting!\", \"melting!\", etc. and then \"What a world!\"", function() {
+      expect( console.log.calls.count() ).toEqual(7);
+      var deadWitch = "I'm melting!";
+      for(var i = 0; i < 5; i++) {
+        expect(console.log.calls.argsFor(i)[0]).toEqual(("I'm melting!").substr(2*i));
+      }
+      expect(console.log.calls.argsFor(6)[0]).toEqual("What a world!");
+    });
+    it("should have console.log appear 7 times", function() {
+      expect( Exer.while2.toString().match(/console\.log/gm).length ).toEqual(7);
+    });
+  });
+
+  describe("do while 1", function() {
+    beforeAll(function() {
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.doWhile1()
+    });
+
+    it("should contain a while ... do loop", function() {
+      expect( Exer.doWhile1.toString().match(/while/) ).toBeTruthy();});
+    it("should call console.log 6 times with the arguments 0, 1, 2, 0, 1, and 2", function() {
+      expect( console.log.calls.count() ).toEqual(6);
+      for(var i = 0; i < 6; i++) {
+        expect(console.log.calls.argsFor(i)[0]).toEqual(i%3);
+      }
+    });
+    it("should have console.log appear only once", function() {
+      expect( Exer.doWhile1.toString().match(/console\.log/gm).length ).toEqual(1);
+    });
+  });
+
+  describe("do while 2", function() {
+    beforeAll(function() {
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.doWhile2()
+    });
+
+    it("should not contain a loop", function() {
+      expect( Exer.doWhile2.toString().match(/(while|for)/) ).not.toBeTruthy();
+      });
+    it("should call console.log 7 times with the arguments \"Train# 1: In flight!?\", \"Train# 2: In flight!?\", \"Train# 3: In flight!?\", etc.", function() {
+      expect( console.log.calls.count() ).toEqual(7);
+      for(var i = 0; i < 7; i++) {
+        expect(console.log.calls.argsFor(i)[0]).toEqual("Train# " + (i+1) + ": In flight!?");
+      }
+    });
+    it("should have console.log appear 7 times", function() {
+      expect( Exer.doWhile2.toString().match(/console\.log/gm).length ).toEqual(7);
+    });
+  })
+});
 
 describe("Indenting Code exercises", function() {
   describe("Indenting Code 1", function() {
