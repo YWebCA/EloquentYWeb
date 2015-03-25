@@ -187,7 +187,8 @@ return y + 1;
 // Call and log out the result of `magicFunc`.
 Exer.return1 = function () {
 
-  
+  magicFunc();
+  console.log(magicFunc());
 
 };
 
@@ -195,7 +196,8 @@ Exer.return1 = function () {
 // Call and return the result of `magicFunc`.
 Exer.return2 = function () {
 
-  // your work goes here
+  magicFunc();
+  return magicFunc();
 
 };
 
@@ -206,6 +208,10 @@ Exer.return3 = function () {
 
   // Return that same result with "123" concatenated to the end.
 
+
+var x = strShift("abczABCZ");
+console.log(x);
+return x + "123";
 };
 
 // Return 4
@@ -213,7 +219,9 @@ Exer.return3 = function () {
 // `magicFunc`.
 Exer.return4 = function () {
 
-  // your work goes here
+ var x = magicFunc();
+ var y = magicFunc();
+ console.log("" + x + y);
 
 };
 
@@ -230,7 +238,9 @@ Exer.return5 = function () {
   // Declare and initialize a variable for the second string.
 
   // A return statement.
-
+var x = strShift( "abcABC123!@#" );
+var y = strShift( "a S d F j K l" );
+return a = strShuffle( x, (strShift(y)) );
 };
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
