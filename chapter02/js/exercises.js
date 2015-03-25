@@ -261,6 +261,8 @@ Exer.return5 = function () {
   // Declare and initialize a variable for the first string.
   var result1 = strShift("abcABC123!@#");
   // Declare and initialize a variable for the second string.
+
+
   var result3 = strShift(strShift("a S d F j K l"));
 
   // A return statement.
@@ -273,6 +275,7 @@ Exer.return5 = function () {
 // Prompt 1
 // Call prompt with the string and return the result.
 Exer.prompt1 = function () {
+return prompt("What is the answer to the meaning of life, the universe, and everything?");
 
   // Your work here
 
