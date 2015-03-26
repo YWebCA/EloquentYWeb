@@ -288,8 +288,8 @@ describe("The console.log Function exercises", function() {
     describe("with parameters", function () {
 
       beforeEach(function() {
-        spyOn(console, 'log').and.callThrough();
         console.log( "Console 2:" );
+        spyOn(console, 'log').and.callThrough();
       });
 
       it("should print the parameter", function() {
@@ -339,8 +339,8 @@ describe("The console.log Function exercises", function() {
     describe("with parameters", function() {
 
       beforeEach(function () {
-        spyOn(console, 'log').and.callThrough();
         console.log( "Console 3:" );
+        spyOn(console, 'log').and.callThrough();
       });
 
       it("should print 'The magic word is \"Abracadabra!\"'", function () {
@@ -377,8 +377,8 @@ describe("The console.log Function exercises", function() {
     });
 
     it("should provide two parameters", function () {
-      spyOn(console, 'log').and.callThrough();
       console.log( "Console 4:" );
+      spyOn(console, 'log').and.callThrough();
       Exer.console4();
       expect( console.log.calls.allArgs()[0].length ).toEqual(2);
     });
@@ -396,8 +396,8 @@ describe("The console.log Function exercises", function() {
       beforeAll(function() {
         this.test1 = "secret passphrase";
         this.test2 = -6;
-        spyOn(console, 'log').and.callThrough();
         console.log( "Console 5:" );
+        spyOn(console, 'log').and.callThrough();
       });
 
       it("should return the second parameter plus 1", function () {
@@ -419,9 +419,9 @@ describe("Return Values exercises", function () {
   describe("Return 1", function () {
 
     beforeAll(function () {
+      console.log( "Return 1:" );
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
-      console.log( "Return 1:" );
       Exer.return1();
     });
 
@@ -464,9 +464,9 @@ describe("Return Values exercises", function () {
     var foo;
 
     beforeAll(function () {
+      console.log( "Return 3:" );
       spyOn( window, 'strShift' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
-      console.log( "Return 3:" );
       foo = Exer.return3();
     });
 
@@ -495,9 +495,9 @@ describe("Return Values exercises", function () {
   describe( "Return 4", function () {
 
     beforeAll( function () {
+      console.log( "Return 4:" );
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
-      console.log( "Return 4:" );
       Exer.return4();
     } );
 
@@ -598,11 +598,11 @@ describe("Control Flow exercises", function() {
     describe( 'given "hello"', function () {
       var foo, bar;
       beforeAll( function () {
+        console.log( "Control 2:" );
         spyOn( console, 'log' ).and.callThrough();
         spyOn( window, 'strReverse' ).and.callThrough();
         spyOn( window, 'confirm' );
         bar = "hello";
-        console.log( "Control 2:" );
         Exer.control2(bar);
         foo = console.log.calls.argsFor(0)[0];
       } );
