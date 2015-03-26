@@ -998,17 +998,62 @@ describe( "for Loops exercises", function () {
   } );
 
   describe( "For 2", function () {
-    it( "should run", function () {
+
+    var lyrics = [
+      [ "Hi!" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "Slim Shady" ],
+      [ "Hi!" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "Slim Shady" ]
+    ];
+
+    it( "should print the song lyrics", function () {
+      console.log( "For 2:" );
+      spyOn( console, 'log' ).and.callThrough();
       Exer.for2();
-      expect( false ).toBeTruthy();
+      expect( console.log.calls.allArgs() ).toEqual( lyrics );
     } );
+
+    it( "should use a nested for loop", function () {
+      var lines = Exer.for2.toString().split('\n');
+      var work = "";
+      for ( var i = 0; i < lines.length; i++ ) {
+        work += lines[i];
+      }
+      expect( work.match( /function \(\) \{.*for.*\(.*;.*;.*\)\s*\{.*for.*\(.*;.*;.*\)\s*\{.*\}.*\}.*\}/g ) ).not.toBeNull();
+    } );
+
   } );
 
   describe( "For 3", function () {
-    it( "should run", function () {
+
+    var args = [];
+    beforeAll( function () {
+      for ( var i = 20; i >= 5; i-- ) {
+        if ( i % 2 === 0) {
+          args.push( [ i, "even" ] );
+        } else {
+          args.push( [ i, "odd" ] );
+        }
+      }
+      console.log( "For 3:" );
+      spyOn( console, 'log' ).and.callThrough();
       Exer.for3();
-      expect( false ).toBeTruthy();
     } );
+
+    it( 'should print 16 lines', function () {
+      expect( console.log.calls.count() ).toBe( 16 );
+    } );
+
+    it( 'should print alternating "even"s and "odd"s', function () {
+      expect( console.log.calls.allArgs() ).toEqual( args );
+    } );
+    
   } );
 
 } );

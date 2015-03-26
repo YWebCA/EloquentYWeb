@@ -415,13 +415,36 @@ Exer.for1 = function () {
 };
 
 // For 2
-// Rewrite the repetative code with a for loop.
-Exer.for2 = function () {};
+// Rewrite the repetative code with for loops.
+Exer.for2 = function () {
+
+  console.log( "Hi!" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "Slim Shady" );
+  console.log( "Hi!" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "Slim Shady" );
+
+};
 
 // For 3
-// Write a loop that counts backwards from 20 to 5 (inclusive) and prints
-// "even" if the number is even and prints "odd" if the number is odd.
-Exer.for3 = function () {};
+// Write a loop that counts backwards from 20 to 5 and prints the number and
+// "even" if the number is even and "odd" if the number is odd.
+Exer.for3 = function () {
+
+  for ( var i = 20; i >= 5; i-- ) {
+    if ( i % 2 === 0) {
+      console.log( i, "even" );
+    } else {
+      console.log( i, "odd" );
+    }
+  }
+
+};
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
 
