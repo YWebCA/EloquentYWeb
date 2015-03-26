@@ -249,7 +249,6 @@ describe("the functions exercises", function() {
   });
 });
 
-// Annalise
 describe("The console.log Function exercises", function() {
 
   describe("Console 1", function() {
@@ -288,6 +287,7 @@ describe("The console.log Function exercises", function() {
     describe("with parameters", function () {
 
       beforeEach(function() {
+        console.log( "Console 2:" );
         spyOn(console, 'log').and.callThrough();
       });
 
@@ -338,6 +338,7 @@ describe("The console.log Function exercises", function() {
     describe("with parameters", function() {
 
       beforeEach(function () {
+        console.log( "Console 3:" );
         spyOn(console, 'log').and.callThrough();
       });
 
@@ -375,6 +376,7 @@ describe("The console.log Function exercises", function() {
     });
 
     it("should provide two parameters", function () {
+      console.log( "Console 4:" );
       spyOn(console, 'log').and.callThrough();
       Exer.console4();
       expect( console.log.calls.allArgs()[0].length ).toEqual(2);
@@ -393,6 +395,7 @@ describe("The console.log Function exercises", function() {
       beforeAll(function() {
         this.test1 = "secret passphrase";
         this.test2 = -6;
+        console.log( "Console 5:" );
         spyOn(console, 'log').and.callThrough();
       });
 
@@ -415,6 +418,7 @@ describe("Return Values exercises", function () {
   describe("Return 1", function () {
 
     beforeAll(function () {
+      console.log( "Return 1:" );
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
       Exer.return1();
@@ -459,6 +463,7 @@ describe("Return Values exercises", function () {
     var foo;
 
     beforeAll(function () {
+      console.log( "Return 3:" );
       spyOn( window, 'strShift' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
       foo = Exer.return3();
@@ -489,6 +494,7 @@ describe("Return Values exercises", function () {
   describe( "Return 4", function () {
 
     beforeAll( function () {
+      console.log( "Return 4:" );
       spyOn( window, 'magicFunc' ).and.callThrough();
       spyOn( console, 'log' ).and.callThrough();
       Exer.return4();
@@ -591,6 +597,7 @@ describe("Control Flow exercises", function() {
     describe( 'given "hello"', function () {
       var foo, bar;
       beforeAll( function () {
+        console.log( "Control 2:" );
         spyOn( console, 'log' ).and.callThrough();
         spyOn( window, 'strReverse' ).and.callThrough();
         spyOn( window, 'confirm' );
@@ -619,7 +626,6 @@ describe("Control Flow exercises", function() {
 
 });
 
-// Annalise
 describe( "Conditional Execution exercises", function () {
 
   describe( "Conditional 1", function () {
@@ -627,6 +633,7 @@ describe( "Conditional Execution exercises", function () {
     describe( "if isSerious is true", function () {
 
       beforeAll( function () {
+        console.log( "Conditional 1:" );
         spyOn( console, 'log' );
         Exer.condition1( true );
       } );
@@ -769,9 +776,11 @@ describe( "Conditional Execution exercises", function () {
     } );
 
     describe( "for inputs", function () {
+
       beforeEach( function () {
         spyOn( console, 'log' );
       } );
+
       describe( "if input is not a number", function () {
         it( 'should output "What do you think this is, bub? Wonderland?"', function () {
           spyOn( window, 'prompt' ).and.returnValue( NaN );
@@ -779,6 +788,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["What do you think this is, bub? Wonderland?"]] );
         } );
       } );
+
       describe( "if input is less than 1", function () {
         it( 'should output "Negativelaaaaaaand~!"', function () {
           spyOn( window, 'prompt' ).and.returnValue( -2 );
@@ -786,6 +796,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Negativelaaaaaaand~!"]] );
         } );
       } );
+
       describe( "if input is greather than 31", function () {
         it( 'should output "Are they paying you overtime for this?"', function () {
           spyOn( window, 'prompt' ).and.returnValue( 40 );
@@ -793,6 +804,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Are they paying you overtime for this?"]] );
         } );
       } );
+
       describe( "if input is between 29 and 31 inclusive", function () {
         it( 'should output "I sure hope it isn\'t February." for 29', function () {
           spyOn( window, 'prompt' ).and.returnValue( 29 );
@@ -805,6 +817,7 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["I sure hope it isn't February."]] );
         } );
       } );
+
       describe( "if input is between 1 and 28, inclusive", function () {
         it( 'should output "Did you know? There are exactly ## ways to make today awesome!"', function () {
           spyOn( window, 'prompt' ).and.returnValue( 7 );
@@ -812,17 +825,18 @@ describe( "Conditional Execution exercises", function () {
           expect( console.log.calls.allArgs() ).toEqual( [["Did you know? There are exactly 7 ways to make today awesome!"]] );
         } );
       } );
+
     } );
 
   } );
 
 } );
 
-// Nate
 describe("While and dowhile Loops exercises", function() {
 
   describe("While 1", function() {
     beforeAll(function() {
+      console.log( "While 1:" );
       spyOn(console, 'log').and.callThrough();
       Exer.while1();
     });
@@ -843,6 +857,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("while 2", function() {
     beforeAll(function() {
+      console.log( "While 2:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.while2();
     });
@@ -865,6 +880,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("do while 1", function() {
     beforeAll(function() {
+      console.log( "do while 1:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.doWhile1()
     });
@@ -884,6 +900,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("do while 2", function() {
     beforeAll(function() {
+      console.log( "do while 2:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.doWhile2()
     });
@@ -939,7 +956,6 @@ describe("Indenting Code exercises", function() {
           work.splice( i, 1 );
         } else { i++; }
       }
-      i = 0;
       var line1Correct = /^    var firstName/.test(work[1]),
           line2Correct = /^    var lastName/.test(work[2]),
           line3Correct = /^    if\(firstName/.test(work[3]),
@@ -955,21 +971,117 @@ describe("Indenting Code exercises", function() {
   });
 });
 
-// Annalise
-describe("for Loops exercises");
+describe( "for Loops exercises", function () {
+
+  describe( "For 1", function () {
+
+    var args = [];
+    beforeAll( function () {
+      var scream = "...";
+      while ( scream.length < 28 ) {
+        args.push( [ scream ] );
+        scream = "    " + scream + "AA";
+      }
+      scream += "H!"
+      args.push( [ scream ] );
+    } );
+
+    it( "should maintain the correct output", function () {
+      console.log( "For 1:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.for1();
+      expect( console.log.calls.allArgs() ).toEqual( args );
+    } );
+
+    it( "should make six explicit calls to console.log", function () {
+      expect( Exer.for1.toString().match(/console\.log/g).length ).toBe( 6 );
+    } );
+
+  } );
+
+  describe( "For 2", function () {
+
+    var lyrics = [
+      [ "Hi!" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "Slim Shady" ],
+      [ "Hi!" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "My name is" ],
+      [ "Slim Shady" ]
+    ];
+    var work = "";
+    beforeAll( function () {
+      var lines = Exer.for2.toString().split('\n');
+      for ( var i = 0; i < lines.length; i++ ) {
+        work += lines[i];
+      }
+    } );
+
+    it( "should print the song lyrics", function () {
+      console.log( "For 2:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.for2();
+      expect( console.log.calls.allArgs() ).toEqual( lyrics );
+    } );
+
+    it( "should use a for loop", function () {
+      expect( work.match( /function \(\) \{.*for.*\(.*;.*;.*\)\s*\{.*\}.*\}/g ) ).not.toBeNull();
+    } );
+
+    it( "should use a nested for loop", function () {
+      expect( work.match( /function \(\) \{.*for.*\(.*;.*;.*\)\s*\{.*for.*\(.*;.*;.*\)\s*\{.*\}.*\}.*\}/g ) ).not.toBeNull();
+    } );
+
+  } );
+
+  describe( "For 3", function () {
+
+    var args = [];
+    beforeAll( function () {
+      for ( var i = 20; i >= 5; i-- ) {
+        if ( i % 2 === 0) {
+          args.push( [ i, "even" ] );
+        } else {
+          args.push( [ i, "odd" ] );
+        }
+      }
+      console.log( "For 3:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.for3();
+    } );
+
+    it( 'should print 16 lines', function () {
+      expect( console.log.calls.count() ).toBe( 16 );
+    } );
+
+    it( 'should print alternating "even"s and "odd"s', function () {
+      expect( console.log.calls.allArgs() ).toEqual( args );
+    } );
+    
+  } );
+
+} );
 
 // Nate
-describe("Breaking Out of a Loop exercises");
-
-// Zach
-describe("Updating Variables Succinctly exercises");
+describe("Breaking Out of a Loop exercises", function () {
+  it( "should test things" );
+});
 
 // Annalise
+describe("Updating Variables Succinctly exercises", function () {
+  it( "should test things" );
+} );
+
 describe( "Dispatching on a Value with switch exercises", function () {
   describe( "Switch 1", function () {
 
     beforeEach( function () {
       spyOn( console, 'log' ).and.callThrough();
+      console.log( "Switch 1:");
     } );
 
     it( 'should say "foo"', function () {
@@ -996,9 +1108,13 @@ describe( "Dispatching on a Value with switch exercises", function () {
 } );
 
 // Nate
-describe("Capitalization exercises");
+describe("Capitalization exercises", function () {
+  it( "should test things" );
+} );
 
-// Zach
-describe("Comments exercises");
+// Annalise
+describe("Comments exercises", function () {
+  it( "should test things" );
+} );
 
 jsHintSpec();

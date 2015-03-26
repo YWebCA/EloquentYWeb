@@ -130,6 +130,8 @@ Exer.environment1 = function () {
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
+  // Your work here
+  
 };
 
 
@@ -236,11 +238,15 @@ Exer.return5 = function () {
 // Call prompt with the string and return the result.
 Exer.prompt1 = function () {
 
+  // Your work here
+
 };
 
 // Confirm 1
 // Call confirm with the string and return the result.
 Exer.confirm1 = function () {
+
+  // Your work here
 
 };
 
@@ -399,6 +405,46 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
+
+// For 1
+// Rewrite the loop as a linear sequence of statements.
+Exer.for1 = function () {
+
+  var scream;
+  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
+    console.log( scream );
+    scream = "    " + scream;
+  }
+  scream += "H!"
+  console.log( scream );
+
+};
+
+// For 2
+// Rewrite the repetative code with for loops.
+Exer.for2 = function () {
+
+  console.log( "Hi!" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "Slim Shady" );
+  console.log( "Hi!" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "My name is" );
+  console.log( "Slim Shady" );
+
+};
+
+// For 3
+// Write a loop that counts backwards from 20 to 5 and prints the number and
+// "even" if the number is even and "odd" if the number is odd.
+Exer.for3 = function () {
+
+  // Your work here
+
+};
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
 
