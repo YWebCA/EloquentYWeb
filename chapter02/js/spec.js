@@ -1016,6 +1016,13 @@ describe( "for Loops exercises", function () {
       [ "My name is" ],
       [ "Slim Shady" ]
     ];
+    var work = "";
+    beforeAll( function () {
+      var lines = Exer.for2.toString().split('\n');
+      for ( var i = 0; i < lines.length; i++ ) {
+        work += lines[i];
+      }
+    } );
 
     it( "should print the song lyrics", function () {
       console.log( "For 2:" );
@@ -1024,12 +1031,11 @@ describe( "for Loops exercises", function () {
       expect( console.log.calls.allArgs() ).toEqual( lyrics );
     } );
 
+    it( "should use a for loop", function () {
+      expect( work.match( /function \(\) \{.*for.*\(.*;.*;.*\)\s*\{.*\}.*\}/g ) ).not.toBeNull();
+    } );
+
     it( "should use a nested for loop", function () {
-      var lines = Exer.for2.toString().split('\n');
-      var work = "";
-      for ( var i = 0; i < lines.length; i++ ) {
-        work += lines[i];
-      }
       expect( work.match( /function \(\) \{.*for.*\(.*;.*;.*\)\s*\{.*for.*\(.*;.*;.*\)\s*\{.*\}.*\}.*\}/g ) ).not.toBeNull();
     } );
 
@@ -1064,10 +1070,14 @@ describe( "for Loops exercises", function () {
 } );
 
 // Nate
-describe("Breaking Out of a Loop exercises");
+describe("Breaking Out of a Loop exercises", function () {
+  it( "should test things" );
+});
 
 // Zach
-describe("Updating Variables Succinctly exercises");
+describe("Updating Variables Succinctly exercises", function () {
+  it( "should test things" );
+} );
 
 describe( "Dispatching on a Value with switch exercises", function () {
   describe( "Switch 1", function () {
@@ -1101,9 +1111,13 @@ describe( "Dispatching on a Value with switch exercises", function () {
 } );
 
 // Nate
-describe("Capitalization exercises");
+describe("Capitalization exercises", function () {
+  it( "should test things" );
+} );
 
 // Zach
-describe("Comments exercises");
+describe("Comments exercises", function () {
+  it( "should test things" );
+} );
 
 jsHintSpec();

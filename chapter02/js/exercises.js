@@ -436,13 +436,7 @@ Exer.for2 = function () {
 // "even" if the number is even and "odd" if the number is odd.
 Exer.for3 = function () {
 
-  for ( var i = 20; i >= 5; i-- ) {
-    if ( i % 2 === 0) {
-      console.log( i, "even" );
-    } else {
-      console.log( i, "odd" );
-    }
-  }
+  // Your work here
 
 };
 
