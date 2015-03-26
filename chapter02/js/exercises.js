@@ -226,10 +226,12 @@ Exer.return2 = function () {
 Exer.return3 = function () {
 
   // Call `strShift` with the argument "abczABCZ". Log the result.
-  console.log(strShift("abczABCZ"));
+  var result = strShift("abczABCZ");
+
+  console.log(result);
 
   // Return that same result with "123" concatenated to the end.
-  return strShift("abczABCZ" + "123")
+  return result + "123";
 };
 
 // Return 4
@@ -238,10 +240,10 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
-  magicFunc("String1");
-  magicFunc("String2");
+  var result1 = magicFunc("String1");
+  var result2 = magicFunc("String2");
 
-  console.log(magicFunc("String1" + "String2"));
+  console.log(result1 + result2);
 
 
 };
@@ -258,7 +260,7 @@ Exer.return5 = function () {
   var result1 = strShift("abcABC123!@#");
 
   // Declare and initialize a variable for the second string.
-  var result2 = strShift(strShift(" S d F j K l"));
+  var result2 = strShift(strShift("a S d F j K l"));
   // A return statement.
   return strShuffle(result1, result2);
 
@@ -302,7 +304,7 @@ Exer.control2 = function ( bar ) {
   var foo;
 
   // Initialize `foo` with a string.
-  foo = "Hello World"; 
+  foo = "hello world"; 
 
   // Log `foo` to the console.
   console.log(foo);
@@ -332,7 +334,7 @@ Exer.condition1 = function ( isSerious ) {
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
-  if (isSerious === true){
+  if (isSerious === false){
     console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
   }
 
@@ -344,10 +346,18 @@ Exer.condition2 = function ( temperature ) {
 
   // If temperature is greater than or equal to 70
   // Then output:
-  //     Hermit crab warning!
+  // Hermit crab warning!
+  if(temperature >= 70){
+    console.log("Hermit crab warning!");
+    console.log("Thanks for visiting Pier One and Three Quarters!");
+  }
 
   // Otherwise, output
   //     Catch of the day: influenza, $14/lb.
+  else{
+    console.log("Catch of the day: influenza, $14/lb.");
+    console.log("Thanks for visiting Pier One and Three Quarters!");
+  }
 
   // In either case, also print
   //     Thanks for visiting Pier One and Three Quarters!
@@ -359,14 +369,30 @@ Exer.condition2 = function ( temperature ) {
 Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
+  var luckyNumber = 7;
 
   // If the length of `whatDay` is 6 or less...
+  if(whatDay.length <= 6){
+    luckyNumber += "!";
+  }
 
   // If `whatDay` is "Mannersday"...
+  if(whatDay === "Mannersday"){
+    return luckyNumber += 4;
+  } 
   // If `whatDay` is "Foosday"...
+  else if(whatDay === "Foosday"){
+    return luckyNumber += 2;
+  } 
   // If `whatDay` is "Heyday"...
+  else if(whatDay === "Heyday"){
+    console.log(typeof luckyNumber);
+    return luckyNumber + luckyNumber.charAt(0);
+  } 
   // Otherwise...
-
+  else{
+    return luckyNumber = Infinity;
+  }
   // Return `luckyNumber`
 
 };
@@ -375,13 +401,35 @@ Exer.condition3 = function ( whatDay ) {
 Exer.condition4 = function () {
 
   // Prompt the user
+  var result = prompt("Enter today's date, please.");
 
   // If the user's input is not a number...
+  if (isNaN(result) === true){
+    console.log("What do you think this is, bub? Wonderland?");
+  }
+
+// Otherwise...
+  // If the user's input is less than 1...
+  else if(result < 1){
+    console.log("Negativelaaaaaaand~!");
+  }
+
+  // If the user's input is greater than 31...
+  else if(result > 31){
+    console.log("Are they paying you overtime for this?");
+  }
+
+  // If the user's input is greater than 31...
+  else if(result >= 29 && result <= 31){
+    console.log("I sure hope it isn't February.");
+  }
+  
   // Otherwise...
-    // If the user's input is less than 1...
-    // If the user's input is greater than 31...
-    // If the user's input between 29 and 31, inclusive...
-    // Otherwise...
+  // If the user's input between 29 and 31, inclusive...
+  else{
+    console.log("Did you know? There are exactly " + result + " ways to make today awesome!");
+  }
+
 
 };
 
@@ -390,28 +438,56 @@ Exer.condition4 = function () {
 // While 1
 // Turn the code in the function into a while loop.
 Exer.while1 = function () {
-  console.log("10 sheep");
-  console.log("9 sheep");
-  console.log("8 sheep");
-  console.log("7 sheep");
-  console.log("6 sheep");
-  console.log("5 sheep");
-  console.log("4 sheep");
-  console.log("3 sheep");
-  console.log("2 sheep");
-  console.log("1 sheep");
+
+
+  var x = 0;
+  var y = 10;
+  while (x < y){
+    console.log(y + " sheep");
+    y--;
+  }
+
+    // var i = 10;
+    // do {
+    //     console.log(i + " The number is ");
+    //     i--;
+    // }
+    // while (i < 10);
+
+
+
+  // console.log("10 sheep");
+  // console.log("9 sheep");
+  // console.log("8 sheep");
+  // console.log("7 sheep");
+  // console.log("6 sheep");
+  // console.log("5 sheep");
+  // console.log("4 sheep");
+  // console.log("3 sheep");
+  // console.log("2 sheep");
+  // console.log("1 sheep");
 };
 
 /* jshint ignore:start */
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
-  var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
-    console.log(deadWitch);
-    deadWitch = deadWitch.substr(2);
-  }
+  console.log("I'm melting!");
+  console.log("I'm melting!");  
+  console.log("I'm melting!");  
+  console.log("I'm melting!");  
+  console.log("I'm melting!");  
+  console.log("I'm melting!");  
+  console.log("I'm melting!");    
+
   console.log("What a world!");
+
+// while(deadWitch.length > 0) {
+  //   console.log(deadWitch);
+  //   deadWitch = deadWitch.substr(2);
+  // }
+  // console.log("What a world!");  // var deadWitch = "I'm melting!";
+  
 };
 /* jshint ignore:end */
 
