@@ -249,16 +249,16 @@ return a = strShuffle( x, (strShift(y)) );
 // Call prompt with the string and return the result.
 Exer.prompt1 = function () {
 
-  // Your work here
-
+var x = prompt("What is the answer to the meaning of life, the universe, and everything?", "...");
+return x;
 };
 
 // Confirm 1
 // Call confirm with the string and return the result.
 Exer.confirm1 = function () {
 
-  // Your work here
-
+var y = confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
+return y;
 };
 
 /*----------------------------    CONTROL FLOW    ----------------------------*/
@@ -269,27 +269,30 @@ Exer.control1 = function () {
   // Use prompt to get a number from a user
 
   // Print that number to the console
-
+var x = prompt("What's your favorite number?", "...");
+console.log("5");
 };
 
 // Control 2
 Exer.control2 = function ( bar ) {
 
   // Declare a variable named `foo`.
-
+var foo;
   // Initialize `foo` with a string.
-
+foo = "lemonade";
+console.log(foo);
   // Log `foo` to the console.
 
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.
-
+var ding = bar + foo + bar;
   // Call `strReverse` and pass it `ding` (as an argument).
   // Send the result to the user in a confirm window.
   // Save the user's response in a new variable called `quux`.
-
+var y = strReverse(ding);
+var quux = confirm(y);
   // Return the opposite of `quux`.
-
+return !quux;
 };
 
 /*-----------------------    CONDITIONAL EXECUTION    ------------------------*/
@@ -297,12 +300,13 @@ Exer.control2 = function ( bar ) {
 // Conditional 1
 // Expect `isSerious` to be a boolean
 Exer.condition1 = function ( isSerious ) {
-
+if ( 3 = 2 )
   console.log( "Welcome to Camelot!" );
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
-
+else
+console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
 };
 
 // Conditional 2
