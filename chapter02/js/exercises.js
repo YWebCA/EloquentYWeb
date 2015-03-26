@@ -130,6 +130,8 @@ Exer.environment1 = function () {
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
+  // Your work here
+  
 };
 
 
@@ -236,11 +238,15 @@ Exer.return5 = function () {
 // Call prompt with the string and return the result.
 Exer.prompt1 = function () {
 
+  // Your work here
+
 };
 
 // Confirm 1
 // Call confirm with the string and return the result.
 Exer.confirm1 = function () {
+
+  // Your work here
 
 };
 

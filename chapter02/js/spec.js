@@ -249,7 +249,6 @@ describe("the functions exercises", function() {
   });
 });
 
-// Annalise
 describe("The console.log Function exercises", function() {
 
   describe("Console 1", function() {
@@ -833,7 +832,6 @@ describe( "Conditional Execution exercises", function () {
 
 } );
 
-// Nate
 describe("While and dowhile Loops exercises", function() {
 
   describe("While 1", function() {
@@ -973,7 +971,6 @@ describe("Indenting Code exercises", function() {
   });
 });
 
-// Annalise
 describe( "for Loops exercises", function () {
 
   describe( "For 1", function () {
@@ -1074,7 +1071,7 @@ describe("Breaking Out of a Loop exercises", function () {
   it( "should test things" );
 });
 
-// Zach
+// Annalise
 describe("Updating Variables Succinctly exercises", function () {
   it( "should test things" );
 } );
@@ -1115,7 +1112,7 @@ describe("Capitalization exercises", function () {
   it( "should test things" );
 } );
 
-// Zach
+// Annalise
 describe("Comments exercises", function () {
   it( "should test things" );
 } );
