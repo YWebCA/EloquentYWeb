@@ -634,6 +634,7 @@ describe( "Conditional Execution exercises", function () {
     describe( "if isSerious is true", function () {
 
       beforeAll( function () {
+        console.log( "Conditional 1:" );
         spyOn( console, 'log' );
         Exer.condition1( true );
       } );
@@ -837,6 +838,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("While 1", function() {
     beforeAll(function() {
+      console.log( "While 1:" );
       spyOn(console, 'log').and.callThrough();
       Exer.while1();
     });
@@ -857,6 +859,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("while 2", function() {
     beforeAll(function() {
+      console.log( "While 2:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.while2();
     });
@@ -879,6 +882,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("do while 1", function() {
     beforeAll(function() {
+      console.log( "do while 1:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.doWhile1()
     });
@@ -898,6 +902,7 @@ describe("While and dowhile Loops exercises", function() {
 
   describe("do while 2", function() {
     beforeAll(function() {
+      console.log( "do while 2:" );
       spyOn( console, 'log' ).and.callThrough();
       Exer.doWhile2()
     });
@@ -985,8 +990,8 @@ describe( "for Loops exercises", function () {
     } );
 
     it( "should maintain the correct output", function () {
-      spyOn( console, 'log' ).and.callThrough();
       console.log( "For 1:" );
+      spyOn( console, 'log' ).and.callThrough();
       Exer.for1();
       expect( console.log.calls.allArgs() ).toEqual( args );
     } );
