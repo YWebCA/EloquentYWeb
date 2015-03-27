@@ -1,11 +1,11 @@
-/*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
+ /*---------------------    EXPRESSIONS AND STATEMENTS    ---------------------*/
 
 // Expressions 1
 // Make the function return a nested expression (use parentheses) whose
 // evaluated value is not undefined.
 Exer.expressions1 = function () {
 
-  return /* your answer here */ ;
+  return console.log(Math.max(2,4));
 
 };
 
@@ -13,7 +13,9 @@ Exer.expressions1 = function () {
 // Statements 1
 Exer.statements1 = function () {
 
-  // Write a statement that is not undefined.
+    var a = "The New";
+   
+
 
 };
 /* jshint ignore:end */
