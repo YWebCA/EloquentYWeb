@@ -364,19 +364,32 @@ Exer.condition2 = function ( temperature ) {
 // Conditional 3
 // Expect `whatDay` to be a string
 Exer.condition3 = function ( whatDay ) {
-
+var luckyNumber = 7;
   // Declare and initialize `luckyNumber`
-
+if(whatDay.length<=6 ){
+  luckyNumber = luckyNumber + "!";
+}
   // If the length of `whatDay` is 6 or less...
-
   // If `whatDay` is "Mannersday"...
+
+ if(whatDay === 'Mannersday'){
+  luckyNumber += 4; 
+  }
+
   // If `whatDay` is "Foosday"...
+  else if(whatDay === 'Foosday'){
+   luckyNumber += 2 ;
+  }
   // If `whatDay` is "Heyday"...
+  else if (whatDay === 'Heyday'){
+   luckyNumber += luckyNumber.charAt(0) ;
+  }
   // Otherwise...
 
   // Return `luckyNumber`
-
-};
+  return luckyNumber;
+ 
+ }; 
 
 // Conditional 4
 Exer.condition4 = function () {
