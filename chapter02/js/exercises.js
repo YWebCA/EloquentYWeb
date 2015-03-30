@@ -300,28 +300,31 @@ return !quux;
 // Conditional 1
 // Expect `isSerious` to be a boolean
 Exer.condition1 = function ( isSerious ) {
-if ( 3 = 2 )
   console.log( "Welcome to Camelot!" );
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
-else
-console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+if ( !isSerious )
+  console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
 };
 
 // Conditional 2
 // Expect `temperature` to be a number
 Exer.condition2 = function ( temperature ) {
 
+     
   // If temperature is greater than or equal to 70
   // Then output:
-  //     Hermit crab warning!
+  if ( temperature >= 70 )
+    console.log("Hermit crab warning!");
 
   // Otherwise, output
-  //     Catch of the day: influenza, $14/lb.
+  else 
+     console.log("Catch of the day: influenza, $14/lb.");
 
   // In either case, also print
-  //     Thanks for visiting Pier One and Three Quarters!
+  //    
+  console.log("Thanks for visiting Pier One and Three Quarters!"); 
 
 };
 
@@ -330,16 +333,28 @@ Exer.condition2 = function ( temperature ) {
 Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
-
+var luckyNumber;
+luckyNumber = 7;
   // If the length of `whatDay` is 6 or less...
+if (whatDay.length <= 6) {
+luckyNumber += "!";
 
   // If `whatDay` is "Mannersday"...
+} if (whatDay == "Mannersday") {
+luckyNumber += 4;  
+
   // If `whatDay` is "Foosday"...
+} else if (whatDay == "Foosday") {
+luckyNumber += 2;  
+
   // If `whatDay` is "Heyday"...
+} else if (whatDay == "Heyday") {
+luckyNumber += luckyNumber.charAt(0); 
   // Otherwise...
 
   // Return `luckyNumber`
-
+}
+return luckyNumber; 
 };
 
 // Conditional 4
