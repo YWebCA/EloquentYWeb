@@ -44,7 +44,7 @@ Exer.variables3 = function () {
   var stringy = 'init';// Write a statement that declares a variable and initializes it to a string.
 
   return stringy;// Return the variable.
-
+// dogs bark
 };
 
 // Variables 4
