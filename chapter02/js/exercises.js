@@ -479,7 +479,7 @@ Exer.succinct2 = function () {
 // Correct the decrementation operator error.
 Exer.succinct3 = function () {
 
-  var message = "Reverse me!"
+  var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
     console.log( message.charAt( pointer-- ) );
