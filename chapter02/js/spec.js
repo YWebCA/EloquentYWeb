@@ -1113,7 +1113,7 @@ describe( "Updating Variables Succinctly exercises", function () {
     } );
 
     it( "should use a succinct incremenation operator", function () {
-      console.log( Exer.succinct2.toString().match(/for\s*\(.*;.*;\s*(?:hippo\+\+|\+\+hippo)\s*\)/mg) );
+      expect( Exer.succinct2.toString().match(/for\s*\(.*;.*;\s*(?:hippo\+\+|\+\+hippo)\s*\)/mg).length ).toBe(1);
     } );
 
   } );
