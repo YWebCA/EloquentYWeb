@@ -1071,9 +1071,69 @@ describe("Breaking Out of a Loop exercises", function () {
   it( "should test things" );
 });
 
-// Annalise
-describe("Updating Variables Succinctly exercises", function () {
-  it( "should test things" );
+describe( "Updating Variables Succinctly exercises", function () {
+
+  describe( "Succinct 1", function () {
+
+    it( "should return the answer", function () {
+      expect( Exer.succinct1(3) ).toBe( "5 handsomely hirsute kiwis" );
+    } );
+
+    it( "should return the answer", function () {
+      expect( Exer.succinct1(7) ).toBe( "13 handsomely hirsute kiwis" );
+    } );
+
+    it( "should return the answer", function () {
+      expect( Exer.succinct1(24) ).toBe( "47 handsomely hirsute kiwis" );
+    } );
+
+    it( "should use all four compound assignment operators", function () {
+      expect( Exer.succinct1.toString().match(/\*=/mg).length ).toBe(1);
+      expect( Exer.succinct1.toString().match(/-=/mg).length ).toBe(1);
+      expect( Exer.succinct1.toString().match(/\/=/mg).length ).toBe(1);
+      expect( Exer.succinct1.toString().match(/\+=/mg).length ).toBe(1);
+    } );
+
+  } );
+
+  describe( "Succinct 2", function () {
+
+    var output = [];
+    beforeAll( function () {
+      for ( var hippo = 2; hippo <= 10; hippo = hippo + 1 ) {
+        output.push( [ hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" ] );
+      }
+    } );
+
+    it( "should create the same output", function () {
+      console.log( "Succinct 2:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.succinct2();
+      expect( console.log.calls.allArgs() ).toEqual( output );
+    } );
+
+    it( "should use a succinct incremenation operator", function () {
+      expect( Exer.succinct2.toString().match(/for\s*\(.*;.*;\s*(?:hippo\+\+|\+\+hippo)\s*\)/mg).length ).toBe(1);
+    } );
+
+  } );
+
+  describe( "Succinct 3", function () {
+
+    it( "should use a prefixed decrementer", function () {
+      expect( Exer.succinct3.toString().match(/--pointer/mg).length ).toBe(1);
+    } );
+
+    it( "should produce the correct output", function () {
+      var output = [ [ '!' ], [ 'e' ], [ 'm' ], [ ' ' ], [ 'e' ], [ 's' ], [ 'r' ], [ 'e' ], [ 'v' ], [ 'e' ], [ 'R' ] ];
+      console.log( "Succinct 3:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.succinct3();
+      expect( console.log.calls.allArgs() ).toEqual( output );
+    } );
+
+  } );
+
 } );
 
 describe( "Dispatching on a Value with switch exercises", function () {

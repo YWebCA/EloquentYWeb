@@ -450,6 +450,43 @@ Exer.for3 = function () {
 
 /*-------------------    UPDATING VARIABLES SUCCINCTLY    --------------------*/
 
+// Succinct 1
+Exer.succinct1 = function ( kiwis ) {
+
+  // Quintuple kiwis.
+
+  // Reduce kiwis by 2.
+
+  // Halve kiwis.
+
+  // Concatenate " handsomely hirsute kiwis" to kiwis.
+
+  // Return kiwis.
+
+};
+
+// Succinct 2
+// Edit the for loop to use the incrementation operator.
+Exer.succinct2 = function () {
+
+  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+    console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
+  }
+
+};
+
+// Succinct 3
+// Correct the decrementation operator error.
+Exer.succinct3 = function () {
+
+  var message = "Reverse me!";
+  var pointer = message.length;
+  while( pointer > 0 ) {
+    console.log( message.charAt( pointer-- ) );
+  }
+
+};
+
 /*-----------------    DISPATCHING ON A VALUE WITH SWITCH    -----------------*/
 
 // Switch 1
