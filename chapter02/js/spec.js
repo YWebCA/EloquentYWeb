@@ -1172,9 +1172,39 @@ describe("Capitalization exercises", function () {
   it( "should test things" );
 } );
 
-// Annalise
 describe("Comments exercises", function () {
-  it( "should test things" );
+
+  describe( "Comments 1", function () {
+
+    var work;
+    beforeAll( function () {
+      work = Exer.comments1.toString();
+    } );
+
+    it( "should comment out the missiles line", function () {
+      expect( work.match(/^\s*\/\/\s*missiles\.launch\(\);$/mg).length ).toBe(1);
+    } );
+
+    it( "should contain a full-line comment involving wheat", function () {
+      expect( work.match(/^\s*\/\/.*wheat.*$/mg).length ).toBe(1);
+    } );
+
+    it( "should contain a comment about bandits after your bricks", function () {
+      expect( work.match(/^\s*brick\.buy\(2\);\s*\/\/.*bandits!.*$/mg).length ).toBe(1);
+    } );
+
+    // TODO: currently does not check for function
+
+  } );
+
+  describe( "comments 2", function () {
+    it( "should contain a block comment and nothing else", function () {
+      var work = Exer.comments2.toString().match(/function \(\) {\s*\/\*(.*)\*\/\s*}/m);
+      expect( work ).not.toBeNull();
+      console.log( "Comments 2:\n" + work[1] );
+    } );
+  } );
+
 } );
 
 jsHintSpec();

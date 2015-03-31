@@ -514,3 +514,28 @@ Exer.switch1 = function ( animal ) {
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
 /*------------------------------    COMMENTS    ------------------------------*/
+
+Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
+
+  if ( war ) {
+    if ( missiles ) {
+    } else {
+      cower();
+    }
+  } else {
+    if ( wood ) {
+      wood.trade( sheep, 1 );
+    } else if ( sheep ) {
+      sheep.trade( wood, 3 );
+    } else {
+      brick.buy(2);
+    }
+  }
+
+};
+
+Exer.comments2 = function () {
+
+  // your work here
+
+};
