@@ -1199,8 +1199,10 @@ describe("Comments exercises", function () {
 
   describe( "comments 2", function () {
     it( "should contain a block comment and nothing else", function () {
-      var work = Exer.comments2.toString().match(/function \(\) {\s*\/\*(.*)\*\/\s*}/m);
-      expect( work ).not.toBeNull();
+      var work = Exer.comments2.toString().split(/\/\*|\*\//);
+      expect( work[0].match(/^function \(\) {\s*$/) ).not.toBeNull();
+      expect( work[2].match(/^\s*}/)).not.toBeNull();
+      expect( work[1] ).not.toBeNull();
       console.log( "Comments 2:\n" + work[1] );
     } );
   } );
