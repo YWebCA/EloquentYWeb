@@ -97,16 +97,16 @@ Exer.variables6 = function ( stacys ) {
 Exer.variables7 = function ( change ) {
 
   // You find a quarter.
-  var newChange = .25 + change ;
+  change += .25;
 
   // Then you spend a dime on old fashioned candy.
-  newChange = newChange - 0.10;
+  change -= 0.10;
   // How much money do you have now?
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
-  result = "$" + newChange + " ";
+  change = "$" + change;
   // Return that string.
-  return result;
+  return change;
 };
 
 
@@ -148,7 +148,9 @@ Exer.environment1 = function () {
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
   // Your work here
-
+  recombobulate();
+  setPowerLevel(9001);
+  cornTortilla("chicken", "queso", "bacon", "lime");
 };
 
 
@@ -273,6 +275,7 @@ Exer.return5 = function () {
 Exer.prompt1 = function () {
 
   // Your work here
+  return prompt("What is the answer to the meaning of life, the universe, and everything?");
 
 };
 
@@ -494,14 +497,22 @@ Exer.while2 = function () {
 // doWhile 1
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
-Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
-};
+// Exer.doWhile1 = function () {
+//   console.log(0);
+//   console.log(1);
+//   console.log(2);
+//   console.log(0);
+//   console.log(1);
+//   console.log(2);
+// };
+
+var i = 0;
+do{
+  i += 1;
+  console.log(i/3)  
+}
+
+while(i < 6)
 
 /* jshint ignore:start */
 // doWhile 2
@@ -519,13 +530,13 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+  var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
