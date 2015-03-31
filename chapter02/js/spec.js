@@ -851,7 +851,19 @@ describe("While and dowhile Loops exercises", function() {
       }
     });
     it("should have console.log appear only once", function() {
-        expect( Exer.while1.toString().match(/console\.log/gm).length ).toEqual(1);
+      var work = Exer.while1.toString();
+      work = work.match(/^.+?$/mg);  // break into lines
+      var i = 0;
+      while ( i < work.length ) {
+        if ( work[i].match(/^\s*\/\//) ) {  // remove comments
+          work.splice( i, 1 );
+        } else { i++; }
+      }
+      var work2 = '';
+      for( i = 0; i < work.length; i++ ) {
+        work2 += work[i];
+      }
+      expect( work2.match(/console\.log/gm).length ).toEqual(1);
     });
   });
 
