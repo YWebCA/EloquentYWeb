@@ -47,7 +47,7 @@ Exer.variables3 = function () {
 
   // Write a statement that declares a variable and initializes it to a string.
    var three = "3";
-   return three; 
+   return three 
 
 
 };
@@ -55,7 +55,7 @@ Exer.variables3 = function () {
 // Variables 4
 Exer.variables4 = function ( n ) {
 
-   return n;
+   return n
 
 
 };
@@ -66,7 +66,7 @@ Exer.variables5 = function ( n ) {
   // Declare a new variable and initialize it to the value of `n`.
 
   var good = n;
-  return good;
+  return good
 };
 
 // Variables 6
@@ -81,7 +81,7 @@ Exer.variables6 = function ( stacys ) {
        "parameter" ;
 
   // Return the total number of apples you have.
- return stacys + apple  ;
+ return stacys + apple  
 
 
 };
@@ -91,38 +91,42 @@ Exer.variables6 = function ( stacys ) {
 Exer.variables7 = function ( change ) {
 
   // You find a quarter
-  change = change + .25;
- 
+  change +=  + 0.25;
+  change  -=  .1;
+  change = "$"+  change;
+  return change;
+  
 
   // Then you spend a dime on old fashioned candy.
   // How much money do you have now? 
-  change = change - .10;
+  
   
 
 
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-  // Return that string.
-  return "$" + change; 
+  // // Return that string.
+  // return "$" + change; 
 
 };
 
 
 /*--------------------    KEYWORDS AND RESERVED WORDS    ---------------------*/
 
-// Keywords 1
-// Uncomment the following function by removing the slash-asterisk pairs.
-// Fix the function so no keywords or reserved words are improperly used.
-/*
-Exer.keywords1 = function ( true, two ) {
-  var new  2;
-  var const =two+2;
-  true "2";
-  var function = new + const + true + two;
-  return function;
+ // Keywords 1
+ // Uncomment the following function by removing the slash-asterisk pairs.
+ // Fix the function so no keywords or reserved words are improperly used.
+
+Exer.keywords1 = function ( red, two ) {
+ var old = 2;
+  var consti = two+2;
+  red += "2";
+  var functioning = old + consti + red + two;
+  return functioning
 };
-*/
+
+
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
@@ -133,7 +137,7 @@ Exer.environment1 = function () {
   // return window;
   // return document;
   // return history;
-  // return browser;
+   return browser;
   // return navigator;
 
 };
@@ -141,12 +145,16 @@ Exer.environment1 = function () {
 /*------------------------------    FUNCTIONS    -----------------------------*/
 
 // Functions 1
+// Call recombobulate with no arguments
 // Call setPowerLevel and pass it a value over 9000.
 // Call cornTortilla and pass it the values "chicken", "queso", "bacon", and
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
   // Your work here
+  recombobulate();
+  setPowerLevel(9001);
+  cornTortilla("chicken" , "queso" , "bacon" , "lime");
 
 };
 
@@ -157,6 +165,7 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 Exer.console1 = function () {
 
   // Output something to the console.
+  console.log("Hello World");
 
 };
 
@@ -164,6 +173,8 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
+  console.log(printme);
+
 
 };
 
@@ -176,6 +187,8 @@ Exer.console3 = function ( data ) {
 
   // your answer here
 
+  console.log (data);
+
 };
 
 // Console 4
@@ -183,7 +196,7 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
-
+    console.log("one", "two");
 };
 
 // Console 5
@@ -193,6 +206,7 @@ Exer.console5 = function ( x, y ) {
   // Output the first parameter `x` to the console.
 
   // Make the function return the parameter `y` plus 1.
+  
 
 };
 
