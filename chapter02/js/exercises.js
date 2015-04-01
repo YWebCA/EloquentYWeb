@@ -530,6 +530,17 @@ Exer.switch1 = function ( animal ) {
 
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
+Exer.capitalization1 = function() {
+  var ZeRo = 0;
+  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
+  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
+    if (Index % 4 == ZeRo) {
+      Console.Log(HAPPYCAT);
+    }
+  }
+
+}
+
 /*------------------------------    COMMENTS    ------------------------------*/
 
 Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {

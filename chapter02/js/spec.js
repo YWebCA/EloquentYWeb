@@ -1212,7 +1212,32 @@ describe( "Dispatching on a Value with switch exercises", function () {
 
 // Nate
 describe("Capitalization exercises", function () {
-  it( "should test things" );
+  describe( "Capitalization 1", function () {
+    it("should have ZeRo correctly capitalized as zero", function() {
+      expect( Exer.capitalization1.toString().match("ZeRo") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("zero") ).toBeTruthy();
+    });
+    it("should have HAPPYCAT correctly capitalized as happyCat", function() {
+      expect( Exer.capitalization1.toString().match("HAPPYCAT") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("happyCat") ).toBeTruthy();
+    });
+    it("should have string correctly capitalized as String", function() {
+      expect( Exer.capitalization1.toString().match("string") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("String") ).toBeTruthy();
+    });
+    it("should have Length correctly capitalized as length", function() {
+      expect( Exer.capitalization1.toString().match("Length") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("length") ).toBeTruthy();
+    });
+    it("should have Index correctly capitalized as index", function() {
+      expect( Exer.capitalization1.toString().match("Index") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("index") ).toBeTruthy();
+    });
+    it("should have Console.Log correctly capitalized as console.log", function() {
+      expect( Exer.capitalization1.toString().match("Console.Log") ).not.toBeTruthy();
+      expect( Exer.capitalization1.toString().match("console.log") ).toBeTruthy();
+    });
+  });
 } );
 
 describe("Comments exercises", function () {
