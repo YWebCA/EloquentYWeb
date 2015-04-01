@@ -447,10 +447,19 @@ while (number >= 1) {
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
   var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
+  
     console.log(deadWitch);
     deadWitch = deadWitch.substr(2);
-  }
+  console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+  console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+  console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
   console.log("What a world!");
 };
 /* jshint ignore:end */
@@ -459,12 +468,14 @@ Exer.while2 = function () {
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
 Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
+  var index =  0;
+  var max  = 6;
+ do{ 
+
+  console.log (index % 3);
+  ++index;
+
+ } while (index < max);
 };
 
 /* jshint ignore:start */
@@ -478,6 +489,14 @@ Exer.doWhile2 = function () {
 };
 /* jshint ignore:end */
 
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+    console.log("Train# " + trainNum + ": In flight!?");
+ };    
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
 // Indenting 1
