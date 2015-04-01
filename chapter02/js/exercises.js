@@ -404,11 +404,12 @@ Exer.while1 = function () {
   //console.log("1 sheep");
 
 
-  var number = 10;
-  while (number >= 1) {
-    console.log(number);
-    number = number - 1;
-  }
+  var i = 11;
+  do {
+    i -= 1;
+    console.log(i + " sheep");
+  } while ( i > 1 );
+  
 };
 
 /* jshint ignore:start */
@@ -416,11 +417,18 @@ Exer.while1 = function () {
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
   var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
     console.log(deadWitch);
     deadWitch = deadWitch.substr(2);
-  }
-  console.log("What a world!");
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    console.log("What a world!");
 };
 /* jshint ignore:end */
 
@@ -428,12 +436,13 @@ Exer.while2 = function () {
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
 Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
+  //0 1 2 0 1 2
+  var i = 3;
+  do {
+    console.log(i % 3);
+    i++;
+  } while ( i <= 8);
+  
 };
 
 /* jshint ignore:start */
@@ -441,9 +450,22 @@ Exer.doWhile1 = function () {
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
   var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
+
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ <= 7;
+  
 };
 /* jshint ignore:end */
 
@@ -452,14 +474,22 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery"; 
+  var lastName = "Moneypenny"; 
+  if(firstName === "Zachery") { 
+    lastName = "Johnson"; 
+  }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
-};
+    var firstName = "Penny"; 
+    var lastName = "Moneywhistle"; 
+    if(firstName === "Penny") { 
+        lastName = "Johnson"; 
+    }
+  };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
 
