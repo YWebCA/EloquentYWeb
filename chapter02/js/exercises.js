@@ -131,7 +131,7 @@ Exer.environment1 = function () {
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
   // Your work here
-  
+
 };
 
 
@@ -322,7 +322,7 @@ Exer.condition3 = function ( whatDay ) {
   // If `whatDay` is "Foosday"...
   // If `whatDay` is "Heyday"...
   // Otherwise...
-  
+
   // Return `luckyNumber`
 
 };
@@ -447,6 +447,23 @@ Exer.for3 = function () {
 };
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
+
+// Breaking 1
+// Use a break to stop this infinite loop
+Exer.breaking1 = function(yeng) {
+  while(yeng()) {
+
+  }
+}
+
+// Breaking 2
+// Every time theatre.next() is called it returns a string, break when that string is
+// "Electric Boogaloo!"
+Exer.breaking2 = function(theatre) {
+  while (theatre.next()) {
+    console.log(theatre.current());
+  }
+}
 
 /*-------------------    UPDATING VARIABLES SUCCINCTLY    --------------------*/
 

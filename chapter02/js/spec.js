@@ -1061,14 +1061,57 @@ describe( "for Loops exercises", function () {
     it( 'should print alternating "even"s and "odd"s', function () {
       expect( console.log.calls.allArgs() ).toEqual( args );
     } );
-    
+
   } );
 
 } );
 
 // Nate
-describe("Breaking Out of a Loop exercises", function () {
-  it( "should test things" );
+describe("Breaking Out of a Loop exercises", function() {
+  describe("breaking 1", function() {
+    beforeAll(function() {
+      var self = this;
+      this.yengCount = 5000;
+      var yeng = function() {
+        return --self.yengCount;
+      };
+      Exer.breaking1(yeng);
+    });
+
+    it("should have the keyword break within the loop", function() {
+      var match = Exer.breaking1.toString().match(/break;/);
+      expect( match ).not.toBeNull();
+    });
+  });
+
+  describe("breaking 2", function() {
+    beforeAll(function() {
+      this.theatre = [
+        "Zardoz",
+        "The FP",
+        "The Lost Skeleton of Cadavra",
+        "Electric Boogaloo!",
+        "Buckaroo Banzai and the 5th Dimension",
+        "Death Bed the Bed That Eats"
+      ];
+      this.theatre.currentIndex = -1;
+      this.theatre.next = function() {
+        return this[++this.currentIndex];
+      };
+      this.theatre.current = function() {
+        return this[this.currentIndex];
+      };
+      this.theatre.toString = function() {
+        return this.current();
+      };
+
+      Exer.breaking2(this.theatre);
+    });
+
+    it("should break after logging \"Electric Boogaloo\"", function() {
+      expect( this.theatre.current() ).toEqual( "Electric Boogaloo!" );
+    });
+  });
 });
 
 describe( "Updating Variables Succinctly exercises", function () {
