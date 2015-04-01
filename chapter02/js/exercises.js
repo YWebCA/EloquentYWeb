@@ -206,6 +206,8 @@ Exer.console5 = function ( x, y ) {
   // Output the first parameter `x` to the console.
 
   // Make the function return the parameter `y` plus 1.
+  console.log(x);
+  return y + 1;
   
 
 };
@@ -217,6 +219,10 @@ Exer.console5 = function ( x, y ) {
 Exer.return1 = function () {
 
   // your work goes here
+  magicFunc();
+  console.log(magicFunc());
+
+
 
 };
 
@@ -225,6 +231,8 @@ Exer.return1 = function () {
 Exer.return2 = function () {
 
   // your work goes here
+  magicFunc();
+  return magicFunc();
 
 };
 
@@ -235,6 +243,13 @@ Exer.return3 = function () {
 
   // Return that same result with "123" concatenated to the end.
 
+var result = strShift("abczABCZ");
+console.log(result);
+return result + "123";
+
+
+
+
 };
 
 // Return 4
@@ -243,6 +258,11 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
+magicFunc(); 
+ console.log;
+ var food = (food)
+
+  
 
 };
 
@@ -252,6 +272,7 @@ Exer.return4 = function () {
 // Return the result of these two shifted strings passed into `strShuffle` with
 // the first string as the first argument and the second string as the second
 // argument.
+
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
