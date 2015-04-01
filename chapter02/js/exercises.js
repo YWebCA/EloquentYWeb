@@ -530,13 +530,20 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-  var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
-};
+  var firstName = "Zachery"; 
+    var lastName = "Moneypenny"; 
+      if(firstName === "Zachery") { 
+          lastName = "Johnson"; 
+        }
+};    
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-  var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+    var firstName = "Penny"; 
+    var lastName = "Moneywhistle"; 
+        if(firstName === "Penny") { 
+            lastName = "Johnson"; }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
