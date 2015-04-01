@@ -7,6 +7,8 @@ Exer.expressions1 = function () {
 
   return ("nested");
 
+
+
 };
 
 /* jshint ignore:start */
@@ -395,6 +397,29 @@ if(whatDay.length<=6 ){
 Exer.condition4 = function () {
 
   // Prompt the user
+  var theNumber = prompt("Enter today's date, please.");
+  
+  if (isNaN(theNumber)) {
+    console.log("What do you think this is, bub? Wonderland?");
+  }
+  else if (theNumber <
+   1){
+    console.log("Negativelaaaaaaand~!");
+  }
+  else if(theNumber >31){
+    console.log("Are they paying you overtime for this?");
+  }
+  else if(theNumber >=29 && theNumber <= 31) {
+    console.log("I sure hope it isn't February.");
+  }
+  else { 
+    console.log("Did you know? There are exactly " + theNumber + " ways to make today awesome!"); 
+  } 
+};
+    
+  
+    
+
 
   // If the user's input is not a number...
   // Otherwise...
@@ -403,23 +428,18 @@ Exer.condition4 = function () {
     // If the user's input between 29 and 31, inclusive...
     // Otherwise...
 
-};
-
 /*----------------------    WHILE AND DO WHILE LOOPS    ----------------------*/
 
 // While 1
 // Turn the code in the function into a while loop.
 Exer.while1 = function () {
-  console.log("10 sheep");
-  console.log("9 sheep");
-  console.log("8 sheep");
-  console.log("7 sheep");
-  console.log("6 sheep");
-  console.log("5 sheep");
-  console.log("4 sheep");
-  console.log("3 sheep");
-  console.log("2 sheep");
-  console.log("1 sheep");
+var number = 10;
+while (number >= 1) {
+  console.log(number + " sheep");
+  number--;
+  }
+
+
 };
 
 /* jshint ignore:start */

@@ -1,8 +1,9 @@
 // Student Workspace
 
 Triangle.start = function () {
-for varline = "#";
-	line.lenght<8;
-line +="#";
-consol.log(line);
+	var line = '#';
+	for (var i = 0; i < 7; i++) {
+		console.log(line);
+	    line += "#";
+	}
 };
