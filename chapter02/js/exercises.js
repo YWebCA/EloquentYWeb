@@ -477,7 +477,7 @@ Exer.breaking2 = function(theatre) {
 // Succinct 1
 Exer.succinct1 = function ( kiwis ) {
 
-  // Quintuple kiwis.
+  // Quadruple kiwis.
 
   // Reduce kiwis by 2.
 
