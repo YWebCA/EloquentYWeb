@@ -312,7 +312,7 @@ foo='';
   // Log `foo` to the console.
 console.log(foo)
   // Concatenate the parameter `bar` to be beginning and end of `foo`
-  // Save the result in a new variable called `ding`.
+  // Save the result in a new variable called `ding`.                      
 var ding = (bar+foo+bar);
   // Call `strReverse` and pass it `ding` (as an argument).
   // Send the result to the user in a confirm window.
@@ -553,17 +553,16 @@ Exer.for1 = function () {
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
+  for (
+    i = 1; i < 3; i++){
+      
+    console.log('Hi!');
+    for( l = 1 ; l < 4 ; l++ ){
+        console.log('My name is');
+    }
+    console.log('Slim Shady');
 
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
+  }
 
 };
 /* jshint ignore:end */
