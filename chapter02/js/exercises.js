@@ -443,33 +443,35 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // For 1
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
-
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
+    var scream = "..."; 
     console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
-  console.log( scream );
+    scream = "    " + scream + "AA";
+    console.log( scream );
+    scream = "    " + scream + "AA";
+    console.log( scream );
+    scream = "    " + scream + "AA";
+    console.log( scream );
+    scream = "    " + scream + "AA";
+    console.log( scream );
+    scream = "    " + scream + "AA";
+   
+    scream += "H!"
+    console.log( scream );
 
-};
+  };  
 
 /* jshint ignore:start */
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
 
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-
+  for (var index = 0; index < 2; index++) {
+    console.log("Hi!"); 
+    for (var count = 0; count < 3; count++) {
+      console.log("My name is"); 
+    }
+    console.log("Slim Shady"); 
+  }
 };
 /* jshint ignore:end */
 
@@ -588,29 +590,3 @@ Exer.capitalization1 = function() {
 /* jshint ignore:end */
 
 /*------------------------------    COMMENTS    ------------------------------*/
-
-Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
-
-  if ( war ) {
-    if ( missiles ) {
-      missiles.launch();
-    } else {
-      cower();
-    }
-  } else {
-    if ( wood ) {
-      wood.trade( sheep, 1 );
-    } else if ( sheep ) {
-      sheep.trade( wood, 3 );
-    } else {
-      brick.buy(2);
-    }
-  }
-
-};
-
-Exer.comments2 = function () {
-
-  // your work here
-
-};
