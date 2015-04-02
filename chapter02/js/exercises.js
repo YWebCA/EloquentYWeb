@@ -462,6 +462,9 @@ Exer.breaking1 = function(yeng) {
 Exer.breaking2 = function(theatre) {
   while (theatre.next()) {
     console.log(theatre.current());
+    if (theatre.current() === "Electric Boogaloo!") {
+      break;
+    }
   }
 }
 

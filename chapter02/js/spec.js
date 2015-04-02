@@ -1105,11 +1105,15 @@ describe("Breaking Out of a Loop exercises", function() {
         return this.current();
       };
 
+      spyOn(console, "log").and.callThrough();
+
       Exer.breaking2(this.theatre);
     });
 
-    it("should break after logging \"Electric Boogaloo\"", function() {
+    it("should break after logging \"Electric Boogaloo!\"", function() {
+      expect( Exer.breaking2.toString() ).toMatch("break");
       expect( this.theatre.current() ).toEqual( "Electric Boogaloo!" );
+      expect( console.log.calls.mostRecent().args[0] ).toEqual("Electric Boogaloo!");
     });
   });
 });
