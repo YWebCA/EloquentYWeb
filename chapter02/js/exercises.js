@@ -387,7 +387,7 @@ if(whatDay.length<=6 ){
    luckyNumber += luckyNumber.charAt(0) ;
   }
   // Otherwise...
-
+  else{luckyNumber=Infinity;}
   // Return `luckyNumber`
   return luckyNumber;
  
@@ -521,8 +521,7 @@ Exer.indenting1 = function() {
 Exer.indenting2 = function() {
     var firstName = "Penny";
     var lastName = "Moneywhistle";
-    if(firstName === "Penny") {
-        
+    if(firstName === "Penny") {   
         lastName = "Johnson"; 
     }
 };
@@ -572,6 +571,14 @@ Exer.for2 = function () {
 // "even" if the number is even and "odd" if the number is odd.
 Exer.for3 = function () {
 
+  for(var number =20; number >= 5; --number){
+   if(number%2===0) {
+    console.log(number,"even");
+  }
+  else{
+    console.log(number,"odd"); 
+  }
+}
   // Your work here
 
 };
@@ -583,7 +590,7 @@ Exer.for3 = function () {
 Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
-
+    break;
   }
 
 };
