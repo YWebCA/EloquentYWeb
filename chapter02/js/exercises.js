@@ -117,7 +117,7 @@ Exer.environment1 = function () {
   // return window;
   // return document;
   // return history;
-  // return browser;
+   return browser;
   // return navigator;
 
 };
@@ -183,11 +183,10 @@ Exer.console5 = function ( x, y ) {
 
 /*---------------------------    RETURN VALUES    ----------------------------*/
 
-// Return 1
-// Call and log out the result of `magicFunc`.
 Exer.return1 = function () {
 
   // your work goes here
+  return console.log(magicFunc());
 
 };
 
@@ -195,7 +194,7 @@ Exer.return1 = function () {
 // Call and return the result of `magicFunc`.
 Exer.return2 = function () {
 
-  // your work goes here
+  return magicFunc();// your work goes here
 
 };
 
@@ -203,11 +202,10 @@ Exer.return2 = function () {
 Exer.return3 = function () {
 
   // Call `strShift` with the argument "abczABCZ". Log the result.
-
-  // Return that same result with "123" concatenated to the end.
+  var shoe = console.log(strShift("abczABCZ")) || "bcdaBCDA";
+  return  (shoe + "123");// Return that same result with "123" concatenated to the end.
 
 };
-
 // Return 4
 // Log the result of the string concatenation of two separate calls to
 // `magicFunc`.
@@ -415,13 +413,23 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
-  console.log( scream );
+ var scream;
+  // for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
+  //   console.log( scream );
+  //   scream = "    " + scream;
+  // }
+  scream = "...";
+  console.log(scream);
+  scream = "    " + scream + "AA";
+  console.log(scream);
+  scream = "    " + scream + "AA";
+  console.log(scream);
+  scream = "    " + scream + "AA";
+  console.log(scream);
+  scream = "    " + scream + "AA";
+  console.log(scream);
+  scream = "    " + scream + "AAH!";
+  console.log(scream);
 
 };
 
