@@ -491,24 +491,40 @@ Exer.doWhile2 = function () {
 
     console.log("Train# " + trainNum + ": In flight!?");
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
     console.log("Train# " + trainNum + ": In flight!?");
+    trainNum++ ;
+    
  };    
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery";
+  var lastName = "Moneypenny"; 
+  if(firstName === "Zachery"){
+    lastName = "Johnson"; 
+  }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+    var firstName = "Penny";
+    var lastName = "Moneywhistle";
+    if(firstName === "Penny") {
+        
+        lastName = "Johnson"; 
+    }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -517,14 +533,20 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
+  var scream =  "..." ; 
   console.log( scream );
-
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  scream += "H!";
+  console.log( scream );
+  
 };
 
 /* jshint ignore:start */
