@@ -451,19 +451,23 @@ Exer.for3 = function () {
 // Breaking 1
 // Use a break to stop this infinite loop
 Exer.breaking1 = function(yeng) {
+
   while(yeng()) {
 
   }
-}
+
+};
 
 // Breaking 2
 // Every time theatre.next() is called it returns a string, break when that string is
 // "Electric Boogaloo!"
 Exer.breaking2 = function(theatre) {
+
   while (theatre.next()) {
     console.log(theatre.current());
   }
-}
+
+};
 
 /*-------------------    UPDATING VARIABLES SUCCINCTLY    --------------------*/
 
@@ -531,6 +535,7 @@ Exer.switch1 = function ( animal ) {
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
 Exer.capitalization1 = function() {
+  
   var ZeRo = 0;
   var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
   for (var Index = 0; I < HAPPYCAT.Length; Index++) {
@@ -539,7 +544,7 @@ Exer.capitalization1 = function() {
     }
   }
 
-}
+};
 
 /*------------------------------    COMMENTS    ------------------------------*/
 

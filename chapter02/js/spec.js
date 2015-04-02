@@ -1078,7 +1078,6 @@ describe( "for Loops exercises", function () {
 
 } );
 
-// Nate
 describe("Breaking Out of a Loop exercises", function() {
   describe("breaking 1", function() {
     beforeAll(function() {
@@ -1222,7 +1221,6 @@ describe( "Dispatching on a Value with switch exercises", function () {
   } );
 } );
 
-// Nate
 describe("Capitalization exercises", function () {
   describe( "Capitalization 1", function () {
     it("should have ZeRo correctly capitalized as zero", function() {
