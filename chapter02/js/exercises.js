@@ -615,22 +615,23 @@ Exer.breaking2 = function(theatre) {
 Exer.succinct1 = function ( kiwis ) {
 
   // Quadruple kiwis.
-
+ kiwis *= 4; 
   // Reduce kiwis by 2.
-
+  kiwis -=2; 
   // Halve kiwis.
-
+ kiwis /=2;
   // Concatenate " handsomely hirsute kiwis" to kiwis.
 
+ kiwis += " handsomely hirsute kiwis";
   // Return kiwis.
-
+  return kiwis;
 };
 
 // Succinct 2
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10; hippo++) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -643,7 +644,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer ) );
   }
 
 };
@@ -655,6 +656,19 @@ Exer.switch1 = function ( animal ) {
 
   var output = 'The ' + animal + ' goes "';
 
+  switch(animal){
+    case "cow":
+      output+="foo"; 
+      break;
+    case "sheep":
+      output+="bar";
+      break;
+   case "duck": 
+    output+="quux";
+      break;
+    default:
+      output+=("ring-a-ding-ding-dingding-ding-a-ding-ding");
+}
   // Create a switch that dispatches on the parameter `animal`.
   // In each case, concatenate the correct response to end of the `output`
   // string.
@@ -694,24 +708,25 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
   if ( war ) {
     if ( missiles ) {
-      missiles.launch();
+     // missiles.launch();
     } else {
       cower();
     }
   } else {
     if ( wood ) {
+      //I farm wheat
       wood.trade( sheep, 1 );
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
     } else {
-      brick.buy(2);
+      brick.buy(2);// still think wheat is wrong bandits! 
     }
   }
 
 };
 
 Exer.comments2 = function () {
-
-  // your work here
+/* I can not draw :) :()*/
+  
 
 };
