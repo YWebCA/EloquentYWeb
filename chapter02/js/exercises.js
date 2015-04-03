@@ -9,12 +9,14 @@ Exer.expressions1 = function () {
 
 };
 
+/* jshint ignore:start */
 // Statements 1
 Exer.statements1 = function () {
 
   // Write a statement that is not undefined.
 
 };
+/* jshint ignore:end */
 
 /*-----------------------------    VARIABLES    ------------------------------*/
 
@@ -358,6 +360,7 @@ Exer.while1 = function () {
   console.log("1 sheep");
 };
 
+/* jshint ignore:start */
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
@@ -368,6 +371,7 @@ Exer.while2 = function () {
   }
   console.log("What a world!");
 };
+/* jshint ignore:end */
 
 // doWhile 1
 // Turn the code in the function into a single do while loop.
@@ -381,6 +385,7 @@ Exer.doWhile1 = function () {
   console.log(2);
 };
 
+/* jshint ignore:start */
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
@@ -389,6 +394,7 @@ Exer.doWhile2 = function () {
     console.log("Train# " + trainNum + ": In flight!?");
   } while (trainNum++ < 7);
 };
+/* jshint ignore:end */
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
@@ -420,6 +426,7 @@ Exer.for1 = function () {
 
 };
 
+/* jshint ignore:start */
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
@@ -436,6 +443,7 @@ Exer.for2 = function () {
   console.log( "Slim Shady" );
 
 };
+/* jshint ignore:end */
 
 // For 3
 // Write a loop that counts backwards from 20 to 5 and prints the number and
@@ -537,6 +545,7 @@ Exer.switch1 = function ( animal ) {
 
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
+/* jshint ignore:start */
 Exer.capitalization1 = function() {
   
   var ZeRo = 0;
@@ -548,6 +557,7 @@ Exer.capitalization1 = function() {
   }
 
 };
+/* jshint ignore:end */
 
 /*------------------------------    COMMENTS    ------------------------------*/
 
