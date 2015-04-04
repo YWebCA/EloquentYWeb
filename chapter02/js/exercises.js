@@ -129,7 +129,9 @@ Exer.environment1 = function () {
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
-  // Your work here
+  recombobulate();
+  setPowerLevel(9001);
+  cornTortilla("chicken", "queso", "bacon", "lime");
 
 };
 
@@ -350,13 +352,13 @@ Exer.condition3 = function ( whatDay ) {
     luckyNumber += 2;  
 
   // If `whatDay` is "Heyday"...
-} else if (whatDay == "Heyday") {
-luckyNumber += luckyNumber.charAt(0); 
+  } else if (whatDay == "Heyday") {
+  luckyNumber += luckyNumber.charAt(0); 
   // Otherwise...
-
+  } else { luckyNumber = Infinity;
   // Return `luckyNumber`
-}
-return luckyNumber; 
+  }
+  return luckyNumber; 
 };
 
 // Conditional 4
@@ -501,8 +503,13 @@ Exer.for2 = function () {
 // "even" if the number is even and "odd" if the number is odd.
 Exer.for3 = function () {
 
-  // Your work here
-
+  for (var num = 20; num >= 5; num--) {
+    if( num % 2 === 0) {
+      console.log(num, "even");
+    } else {
+      console.log(num, "odd");
+    }
+   }
 };
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
@@ -512,6 +519,7 @@ Exer.for3 = function () {
 Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
+    break;
 
   }
 
