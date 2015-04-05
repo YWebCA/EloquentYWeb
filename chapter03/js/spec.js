@@ -20,7 +20,13 @@ describe("Defining a Function exercises", function() {
 /************************    Parameters and Scopes    *************************/
 // Nate
 describe("Parameters and Scopes exercises", function() {
-  it("should test a thing");
+  describe("Parameters 1", function() {
+    it("should define a function named spaceCubeDetector");
+    it("should have said function accept the parameters length, width, and height");
+    it("should have said function return \"SPACE CUBE DETECTED!!\" when length, width, and height are all equal");
+    it("should have said function return \"THIS IS NO SPACE CUBE!\" when length, width, and height are not all equal");
+    it("should return said function. We'll need this later, and we'd like to give it back to you.");
+  });
 });
 
 /*****************************    Nested Scope    *****************************/
