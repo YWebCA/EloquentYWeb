@@ -2,7 +2,9 @@
 // Nate
 describe("Defining a Function exercises", function() {
   describe("Defining 1", function() {
-    it("should define a function named three that returns 3");
+    it("should define a function named three");
+    it("should have said function return the value 3");
+  });
   describe("Defining 2", function() {
     it("should define a function named myLog accepts a value and then logs it");
   });
