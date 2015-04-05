@@ -60,27 +60,27 @@ describe("Parameters and Scopes exercises", function() {
   */
   describe("Scope 1" function() {
     it("should have the correct answer" function() {
-      expect( Exer.scope1() === 5).toBeTruthy();
+      expect( Exer.scope1() === 5 ).toBeTruthy();
     });
   });
   describe("Scope 2" function() {
     it("should have the correct answer" function() {
-      expect( Exer.scope2() === 35).toBeTruthy();
+      expect( Exer.scope2() === 35 ).toBeTruthy();
     });
   });
   describe("Scope 3" function() {
     it("should have the correct answer" function() {
-      expect( Exer.scope3() === 7).toBeTruthy();
+      expect( Exer.scope3() === 7 ).toBeTruthy();
     });
   });
   describe("Scope 4" function() {
     it("should have the correct answer" function() {
-      expect( Exer.scope4() === 35).toBeTruthy();
+      expect( Exer.scope4() === 4 ).toBeTruthy();
     });
   });
   describe("Scope 5" function() {
     it("should have the correct answer" function() {
-      expect( Exer.scope5() === 7).toBeTruthy();
+      expect( Exer.scope5() === 35 ).toBeTruthy();
     });
   });
 });
