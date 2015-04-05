@@ -6,7 +6,9 @@ describe("Defining a Function exercises", function() {
     it("should have said function return the value 3");
   });
   describe("Defining 2", function() {
-    it("should define a function named myLog accepts a value and then logs it");
+    it("should define a function named myLog");
+    it("should have said function accept a parameter named message");
+    it("should have said function log \"The Log Says: {message}\"");
   });
   describe("Defining 3", function() {
     it("should define a function named square accepts a number and squares it");
