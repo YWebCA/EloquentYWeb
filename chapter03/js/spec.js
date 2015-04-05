@@ -11,7 +11,9 @@ describe("Defining a Function exercises", function() {
     it("should have said function log \"The Log Says: {message}\"");
   });
   describe("Defining 3", function() {
-    it("should define a function named square accepts a number and squares it");
+    it("should define a function named square");
+    it("should have said function accept a parameter named number")
+    it("should have said function return number squared");
   });
 });
 
