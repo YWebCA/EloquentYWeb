@@ -40,18 +40,18 @@ describe("Parameters and Scopes exercises", function() {
 
   var skip = function() {
     var foo = 5;
-    console.log("Scope 1: " + foo); // Scope 1: What value of foo is logged?
+    console.log(foo); // Scope 1: What value of foo is logged?
     quux = foo *  bar;
-    console.log("Scope 2: " + quux); // Scope 2: What value of quux is logged?
+    console.log(quux); // Scope 2: What value of quux is logged?
     return bar;
   };
 
   var scoop = function(quux) {
-    console.log("Scope 4: " + quux); // Scope 4: What value of quux is logged?
+    console.log(quux); // Scope 4: What value of quux is logged?
   };
 
   var scrap = function() {
-    console.log("Scope 5: " + quux); // Scope 5: What value of quux is logged?
+    console.log(quux); // Scope 5: What value of quux is logged?
   };
 
   foo = skip();
