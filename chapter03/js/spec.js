@@ -27,6 +27,12 @@ describe("Parameters and Scopes exercises", function() {
     it("should have said function return \"THIS IS NO SPACE CUBE!\" when length, width, and height are not all equal");
     it("should return said function. We'll need this later, and we'd like to give it back to you.");
   });
+  describe("Parameters 2" function() {
+    it("should run the given spaceCubeDetector function 3 times");
+    it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return");
+    it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return");
+    it("should run the given spaceCubeDetector function with the arguments length => 2, width => 3, and height => 5 and log the return");
+  });
 });
 
 /*****************************    Nested Scope    *****************************/
