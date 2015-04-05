@@ -87,7 +87,156 @@ describe("Parameters and Scopes exercises", function() {
 /*****************************    Nested Scope    *****************************/
 // Annalise
 describe("Nested Scope exercises", function() {
-  it("should test a thing");
+  /*
+  var foo = 2;
+  var bar = 5;
+  var quux = 7;
+
+  var nest = function(foo) {
+
+    var bar = 11;
+
+    var finch = function(foo) {
+      console.log("Nest 8: " + foo); // Nest 8: What value of foo is logged?
+      bar = foo;
+      quux = foo;
+    };
+
+    console.log("Nest 4: " + bar); // Nest 4: What value of bar is logged?
+    console.log("Nest 5: " + quux); // Nest 5: What value of quux is logged?
+
+    var robin = function() {
+      var bar = 13;
+      quux = bar;
+      console.log("Nest 11: " + quux); // Nest 11: What value of quux is logged?
+    };
+
+    console.log("Nest 6: " + bar); // Nest 6: What value of bar is logged?
+    console.log("Nest 7: " + quux); // Nest 7: What value of quux is logged?
+
+    var batman = function() {
+      foo = 0;
+      bar = 0;
+      quux = 0;
+      return "I AM THE NIGHT!!";
+    };
+
+    finch(17);
+
+    console.log("Nest 9: " + bar); // Nest 9: What value of bar is logged?
+    console.log("Nest 10: " + quux); // Nest 10: What value of quux is logged?
+
+    robin();
+
+    console.log("Nest 12: " + quux); // Nest 12: What value of quux is logged?
+
+    if (batman()) {
+      console.log("Nest 13: " + foo); // Nest 13: What value of foo is logged?
+      console.log("Nest 14: " + bar); // Nest 14: What value of bar is logged?
+      console.log("Nest 15: " + quux); // Nest 15: What value of quux is logged?
+    }
+  };
+
+  console.log("Nest 1: " + foo); // Nest 1: What value of foo is logged?
+  console.log("Nest 2: " + bar); // Nest 2: What value of bar is logged?
+  console.log("Nest 3: " + quux); // Nest 3: What value of quux is logged?
+
+  nest(5318008);
+
+  console.log("Nest 16: " + foo); // Nest 16: What value of foo is logged?
+  console.log("Nest 17: " + bar); // Nest 6: What value of bar is logged?
+  console.log("Nest 18: " + quux); // Nest 6: What value of quux is logged?
+  */
+  describe("Nest 1" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest1() === 2).toBeTruthy();
+    });
+  });
+  describe("Nest 2" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest2() === 5).toBeTruthy();
+    });
+  });
+  describe("Nest 3" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest3() === 7).toBeTruthy();
+    });
+  });
+  describe("Nest 4" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest4() === 11).toBeTruthy();
+    });
+  });
+  describe("Nest 5" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest5() === 7).toBeTruthy();
+    });
+  });
+  describe("Nest 6" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest6() === 11).toBeTruthy();
+    });
+  });
+  describe("Nest 7" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest7() === 7).toBeTruthy();
+    });
+  });
+  describe("Nest 8" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest8() === 17).toBeTruthy();
+    });
+  });
+  describe("Nest 9" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest9() === 17).toBeTruthy();
+    });
+  });
+  describe("Nest 10" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest10() === 17).toBeTruthy();
+    });
+  });
+  describe("Nest 11" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest11() === 13).toBeTruthy();
+    });
+  });
+  describe("Nest 12" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest12() === 13).toBeTruthy();
+    });
+  });
+  describe("Nest 13" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest13() === 0).toBeTruthy();
+    });
+  });
+  describe("Nest 14" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest14() === 0).toBeTruthy();
+    });
+  });
+  describe("Nest 15" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest15() === 0).toBeTruthy();
+    });
+  });
+  describe("Nest 16" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest16() === 2).toBeTruthy();
+    });
+  });
+  describe("Nest 17" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest17() === 5).toBeTruthy();
+    });
+  });
+  describe("Nest 18" function() {
+    it("should have the correct answer" function() {
+      expect( Exer.nest18() === 0).toBeTruthy();
+    });
+  });
 });
 
 /*************************    Functions as Values    **************************/
