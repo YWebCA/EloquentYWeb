@@ -661,7 +661,7 @@ Exer.capitalization1 = function() {
       console.log(happyCat);
     } 
   }
-  
+
 };
 
 /* jshint ignore:end */
