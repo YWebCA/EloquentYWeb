@@ -482,26 +482,23 @@ Exer.doWhile1 = function () {
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-  var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
-};
 /* jshint ignore:end */
+  var trainNum = 1;
 
-    console.log("Train# " + trainNum + ": In flight!?");
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
-    console.log("Train# " + trainNum + ": In flight!?");
-    trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
+  console.log("Train# " + trainNum + ": In flight!?");
+  trainNum++ ;
     
  };    
 /*---------------------------    INDENTING CODE    ---------------------------*/
@@ -691,11 +688,11 @@ Exer.switch1 = function ( animal ) {
 /* jshint ignore:start */
 Exer.capitalization1 = function() {
 
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
+  var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; index < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.log(happyCat);
     }
   }
 
