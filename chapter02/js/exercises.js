@@ -43,14 +43,14 @@ Exer.variables3 = function () {
 
   var color = "green";
 
-  return color
+  return color;
 
 };
 
 // Variables 4
 Exer.variables4 = function ( n ) {
 
-  return n
+  return n;
 
 };
 
@@ -59,7 +59,7 @@ Exer.variables5 = function ( n ) {
 
   var name;
   name = n;
-  return name
+  return name;
 
 };
 
@@ -71,7 +71,7 @@ Exer.variables6 = function ( stacys ) {
   // Stacy gives you more apples
   // (the parameter `stacys`)
 
-  return apples + stacys// Return the total number of apples you have.
+  return apples + stacys;// Return the total number of apples you have.
 
 };
 
