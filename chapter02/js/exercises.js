@@ -314,7 +314,7 @@ Exer.control2 = function ( bar ) {
 
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.
-  var ding = console.log(bar + foo + bar);
+  var ding = bar + foo + bar;
 
   // Call `strReverse` and pass it `ding` (as an argument).
   strReverse(ding);
@@ -475,55 +475,51 @@ Exer.while1 = function () {
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
-  console.log("I'm melting!");
   console.log("I'm melting!");  
-  console.log("I'm melting!");  
-  console.log("I'm melting!");  
-  console.log("I'm melting!");  
-  console.log("I'm melting!");  
-  console.log("I'm melting!");    
-
+  console.log("m melting!");  
+  console.log("melting!");  
+  console.log("lting!");  
+  console.log("ing!");  
+  console.log("g!");  
   console.log("What a world!");
 
-// while(deadWitch.length > 0) {
-  //   console.log(deadWitch);
-  //   deadWitch = deadWitch.substr(2);
-  // }
-  // console.log("What a world!");  // var deadWitch = "I'm melting!";
-  
+
 };
 /* jshint ignore:end */
 
 // doWhile 1
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
-// Exer.doWhile1 = function () {
-//   console.log(0);
-//   console.log(1);
-//   console.log(2);
-//   console.log(0);
-//   console.log(1);
-//   console.log(2);
-// };
-
-var i = 0;
+Exer.doWhile1 = function () {
+  var i = 0;
 do{
-  i += 1;
-  console.log(i/3)  
+  console.log(i % 3)
+  i += 1;  
 }
 
 while(i < 6)
 
+<<<<<<< HEAD
 /* jshint ignore:start */
+=======
+};
+
+
+
+>>>>>>> Chapter 2 Last Exercises
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-  var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
+  console.log("Train# 1: In flight!?");
+  console.log("Train# 2: In flight!?");
+  console.log("Train# 3: In flight!?");
+  console.log("Train# 4: In flight!?");
+  console.log("Train# 5: In flight!?");
+  console.log("Train# 6: In flight!?");
+  console.log("Train# 7: In flight!?");
 };
 /* jshint ignore:end */
+
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
