@@ -654,15 +654,15 @@ Exer.switch1 = function ( animal ) {
 /* jshint ignore:start */
 Exer.capitalization1 = function() {
 
-  /* var zero = 0;
+  var zero = 0;
   var happyCat = new String("How did this get here! I'm not good at computer!");
   for (var index = 0; index < happyCat.length; index++) {
     if (index % 4 == zero) {
       console.log(happyCat);
     } 
-  
+  }
 
-}; */
+}; 
 /* jshint ignore:end */
 
 
