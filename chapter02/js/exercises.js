@@ -9,7 +9,6 @@ Exer.expressions1 = function () {
 
 };
 
-/* jshint ignore:start */
 // Statements 1
 Exer.statements1 = function () {
 
@@ -17,7 +16,6 @@ Exer.statements1 = function () {
   3+4;
 
 };
-/* jshint ignore:end */
 
 /*-----------------------------    VARIABLES    ------------------------------*/
 
@@ -242,11 +240,7 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
-  var result1 = magicFunc("String1");
-  var result2 = magicFunc("String2");
-
-  console.log(result1 + result2);
-
+ console.log(magicFun + magicFunc + " ")
 
 };
 
@@ -471,7 +465,6 @@ Exer.while1 = function () {
   // console.log("1 sheep");
 };
 
-/* jshint ignore:start */
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
@@ -485,7 +478,6 @@ Exer.while2 = function () {
 
 
 };
-/* jshint ignore:end */
 
 // doWhile 1
 // Turn the code in the function into a single do while loop.
@@ -499,14 +491,10 @@ do{
 
 while(i < 6)
 
-<<<<<<< HEAD
-/* jshint ignore:start */
-=======
 };
 
 
 
->>>>>>> Chapter 2 Last Exercises
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
@@ -518,7 +506,6 @@ Exer.doWhile2 = function () {
   console.log("Train# 6: In flight!?");
   console.log("Train# 7: In flight!?");
 };
-/* jshint ignore:end */
 
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
@@ -558,10 +545,16 @@ Exer.for1 = function () {
 
 };
 
-/* jshint ignore:start */
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
+
+  for(i=0; i<10; i++){
+    for(i=0; i<10; i++){
+      
+    }
+
+  }
 
   console.log( "Hi!" );
   console.log( "My name is" );
@@ -575,7 +568,6 @@ Exer.for2 = function () {
   console.log( "Slim Shady" );
 
 };
-/* jshint ignore:end */
 
 // For 3
 // Write a loop that counts backwards from 20 to 5 and prints the number and
@@ -617,15 +609,20 @@ Exer.breaking2 = function(theatre) {
 // Succinct 1
 Exer.succinct1 = function ( kiwis ) {
 
-  // Quadruple kiwis.
+  // Quintuple kiwis.
+  kiwis *= 4;
 
   // Reduce kiwis by 2.
-
+  kiwis -= 2;
+  
   // Halve kiwis.
+  kiwis /= 2;
 
   // Concatenate " handsomely hirsute kiwis" to kiwis.
+  kiwis += " handsomely hirsute kiwis";
 
   // Return kiwis.
+  return kiwis;
 
 };
 
@@ -677,9 +674,8 @@ Exer.switch1 = function ( animal ) {
 
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
-/* jshint ignore:start */
 Exer.capitalization1 = function() {
-
+  
   var ZeRo = 0;
   var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
   for (var Index = 0; I < HAPPYCAT.Length; Index++) {
@@ -689,7 +685,6 @@ Exer.capitalization1 = function() {
   }
 
 };
-/* jshint ignore:end */
 
 /*------------------------------    COMMENTS    ------------------------------*/
 
