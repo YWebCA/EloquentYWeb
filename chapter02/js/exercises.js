@@ -575,14 +575,15 @@ Exer.breaking2 = function(theatre) {
 Exer.succinct1 = function ( kiwis ) {
 
   // Quadruple kiwis.
-
+kiwis *= 4;
   // Reduce kiwis by 2.
-
+kiwis -= 2;
   // Halve kiwis.
-
+kiwis /= 2;
   // Concatenate " handsomely hirsute kiwis" to kiwis.
-
+kiwis += " handsomely hirsute kiwis";
   // Return kiwis.
+return kiwis;  
 
 };
 
@@ -590,7 +591,7 @@ Exer.succinct1 = function ( kiwis ) {
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10; hippo++ ) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -603,7 +604,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer ) );
   }
 
 };
@@ -616,6 +617,7 @@ Exer.switch1 = function ( animal ) {
   var output = 'The ' + animal + ' goes "';
 
   // Create a switch that dispatches on the parameter `animal`.
+
   // In each case, concatenate the correct response to end of the `output`
   // string.
 
@@ -626,6 +628,21 @@ Exer.switch1 = function ( animal ) {
     // "duck": "quux"
 
     // default: "ring-a-ding-ding-dingding-ding-a-ding-ding"
+ 
+  switch (animal) {
+    case "cow":
+      output += "foo";
+      break;
+    case "sheep":
+      output += "bar";
+      break;
+    case "duck":
+      output += "quux";
+      break;
+    default:
+      output += "ring-a-ding-ding-dingding-ding-a-ding-ding";
+      break;      
+  }
 
   output += '"!';
   console.log( output );
@@ -637,15 +654,43 @@ Exer.switch1 = function ( animal ) {
 /* jshint ignore:start */
 Exer.capitalization1 = function() {
 
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
-    }
-  }
+  /* var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; index < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.log(happyCat);
+    } 
+  
 
-};
+}; */
 /* jshint ignore:end */
 
+
+
 /*------------------------------    COMMENTS    ------------------------------*/
+
+
+// wheat is special //
+
+/* 
+:-:-:-:-:-:::
+|||||||||
+--:--:--:--::
+  |||||||||||
+  '''...'''...'''...'''...:
+      ,,,|,,,|,,,|,,,|,,,|,,,|,,,|
+      ||''||''||''||''||''||''||''||''||''||:
+          ::.::.::.::.::.::.::.::.::.::.::.::.::.::.::                                      :::           -:-
+            ...|...|...|...|...|...|...|...|...|...|...|...|...|:: :: :: :: :: :: - - - - -   ::: ::: :::   -:-:-
+          ::.::.::.::.::.::.::.::.::.::.::.::.::.::.::                                      :::           -:-
+      ||''||''||''||''||''||''||''||''||''||:
+      ,,,|,,,|,,,|,,,|,,,|,,,|,,,|
+  '''...'''...'''...'''...:
+  |||||||||||
+--:--:--:--::
+|||||||||
+:-:-:-:-:_:::
+
+
+
+*/
