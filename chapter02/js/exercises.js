@@ -678,11 +678,11 @@ Exer.switch1 = function ( animal ) {
 
 Exer.capitalization1 = function() {
   
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
+  var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; I < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.Log(happyCat);
     }
   }
 
