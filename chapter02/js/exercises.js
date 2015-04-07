@@ -5,7 +5,9 @@
 // evaluated value is not undefined.
 Exer.expressions1 = function () {
 
-  return console.log(Math.max(2,4));
+  return 1 * (6 * 1 - 4) / 1 * 2;
+
+  // -4
 
 };
 
@@ -13,8 +15,7 @@ Exer.expressions1 = function () {
 // Statements 1
 Exer.statements1 = function () {
 
-    var a = "The New";
-   
+4 * 3;
 
 
 };
@@ -25,9 +26,10 @@ Exer.statements1 = function () {
 // Variables 1
 Exer.variables1 = function () {
 
-  // Write a statement that declares a variable.
+   var ten = 10;
+  
+  return 10
 
-  // Return that variable.
 
 };
 
@@ -35,6 +37,9 @@ Exer.variables1 = function () {
 Exer.variables2 = function () {
 
   // Write a statement that declares a variable.
+  var eat; 
+  eat = 10;
+  return eat;
 
   // Write a statement to assign a number value to your variable.
 
@@ -46,15 +51,23 @@ Exer.variables2 = function () {
 Exer.variables3 = function () {
 
   // Write a statement that declares a variable and initializes it to a string.
+  var pie = 3;
+  var crust = 'she has' + pie +' kids.';
+
+  return crust;
 
   // Return the variable.
-
+   
 };
 
 // Variables 4
 Exer.variables4 = function ( n ) {
 
   // Return the parameter.
+  return n;
+
+  
+  
 
 };
 
@@ -62,8 +75,10 @@ Exer.variables4 = function ( n ) {
 Exer.variables5 = function ( n ) {
 
   // Declare a new variable and initialize it to the value of `n`.
+  var indent='n';
 
   // Return the new variable.
+  return indent=n;
 
 };
 
@@ -72,11 +87,16 @@ Exer.variables6 = function ( stacys ) {
 
   // You have 3 apples
   // (declare a variable named `apples` and initialize it to `3`)
+  var apples=3;
 
   // Stacy gives you more apples
   // (the parameter `stacys`)
+  var stacysNum=0;
+  return apples + stacys
+
 
   // Return the total number of apples you have.
+return moreapples;
 
 };
 
@@ -92,9 +112,13 @@ Exer.variables7 = function ( change ) {
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-  // Return that string.
+change = change + .25;
+change -= .10;
 
+return "$" + change;
 };
+
+
 
 
 /*--------------------    KEYWORDS AND RESERVED WORDS    ---------------------*/
@@ -102,15 +126,16 @@ Exer.variables7 = function ( change ) {
 // Keywords 1
 // Uncomment the following function by removing the slash-asterisk pairs.
 // Fix the function so no keywords or reserved words are improperly used.
-/*
-Exer.keywords1 = function ( true, two ) {
-  var new = 2;
-  var const = two+2;
-  true += "2";
-  var function = new + const + true + two;
-  return function;
+
+Exer.keywords1 = function ( fake , two ) {
+  var old = 2;
+  var candy = two+2;
+  var fake;
+  fake += "2";
+  var opper= old + candy + fake + two;
+  return opper;
 };
-*/
+
 
 /*--------------------------    THE ENVIRONMENT    ---------------------------*/
 
@@ -121,7 +146,7 @@ Exer.environment1 = function () {
   // return window;
   // return document;
   // return history;
-  // return browser;
+  return browser;
   // return navigator;
 
 };
@@ -133,6 +158,9 @@ Exer.environment1 = function () {
 // Call cornTortilla and pass it the values "chicken", "queso", "bacon", and
 // "lime".
 Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
+recombobulate();
+setPowerLevel(9001);
+cornTortilla("chicken", "queso", "bacon", "lime");
 
   // Your work here
 
@@ -143,6 +171,7 @@ Exer.functions1 = function (recombobulate, setPowerLevel, cornTortilla) {
 
 // Console 1
 Exer.console1 = function () {
+  console.log("Hello World!");
 
   // Output something to the console.
 
@@ -152,6 +181,7 @@ Exer.console1 = function () {
 Exer.console2 = function ( printme ) {
 
   // Print the parameter `printme` to the console.
+  console.log(printme);
 
 };
 
@@ -163,6 +193,9 @@ Exer.console2 = function ( printme ) {
 Exer.console3 = function ( data ) {
 
   // your answer here
+  // console.log("The magic word is \"" + data + "\"");
+  console.log('The magic word is "'+ data + '"');
+
 
 };
 
@@ -171,6 +204,7 @@ Exer.console4 = function () {
 
   // Use comma-separated values to output two things to the console with one
   // call.
+  console.log(4 , 5);
 
 };
 
@@ -179,8 +213,10 @@ Exer.console4 = function () {
 Exer.console5 = function ( x, y ) {
 
   // Output the first parameter `x` to the console.
+  console.log(x);
 
   // Make the function return the parameter `y` plus 1.
+  return y + 1;
 
 };
 
@@ -191,6 +227,8 @@ Exer.console5 = function ( x, y ) {
 Exer.return1 = function () {
 
   // your work goes here
+  var result = magicFunc();
+console.log(result);
 
 };
 
@@ -199,6 +237,9 @@ Exer.return1 = function () {
 Exer.return2 = function () {
 
   // your work goes here
+    var result = magicFunc();
+    return result;
+
 
 };
 
@@ -206,8 +247,12 @@ Exer.return2 = function () {
 Exer.return3 = function () {
 
   // Call `strShift` with the argument "abczABCZ". Log the result.
+  var result = strShift("abczABCZ");
+
+  console.log(result);
 
   // Return that same result with "123" concatenated to the end.
+  return result + "123";
 
 };
 
@@ -217,7 +262,10 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
-
+  var result1 = magicFunc();
+  var result2 = magicFunc();
+  // console.log(result1 + "" + result2);
+  console.log(result1.toString() + result2.toString());
 };
 
 // Return 5
@@ -229,10 +277,11 @@ Exer.return4 = function () {
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
-
   // Declare and initialize a variable for the second string.
-
   // A return statement.
+  var str = strShift("abcABC123!@#");
+  var str2 = strShift(strShift("a S d F j K l"));
+  return strShuffle(str , str2);
 
 };
 
@@ -336,6 +385,12 @@ Exer.condition4 = function () {
 
   // Prompt the user
 
+
+
+  if(input<0){
+    console.log("");
+
+  }
   // If the user's input is not a number...
   // Otherwise...
     // If the user's input is less than 1...
