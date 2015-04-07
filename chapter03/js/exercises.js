@@ -33,22 +33,29 @@ Exer.defining = function () {  // necessary for tests
   Exer.defining1 = three;   //
   Exer.defining2 = myLog;   //
   Exer.defining3 = square;  //
-}; //=======================//
+};  //======================//
 
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^    Parameters and Scopes    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 *******************************************************************************/
-// 1. Create a function named spaceCubeDetector.
-// 2. It should accept a length, width,
-//    and height.
-// 3. When its length, width, and height are all equal, it should return the
-//    string value "SPACE CUBE DETECTED!!"
-// 4. When its length, width, or height is not equal to the other parameters
-//    it should return the string value "THIS IS NO SPACE CUBE!"
-Exer.parameters1 = function() {
 
- };
+//===============================//
+Exer.parameters1 = function() {  //
+//===============================//
+/*****************************    Parameters 1    *****************************/
+// Create a function named spaceCubeDetector that ccepts a length, width, and a
+//     height.
+// When its length, width, and height are all equal, it should return the
+//    correct string, otherwise the other string.
 
+
+
+ };  // wrapper end
+
+//================================================//
+Exer.parameters2 = function(spaceCubeDetector) {  //
+//================================================//
+/*****************************    Parameters 2    *****************************/
 // Given spaceCubeDetector:
 // 1. Run it once with a length of 3, width of 5, and height of 3.14159265359
 //    and log its return.
@@ -57,18 +64,18 @@ Exer.parameters1 = function() {
 // 3. Run it once with a length of 1, width of 2, and height of 3 and log its
 //    return.
 
-Exer.parameters2 = function(spaceCubeDetector) {
-
-};
 
 
-/*
-  For Scope exercises 1-5 go through the following code and find the values for
-  the variables where noted by the comments. Place the corresponding values as
-  returns for the functions Exer.scope[1-5]. Hint: The comments are numbered in
-  the order that their lines are run.
-*/
+};  // wrapper end
+
+//===============================    SCOPE    ================================//
+//  For Scope exercises 1-5, read through the following code and find the     //
+//  values for the variables where noted by the comments. Write your asnwers  //
+//  as return values for the functions Exer.scope[1-5].                       //
+//============================================================================//
+
 Exer.scopeExample = function() {
+
   var foo = 2;
   var bar = 7;
   var quux = 11;
@@ -92,40 +99,45 @@ Exer.scopeExample = function() {
   foo = skip();
   scoop(foo); // Scope 3: What value of foo is passed to the function Scoop?
   scrap();
+
 };
 
-// Place answers as returns in the following functions.
+/********************************    SCOPE    *********************************/
+//  Write your answers in this section
+
 Exer.scope1 = function() {
-  return ;// return value for Scope 1
+  return /* return value for Scope 1 */ ;
 };
 
 Exer.scope2 = function() {
-  return ;// return value for Scope 2
+  return /* return value for Scope 2 */ ;
 };
 
 Exer.scope3 = function() {
-  return ;// return value for Scope 3
+  return /* return value for Scope 3 */ ;
 };
 
 Exer.scope4 = function() {
-  return ;// return value for Scope 4
+  return /* return value for Scope 4 */ ;
 };
 
 Exer.scope5 = function() {
-  return ;// return value for Scope 5
+  return /* return value for Scope 5 */ ;
 };
 
 
+/*******************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    Nested Scope    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************************************************************/
 
-/*****************************    Nested Scope    *****************************/
-/*
-  For Nest exercises 1-20 go through the following code and find the values for
-  the variables where noted by the comments. Place the corresponding values as
-  returns for the functions Exer.nest[1-20]. Hint: The comments are numbered in
-  the order that their lines are run.
-*/
+//============================================================================//
+//  For Nested Scope exercises 1-20, read through the following code and      //
+//  find the values for the variables where noted by the comments. Write      //
+//  your answers as the return values for functions Exer.nest[1-20].          //
+//============================================================================//
 
 Exer.nestExample = function() {
+
   var foo = 2;
   var bar = 5;
   var quux = 7;
@@ -184,62 +196,65 @@ Exer.nestExample = function() {
   console.log(foo); // Nest 16: What value of foo is logged?
   console.log(bar); // Nest 17: What value of bar is logged?
   console.log(quux); // Nest 18: What value of quux is logged?
-}
 
-// Place answers as returns in the following functions.
+};
+
+/*****************************    Nested Scope    *****************************/
+//  Write your answers in this section.
+
 Exer.nest1 = function() {
-  return ;// return value for Nest 1
+  return /* answer for Nest 1 */ ;
 };
 Exer.nest2 = function() {
-  return ;// return value for Nest 2
+  return /* answer for Nest 2 */ ;
 };
 Exer.nest3 = function() {
-  return ;// return value for Nest 3
+  return /* answer for Nest 3 */ ;
 };
 Exer.nest4 = function() {
-  return ;// return value for Nest 4
+  return /* answer for Nest 4 */ ;
 };
 Exer.nest5 = function() {
-  return ;// return value for Nest 5
+  return /* answer for Nest 5 */ ;
 };
 Exer.nest6 = function() {
-  return ;// return value for Nest 6
+  return /* answer for Nest 6 */ ;
 };
 Exer.nest7 = function() {
-  return ;// return value for Nest 7
+  return /* answer for Nest 7 */ ;
 };
 Exer.nest8 = function() {
-  return ;// return value for Nest 8
+  return /* answer for Nest 8 */ ;
 };
 Exer.nest9 = function() {
-  return ;// return value for Nest 9
+  return /* answer for Nest 9 */ ;
 };
 Exer.nest10 = function() {
-  return ;// return value for Nest 10
+  return /* answer for Nest 10 */ ;
 };
 Exer.nest11 = function() {
-  return ;// return value for Nest 11
+  return /* answer for Nest 11 */ ;
 };
 Exer.nest12 = function() {
-  return ;// return value for Nest 12
+  return /* answer for Nest 12 */ ;
 };
 Exer.nest13 = function() {
-  return ;// return value for Nest 13
+  return /* answer for Nest 13 */ ;
 };
 Exer.nest14 = function() {
-  return ;// return value for Nest 14
+  return /* answer for Nest 14 */ ;
 };
 Exer.nest15 = function() {
-  return ;// return value for Nest 15
+  return /* answer for Nest 15 */ ;
 };
 Exer.nest16 = function() {
-  return ;// return value for Nest 16
+  return /* answer for Nest 16 */ ;
 };
 Exer.nest17 = function() {
-  return ;// return value for Nest 17
+  return /* answer for Nest 17 */ ;
 };
 Exer.nest18 = function() {
-  return ;// return value for Nest 18
+  return /* answer for Nest 18 */ ;
 };
 
 /*************************    Functions as Values    **************************/
