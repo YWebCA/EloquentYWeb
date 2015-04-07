@@ -65,7 +65,7 @@ Exer.parameters2 = function(spaceCubeDetector) {
 /*
   For Scope exercises 1-5 go through the following code and find the values for
   the variables where noted by the comments. Place the corresponding values as
-  returns for the functions Exer.scope[1-5]. Hint: The comments are number in
+  returns for the functions Exer.scope[1-5]. Hint: The comments are numbered in
   the order that their lines are run.
 */
 Exer.scopeExample = function() {
