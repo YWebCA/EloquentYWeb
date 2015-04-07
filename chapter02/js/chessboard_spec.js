@@ -55,5 +55,3 @@ describe("Chess Board exercise", function() {
   });
 
 });
-
-jsHintSpec("chessboard.js");

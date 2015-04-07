@@ -100,7 +100,7 @@ Exer.variables7 = function ( change ) {
   // Return that string.
 
 change += 0.25;
-change -= .1;
+change -= 0.1;
 change = "$"+ change;
 return change;
 };
@@ -162,7 +162,7 @@ Exer.console1 = function () {
   function dawn(myString){
     myOutput = myString;
     console.log(myOutput);
-  };
+  }
 
   dawn("Hello World");
 
@@ -310,7 +310,7 @@ var foo;
   // Initialize `foo` with a string.
 foo='';
   // Log `foo` to the console.
-console.log(foo)
+console.log(foo);
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.                      
 var ding = (bar+foo+bar);
@@ -337,7 +337,9 @@ Exer.condition1 = function ( isSerious ) {
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
 if (isSerious === false ){
-  console.log("On second thoughts, let's not go to Camelot. It is a silly place.")};
+  console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+  }
+  
 };
 
 // Conditional 2
@@ -351,7 +353,7 @@ Exer.condition2 = function ( temperature ) {
     console.log("Thanks for visiting Pier One and Three Quarters!");
   }
   else{
-    console.log("Catch of the day: influenza, $14/lb.")
+    console.log("Catch of the day: influenza, $14/lb.");
     console.log("Thanks for visiting Pier One and Three Quarters!");
     }
   // Otherwise, output
@@ -482,7 +484,6 @@ Exer.doWhile1 = function () {
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-/* jshint ignore:end */
   var trainNum = 1;
 
   console.log("Train# " + trainNum + ": In flight!?");
@@ -499,8 +500,8 @@ Exer.doWhile2 = function () {
   trainNum++ ;
   console.log("Train# " + trainNum + ": In flight!?");
   trainNum++ ;
-    
- };    
+};
+/* jshint ignore:end */ 
 /*---------------------------    INDENTING CODE    ---------------------------*/
 
 // Indenting 1
@@ -527,6 +528,7 @@ Exer.indenting2 = function() {
 
 // For 1
 // Rewrite the loop as a linear sequence of statements.
+/* jshint ignore:start */
 Exer.for1 = function () {
 
   var scream =  "..." ; 
@@ -544,7 +546,7 @@ Exer.for1 = function () {
   console.log( scream );
   
 };
-
+/* jshint ignore:end */
 /* jshint ignore:start */
 // For 2
 // Rewrite the repetative code with for loops.
