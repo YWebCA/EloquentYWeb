@@ -187,7 +187,9 @@ Exer.console3 = function ( data ) {
 
   // your answer here
 
-  console.log (data);
+   console.log ("The magic word is \""  + data + "\"");
+  
+  
 
 };
 
@@ -258,12 +260,9 @@ return result + "123";
 Exer.return4 = function () {
 
   // your work goes here
-magicFunc(); 
- console.log;
- var food = (food)
+  console.log ("" + magicFunc()+magicFunc());
 
-  
-
+ 
 };
 
 // Return 5
@@ -276,10 +275,14 @@ magicFunc();
 Exer.return5 = function () {
 
   // Declare and initialize a variable for the first string.
+  var result1 = strShift("abcABC123!@#");
+
 
   // Declare and initialize a variable for the second string.
+  var result3 = strShift(strShift("a S d F j K l"));
 
   // A return statement.
+  return strShuffle(result1,result3);
 
 };
 
@@ -290,6 +293,8 @@ Exer.return5 = function () {
 Exer.prompt1 = function () {
 
   // Your work here
+  return prompt("What is the answer to the meaning of life, the universe, and everything?");
+   
 
 };
 
@@ -298,6 +303,10 @@ Exer.prompt1 = function () {
 Exer.confirm1 = function () {
 
   // Your work here
+  return confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
+
+
+
 
 };
 
@@ -307,8 +316,10 @@ Exer.confirm1 = function () {
 Exer.control1 = function () {
 
   // Use prompt to get a number from a user
+  var result = Number(prompt("what is your number,"));
 
   // Print that number to the console
+  return console.log(result);
 
 };
 
@@ -316,12 +327,18 @@ Exer.control1 = function () {
 Exer.control2 = function ( bar ) {
 
   // Declare a variable named `foo`.
+  var foo;
+
 
   // Initialize `foo` with a string.
+  foo= 'fun';
 
   // Log `foo` to the console.
+  console.log(foo);
 
   // Concatenate the parameter `bar` to be beginning and end of `foo`
+  var ding = bar + foo + bar;
+
   // Save the result in a new variable called `ding`.
 
   // Call `strReverse` and pass it `ding` (as an argument).
@@ -329,6 +346,10 @@ Exer.control2 = function ( bar ) {
   // Save the user's response in a new variable called `quux`.
 
   // Return the opposite of `quux`.
+ var quux=confirm(strReverse(ding));
+ return !quux;
+
+
 
 };
 
@@ -338,7 +359,14 @@ Exer.control2 = function ( bar ) {
 // Expect `isSerious` to be a boolean
 Exer.condition1 = function ( isSerious ) {
 
-  console.log( "Welcome to Camelot!" );
+    console.log( "Welcome to Camelot!" );
+  if (!isSerious) {
+    console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+  
+
+
+  }
+
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
@@ -352,9 +380,20 @@ Exer.condition2 = function ( temperature ) {
   // If temperature is greater than or equal to 70
   // Then output:
   //     Hermit crab warning!
+  if(temperature >= 70){
+    console.log ("Hermit crab warning!");
+    console.log ("Thanks for visiting Pier One and Three Quarters!");
+  }
+  else{
+      console.log ("Catch of the day: influenza, $14/lb.");
+      console.log ("Thanks for visiting Pier One and Three Quarters!");
+    }
 
-  // Otherwise, output
+
+
+// Otherwise, output
   //     Catch of the day: influenza, $14/lb.
+
 
   // In either case, also print
   //     Thanks for visiting Pier One and Three Quarters!
@@ -366,29 +405,58 @@ Exer.condition2 = function ( temperature ) {
 Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
+  var luckyNumber = 7;
 
   // If the length of `whatDay` is 6 or less...
+  if (whatDay.length <= 6 ){
+    luckyNumber = luckyNumber + "!";
+  } 
 
   // If `whatDay` is "Mannersday"...
+  if (whatDay === "Mannersday"){
+    luckyNumber += 4; 
+  }
+
   // If `whatDay` is "Foosday"...
+  else if (whatDay === "Foosday"){
+    luckyNumber += 2;
+
+  }
+
   // If `whatDay` is "Heyday"...
+  else if (whatDay === "Heyday"){
+    luckyNumber += luckyNumber.charAt(0);
+  }
+
+
   // Otherwise...
-
+  else{
+    luckyNumber = Infinity;
+  }  
   // Return `luckyNumber`
-
+    return luckyNumber;
 };
 
 // Conditional 4
-Exer.condition4 = function () {
+Exer.condition4 = function () {  
 
   // Prompt the user
+ var  input = prompt("Enter today's date, please.");
 
-  // If the user's input is not a number...
-  // Otherwise...
+  if (isNaN(input)) {
+    console.log("What do you think this is, bub? Wonderland?");
     // If the user's input is less than 1...
-    // If the user's input is greater than 31...
-    // If the user's input between 29 and 31, inclusive...
-    // Otherwise...
+  } else {
+    if (input<0) {
+      console.log("Negativelaaaaaaand~!");
+    } else if (input > 31) {
+      console.log("Are they paying you overtime for this?" );
+    } else if (input>=29 && input<=31) {
+      console.log("I sure hope it isn't February.");
+    } else {
+      console.log("Did you know? There are exactly "+input+" ways to make today awesome!");
+    }
+  }
 
 };
 
@@ -397,16 +465,11 @@ Exer.condition4 = function () {
 // While 1
 // Turn the code in the function into a while loop.
 Exer.while1 = function () {
-  console.log("10 sheep");
-  console.log("9 sheep");
-  console.log("8 sheep");
-  console.log("7 sheep");
-  console.log("6 sheep");
-  console.log("5 sheep");
-  console.log("4 sheep");
-  console.log("3 sheep");
-  console.log("2 sheep");
-  console.log("1 sheep");
+  var num = 10;
+  while( num>=1){
+    console.log(num+" sheep");
+    num--;
+  }
 };
 
 /* jshint ignore:start */
