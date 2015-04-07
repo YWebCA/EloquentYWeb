@@ -186,6 +186,62 @@ Exer.nestExample = function() {
   console.log(quux); // Nest 18: What value of quux is logged?
 }
 
+// Place answers as returns in the following functions.
+Exer.nest1 = function() {
+  return ;// return value for Nest 1
+};
+Exer.nest2 = function() {
+  return ;// return value for Nest 2
+};
+Exer.nest3 = function() {
+  return ;// return value for Nest 3
+};
+Exer.nest4 = function() {
+  return ;// return value for Nest 4
+};
+Exer.nest5 = function() {
+  return ;// return value for Nest 5
+};
+Exer.nest6 = function() {
+  return ;// return value for Nest 6
+};
+Exer.nest7 = function() {
+  return ;// return value for Nest 7
+};
+Exer.nest8 = function() {
+  return ;// return value for Nest 8
+};
+Exer.nest9 = function() {
+  return ;// return value for Nest 9
+};
+Exer.nest10 = function() {
+  return ;// return value for Nest 10
+};
+Exer.nest11 = function() {
+  return ;// return value for Nest 11
+};
+Exer.nest12 = function() {
+  return ;// return value for Nest 12
+};
+Exer.nest13 = function() {
+  return ;// return value for Nest 13
+};
+Exer.nest14 = function() {
+  return ;// return value for Nest 14
+};
+Exer.nest15 = function() {
+  return ;// return value for Nest 15
+};
+Exer.nest16 = function() {
+  return ;// return value for Nest 16
+};
+Exer.nest17 = function() {
+  return ;// return value for Nest 17
+};
+Exer.nest18 = function() {
+  return ;// return value for Nest 18
+};
+
 /*************************    Functions as Values    **************************/
 // Nate
 
