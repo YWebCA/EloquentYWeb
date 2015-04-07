@@ -43,16 +43,40 @@ describe("Defining a Function exercises", function() {
 // Nate
 describe("Parameters and Scopes exercises", function() {
   describe("Parameters 1", function() {
-    it("should define a function named spaceCubeDetector");
-    it("should have said function accept the parameters length, width, and height");
-    it("should have said function return \"SPACE CUBE DETECTED!!\" when length, width, and height are all equal");
-    it("should have said function return \"THIS IS NO SPACE CUBE!\" when length, width, and height are not all equal");
-    it("should return said function. We'll need this later, and we'd like to give it back to you.");
+    it("should define a function named spaceCubeDetector", function() {
+      expect( Exer.parameters1.toString() ).toMatch(/var\s+spaceCubeDetector\s*=\s*function/m);
+    });
+    it("should have said function accept the parameters length, width, and height", function () {
+      expect( Exer.parameters1.toString() ).toMatch( /var\s+spaceCubeDetector\s*=\s*function\s*\(\s*length\s*,\s*width\s*,\s*height\s*\)/m );
+    });
+    it("should return said function. We'll need this later, and we'd like to give it back to you.", function() {
+      Exer.spaceCubeDetector = Exer.parameters1();
+      expect( typeof Exer.spaceCubeDetector ).toEqual( "function" );
+    });
+    it("should have said function return \"SPACE CUBE DETECTED!!\" when length, width, and height are all equal", function() {
+      expect( Exer.spaceCubeDetector(7,7,7) ).toEqual( "SPACE CUBE DETECTED!!" );
+    });
+    it("should have said function return \"THIS IS NO SPACE CUBE!\" when length, width, and height are not all equal", function() {
+      expect( Exer.spaceCubeDetector(1,2,3) ).toEqual( "THIS IS NO SPACE CUBE!" );
+    });
   });
   describe("Parameters 2", function() {
-    it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return");
-    it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return");
-    it("should run the given spaceCubeDetector function with the arguments length => 2, width => 3, and height => 5 and log the return");
+    // Yeah I know this isn't test the order messages are logged in, but it's sane enough for now. Fix in the refactor.
+    beforeAll(function() {
+      spyOn(Exer, 'spaceCubeDetector').and.callThrough();
+      spyOn(console, 'log').and.callThrough();
+      Exer.parameters2(Exer.spaceCubeDetector).and.callThrough();
+    });
+    it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return", function() {
+      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(3, 5, 3.14159265359);
+      expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" );
+    });
+    it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return", function() {
+      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(7, 7, 7);
+      expect( console.log ).toHaveBeenCalledWith( "SPACE CUBE DETECTED!!" ););
+    it("should run the given spaceCubeDetector function with the arguments length => 1, width => 2, and height => 3 and log the return", function() {
+      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(1, 2, 3);
+      expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" ););
   });
   /*
   var foo = 2;
