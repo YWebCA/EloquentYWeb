@@ -118,7 +118,66 @@ Exer.scope5 = function() {
 
 
 /*****************************    Nested Scope    *****************************/
-// Nate
+Exer.nestExample = function() {
+  var foo = 2;
+  var bar = 5;
+  var quux = 7;
+
+  var nest = function(foo) {
+
+    var bar = 11;
+
+    var finch = function(foo) {
+      console.log(foo); // Nest 8: What value of foo is logged?
+      bar = foo;
+      quux = foo;
+    };
+
+    console.log(bar); // Nest 4: What value of bar is logged?
+    console.log(quux); // Nest 5: What value of quux is logged?
+
+    var robin = function() {
+      var bar = 13;
+      quux = bar;
+      console.log(quux); // Nest 11: What value of quux is logged?
+    };
+
+    console.log(bar); // Nest 6: What value of bar is logged?
+    console.log(quux); // Nest 7: What value of quux is logged?
+
+    var batman = function() {
+      foo = 0;
+      bar = 0;
+      quux = 0;
+      return "I AM THE NIGHT!!";
+    };
+
+    finch(17);
+
+    console.log(bar); // Nest 9: What value of bar is logged?
+    console.log(quux); // Nest 10: What value of quux is logged?
+
+    robin();
+
+    console.log(quux); // Nest 12: What value of quux is logged?
+
+    if (batman()) {
+      console.log(foo); // Nest 13: What value of foo is logged?
+      console.log(bar); // Nest 14: What value of bar is logged?
+      console.log(quux); // Nest 15: What value of quux is logged?
+    }
+  };
+
+  console.log(foo); // Nest 1: What value of foo is logged?
+  console.log(bar); // Nest 2: What value of bar is logged?
+  console.log(quux); // Nest 3: What value of quux is logged?
+
+  nest(5318008);
+
+  console.log(foo); // Nest 16: What value of foo is logged?
+  console.log(bar); // Nest 6: What value of bar is logged?
+  console.log(quux); // Nest 6: What value of quux is logged?
+}
 
 /*************************    Functions as Values    **************************/
 // Nate
