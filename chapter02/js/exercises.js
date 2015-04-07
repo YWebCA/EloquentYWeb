@@ -240,7 +240,8 @@ Exer.return3 = function () {
 Exer.return4 = function () {
 
   // your work goes here
- console.log(magicFun + magicFunc + " ")
+
+  console.log("" + magicFunc() + magicFunc());
 
 };
 
@@ -311,13 +312,12 @@ Exer.control2 = function ( bar ) {
   var ding = bar + foo + bar;
 
   // Call `strReverse` and pass it `ding` (as an argument).
-  strReverse(ding);
   // Send the result to the user in a confirm window.
   // Save the user's response in a new variable called `quux`.
   var quux = confirm(strReverse(ding));
 
   // Return the opposite of `quux`.
-  return strReverse(quux);
+  return !quux;
 
 };
 
@@ -514,10 +514,10 @@ Exer.doWhile2 = function () {
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
   var firstName = "Zachery"; 
-    var lastName = "Moneypenny"; 
-      if(firstName === "Zachery") { 
+  var lastName = "Moneypenny"; 
+    if(firstName === "Zachery") { 
           lastName = "Johnson"; 
-        }
+      }
 };    
 
 // Indenting 2
@@ -526,7 +526,8 @@ Exer.indenting2 = function() {
     var firstName = "Penny"; 
     var lastName = "Moneywhistle"; 
         if(firstName === "Penny") { 
-            lastName = "Johnson"; }
+            lastName = "Johnson"; 
+          }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -540,7 +541,7 @@ Exer.for1 = function () {
     console.log( scream );
     scream = "    " + scream;
   }
-  scream += "H!"
+  scream += "H!";
   console.log( scream );
 
 };
@@ -551,6 +552,7 @@ Exer.for2 = function () {
 
   for(i=0; i<10; i++){
     for(i=0; i<10; i++){
+
       
     }
 
@@ -692,17 +694,18 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
   if ( war ) {
     if ( missiles ) {
-      missiles.launch();
+      //missiles.launch();
     } else {
       cower();
     }
+    //wheat is cool
   } else {
     if ( wood ) {
       wood.trade( sheep, 1 );
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
     } else {
-      brick.buy(2);
+      brick.buy(2);//bandits! are bad
     }
   }
 
@@ -710,6 +713,6 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
 Exer.comments2 = function () {
 
-  // your work here
+/** My Block Comment **/
 
 };
