@@ -25,7 +25,7 @@ Exer.variables1 = function () {
 
   var number = "4 * 4";
 
-  16;
+  number = 16;
 
 };
 
@@ -242,7 +242,7 @@ Exer.return5 = function () {
   // A return statement.
 var x = strShift( "abcABC123!@#" );
 var y = strShift( "a S d F j K l" );
-return a = strShuffle( x, (strShift(y)) );
+return strShuffle( x, (strShift(y)) );
 };
 
 /*-------------------------    PROMPT AND CONFIRM    -------------------------*/
@@ -318,15 +318,16 @@ Exer.condition2 = function ( temperature ) {
      
   // If temperature is greater than or equal to 70
   // Then output:
-  if ( temperature >= 70 )
+  if ( temperature >= 70 ) {
     console.log("Hermit crab warning!");
 
   // Otherwise, output
-  else 
+  } else {
      console.log("Catch of the day: influenza, $14/lb.");
 
   // In either case, also print
   //    
+  }
   console.log("Thanks for visiting Pier One and Three Quarters!"); 
 
 };
@@ -344,15 +345,15 @@ Exer.condition3 = function ( whatDay ) {
 
   // If `whatDay` is "Mannersday"...
   }
-  if (whatDay == "Mannersday") {
+  if (whatDay === "Mannersday") {
     luckyNumber += 4;  
 
     // If `whatDay` is "Foosday"...
-  } else if (whatDay == "Foosday") {
+  } else if (whatDay === "Foosday") {
     luckyNumber += 2;  
 
   // If `whatDay` is "Heyday"...
-  } else if (whatDay == "Heyday") {
+  } else if (whatDay === "Heyday") {
   luckyNumber += luckyNumber.charAt(0); 
   // Otherwise...
   } else { luckyNumber = Infinity;
@@ -492,9 +493,10 @@ Exer.indenting2 = function() {
   };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
-
+/* jshint ignore:start */
 // For 1
 // Rewrite the loop as a linear sequence of statements.
+
 Exer.for1 = function () {
     var scream = "..."; 
     console.log( scream );
@@ -508,10 +510,11 @@ Exer.for1 = function () {
     console.log( scream );
     scream = "    " + scream + "AA";
    
-    scream += "H!"
+    scream += "H!";
     console.log( scream );
 
-  };  
+  }; 
+/* jshint ignore:end */
 
 /* jshint ignore:start */
 // For 2
@@ -670,8 +673,29 @@ Exer.capitalization1 = function() {
 
 /*------------------------------    COMMENTS    ------------------------------*/
 
+Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
-// wheat is special //
+  if ( war ) {
+    if ( missiles ) {
+      //missiles.launch();
+    } else {
+      cower();
+    }
+  } else {
+    if ( wood ) {
+      wood.trade( sheep, 1 );
+    } else if ( sheep ) {
+      sheep.trade( wood, 3 );
+    } else {
+      brick.buy(2); //bandits!
+    }
+  }
+// something about wheat
+};
+
+
+
+Exer.comments2 = function () {
 
 /* 
 :-:-:-:-:-:::
@@ -695,3 +719,5 @@ Exer.capitalization1 = function() {
 
 
 */
+
+};
