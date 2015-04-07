@@ -5,8 +5,9 @@
 *******************************************************************************/
 
 //=============================// wrapper:
-Exer.defining = function () {  // necessary for tests
-//=============================// do not remove or alter
+var three, myLog, square;      // necessary for tests
+Exer.defining = function () {  // do not remove or alter
+//=============================//
 
 /******************************    DEFINING 1    ******************************/
 // Use a function expression to define a function named `three`.
