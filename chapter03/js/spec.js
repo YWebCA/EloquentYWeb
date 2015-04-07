@@ -264,7 +264,16 @@ describe("Nested Scope exercises", function() {
 /*************************    Functions as Values    **************************/
 // Nate
 describe("Functions as Values exercises", function() {
-  it("should test a thing");
+  describe("Values 1", function() {
+    it("given spaceCubeDetector and area should assign spaceCubeDetector to area");
+    it("given spaceCubeDetector and area should call each once after the assignment");
+    it("given spaceCubeDetector and area should call to the function value of spaceCubeDetector twice after the assignment");
+    it("given spaceCubeDetector and area should return the new area");
+  });
+  describe("Values 2", function() {
+    it("given area should assign a new function to area that returns the product of length, width, and height");
+    it("given area should return the new area");
+  });
 });
 
 /*************************    Declaration Notation    *************************/
