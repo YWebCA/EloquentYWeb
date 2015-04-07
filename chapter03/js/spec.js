@@ -60,24 +60,30 @@ describe("Parameters and Scopes exercises", function() {
       expect( Exer.spaceCubeDetector(1,2,3) ).toEqual( "THIS IS NO SPACE CUBE!" );
     });
   });
+
   describe("Parameters 2", function() {
     // Yeah I know this isn't test the order messages are logged in, but it's sane enough for now. Fix in the refactor.
+
     beforeAll(function() {
       spyOn(Exer, 'spaceCubeDetector').and.callThrough();
       spyOn(console, 'log').and.callThrough();
       Exer.parameters2(Exer.spaceCubeDetector).and.callThrough();
     });
+
     it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return", function() {
       expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(3, 5, 3.14159265359);
       expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" );
     });
+
     it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return", function() {
       expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(7, 7, 7);
-      expect( console.log ).toHaveBeenCalledWith( "SPACE CUBE DETECTED!!" ););
+      expect( console.log ).toHaveBeenCalledWith( "SPACE CUBE DETECTED!!" );
+    } );
     it("should run the given spaceCubeDetector function with the arguments length => 1, width => 2, and height => 3 and log the return", function() {
       expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(1, 2, 3);
-      expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" ););
-  });
+      expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" );
+    } );
+  } );
   /*
   var foo = 2;
   var bar = 7;
@@ -131,7 +137,6 @@ describe("Parameters and Scopes exercises", function() {
 });
 
 /*****************************    Nested Scope    *****************************/
-// Annalise
 describe("Nested Scope exercises", function() {
   /*
   var foo = 2;
