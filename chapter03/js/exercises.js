@@ -38,7 +38,28 @@ Exer.defining = function () {  // necessary for tests
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^    Parameters and Scopes    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 *******************************************************************************/
+// 1. Create a function named spaceCubeDetector.
+// 2. It should accept a length, width,
+//    and height.
+// 3. When its length, width, and height are all equal, it should return the
+//    string value "SPACE CUBE DETECTED!!"
+// 4. When its length, width, or height is not equal to the other parameters
+//    it should return the string value "THIS IS NO SPACE CUBE!"
+Exer.parameters1 = function() {
 
+ };
+
+// Given spaceCubeDetector:
+// 1. Run it once with a length of 3, width of 5, and height of 3.14159265359
+//    and log its return.
+// 2. Run it once with a length of 7, width of 7, and height of 7 and log its
+//    return.
+// 3. Run it once with a length of 1, width of 2, and height of 3 and log its
+//    return.
+
+Exer.parameters2 = function(spaceCubeDetector) {
+
+};
 
 
 /*
