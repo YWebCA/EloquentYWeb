@@ -190,8 +190,8 @@ describe("Nested Scope exercises", function() {
   nest(5318008);
 
   console.log(foo); // Nest 16: What value of foo is logged?
-  console.log(bar); // Nest 6: What value of bar is logged?
-  console.log(quux); // Nest 6: What value of quux is logged?
+  console.log(bar); // Nest 17: What value of bar is logged?
+  console.log(quux); // Nest 18: What value of quux is logged?
   */
   describe("Nest 1", function() {
     it("should have the correct answer", function() {
