@@ -1,18 +1,40 @@
 /*************************    Defining a Function    **************************/
 // Nate
 describe("Defining a Function exercises", function() {
+
+  beforeAll( function () {
+    Exer.defining();
+  } );
+
   describe("Defining 1", function() {
-    it("should define a function named three");
-    it("should have said function return the value 3");
+    it("should define a function named three", function () {
+      expect( Exer.defining.toString() ).toMatch( /^\s*var\s+three\s*=\s*function/m );
+    } );
+    it("should have said function return the value 3", function () {
+      expect( Exer.defining1() ).toBe( 3 );
+    } );
   });
+
   describe("Defining 2", function() {
-    it("should define a function named myLog");
-    it("should have said function accept a parameter named message");
-    it("should have said function log \"The Log Says: {message}\"");
+    it("should define a function named myLog", function () {
+      expect( Exer.defining.toString() ).toMatch( /^\s*var\s+myLog\s*=\s*function/m );
+    } );
+    it("should have said function accept a parameter named message", function () {
+      expect( Exer.defining.toString() ).toMatch( /^\s*var\s+myLog\s*=\s*function\s*\(\s*message\s*\)/m );
+    } );
+    it("should have said function log \"The Log Says: {message}\"", function () {
+      console.log( "Defining 2:" );
+      spyOn( console, 'log' ).and.callThrough();
+      var message = "I'm a secret passphrase!";
+      Exer.defining2( message );
+      expect( console.log.calls.allArgs() ).toEqual( [ [ "The Log Says: " + message ] ] );
+    } );
   });
+
   describe("Defining 3", function() {
     it("should define a function named square");
-    it("should have said function accept a parameter named number")
+    it("should have said function accept a parameter named number");
+    it("should have said function output number squared to the console");
     it("should have said function return number squared");
   });
 });
@@ -27,7 +49,7 @@ describe("Parameters and Scopes exercises", function() {
     it("should have said function return \"THIS IS NO SPACE CUBE!\" when length, width, and height are not all equal");
     it("should return said function. We'll need this later, and we'd like to give it back to you.");
   });
-  describe("Parameters 2" function() {
+  describe("Parameters 2", function() {
     it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return");
     it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return");
     it("should run the given spaceCubeDetector function with the arguments length => 2, width => 3, and height => 5 and log the return");
@@ -57,28 +79,28 @@ describe("Parameters and Scopes exercises", function() {
   scoop(foo); // Scope 3: What value of foo is passed to the function Scoop?
   scrap();
   */
-  describe("Scope 1" function() {
-    it("should have the correct answer" function() {
+  describe("Scope 1", function() {
+    it("should have the correct answer", function() {
       expect( Exer.scope1() === 5 ).toBeTruthy();
     });
   });
-  describe("Scope 2" function() {
-    it("should have the correct answer" function() {
+  describe("Scope 2", function() {
+    it("should have the correct answer", function() {
       expect( Exer.scope2() === 35 ).toBeTruthy();
     });
   });
-  describe("Scope 3" function() {
-    it("should have the correct answer" function() {
+  describe("Scope 3", function() {
+    it("should have the correct answer", function() {
       expect( Exer.scope3() === 7 ).toBeTruthy();
     });
   });
-  describe("Scope 4" function() {
-    it("should have the correct answer" function() {
+  describe("Scope 4", function() {
+    it("should have the correct answer", function() {
       expect( Exer.scope4() === 4 ).toBeTruthy();
     });
   });
-  describe("Scope 5" function() {
-    it("should have the correct answer" function() {
+  describe("Scope 5", function() {
+    it("should have the correct answer", function() {
       expect( Exer.scope5() === 35 ).toBeTruthy();
     });
   });
@@ -147,93 +169,93 @@ describe("Nested Scope exercises", function() {
   console.log("Nest 17: " + bar); // Nest 6: What value of bar is logged?
   console.log("Nest 18: " + quux); // Nest 6: What value of quux is logged?
   */
-  describe("Nest 1" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 1", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest1() === 2).toBeTruthy();
     });
   });
-  describe("Nest 2" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 2", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest2() === 5).toBeTruthy();
     });
   });
-  describe("Nest 3" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 3", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest3() === 7).toBeTruthy();
     });
   });
-  describe("Nest 4" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 4", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest4() === 11).toBeTruthy();
     });
   });
-  describe("Nest 5" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 5", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest5() === 7).toBeTruthy();
     });
   });
-  describe("Nest 6" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 6", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest6() === 11).toBeTruthy();
     });
   });
-  describe("Nest 7" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 7", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest7() === 7).toBeTruthy();
     });
   });
-  describe("Nest 8" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 8", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest8() === 17).toBeTruthy();
     });
   });
-  describe("Nest 9" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 9", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest9() === 17).toBeTruthy();
     });
   });
-  describe("Nest 10" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 10", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest10() === 17).toBeTruthy();
     });
   });
-  describe("Nest 11" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 11", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest11() === 13).toBeTruthy();
     });
   });
-  describe("Nest 12" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 12", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest12() === 13).toBeTruthy();
     });
   });
-  describe("Nest 13" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 13", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest13() === 0).toBeTruthy();
     });
   });
-  describe("Nest 14" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 14", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest14() === 0).toBeTruthy();
     });
   });
-  describe("Nest 15" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 15", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest15() === 0).toBeTruthy();
     });
   });
-  describe("Nest 16" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 16", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest16() === 2).toBeTruthy();
     });
   });
-  describe("Nest 17" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 17", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest17() === 5).toBeTruthy();
     });
   });
-  describe("Nest 18" function() {
-    it("should have the correct answer" function() {
+  describe("Nest 18", function() {
+    it("should have the correct answer", function() {
       expect( Exer.nest18() === 0).toBeTruthy();
     });
   });
