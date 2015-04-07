@@ -23,12 +23,10 @@ var jsHintOptions = {
   curly: true,
   white: true,
   indent: 2,
-  maxdepth: 3,
   bitwise: true,
   eqeqeq: true,
   nonew: true,
   newcap: true,
-  maxstatements: 10,
   notypeof: true,
 };
 
