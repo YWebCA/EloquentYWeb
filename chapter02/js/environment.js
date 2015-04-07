@@ -11,7 +11,10 @@ Chess = {};
 
 // returns a numerical value
 window.magicFunc = function () {
-  return Math.floor( Math.random() * 1000 ) / 10;
+  var output = Math.floor( Math.random() * 9 + 1 ) * 10;
+  output += Math.floor( Math.random() * 10 );
+  output += Math.floor( Math.random() * 9 + 1 ) / 10;
+  return output;
 };
 
 // str - a string primitive
@@ -54,4 +57,47 @@ window.strReverse = function ( str ) {
     output += str[i];
   }
   return output;
+};
+
+// stuff for comments exercises
+// TODO: this is currently not used for anything
+window.missiles = {
+  launch: function () {
+    console.log( "The only way to win thermonuclear war is not to play." );
+  }
+};
+window.cower = function () {
+  console.log( "You successfully spend one round cowering in fear." );
+};
+window.sheep = {
+  count: 0,
+  trade: function ( num, wood ) {
+    if ( this.count < num) {
+      console.log( "Not enough sheep to trade!" );
+    } else if ( wood.count < num ) {
+      console.log( "Not enough wood to trade!" );
+    } else {
+      this.count += num;
+      wood.count -= num;
+    }
+  }
+};
+window.wood = {
+  count: 0,
+  trade: function ( num, sheep ) {
+    if ( this.count < num) {
+      console.log( "Not enough wood to trade!" );
+    } else if ( sheep.count < num ) {
+      console.log( "Not enough sheep to trade!" );
+    } else {
+      this.count += num;
+      sheep.count -= num;
+    }
+  }
+};
+window.brick = {
+  count: 0,
+  buy: function ( num ) {
+    count += num;
+  }
 };

@@ -28,7 +28,7 @@ var jsHintOptions = {
   eqeqeq: true,
   nonew: true,
   newcap: true,
-  maxstatements: 6,
+  maxstatements: 10,
   notypeof: true,
 };
 
