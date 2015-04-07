@@ -32,16 +32,39 @@ describe("Defining a Function exercises", function() {
   });
 
   describe("Defining 3", function() {
-    it("should define a function named square");
-    it("should have said function accept a parameter named number");
-    it("should have said function output number squared to the console");
-    it("should have said function return number squared");
+
+    describe( "Structure", function () {
+      it("should define a function named square", function () {
+        expect( Exer.defining.toString() ).toMatch( /^\s*var\s*square\s*=\s*function/m );
+      } );
+      it("should have said function accept a parameter named number", function () {
+        expect( Exer.defining.toString() ).toMatch( /^\s*var\s*square\s*=\s*function\s*\(\s*number\s*\)/m );
+      } );
+    } );
+
+    describe( "Effects", function () {
+      var number = 17;
+      var answer;
+      beforeAll( function () {
+        console.log( "Defining 3:" );
+        spyOn( console, 'log' ).and.callThrough();
+        answer = Exer.defining3( number );
+      } );
+      it("should have said function return number squared", function () {
+        expect( answer ).toBe( number * number );
+      } );
+      it("should have said function output number squared to the console", function () {
+        expect( console.log.calls.allArgs() ).toEqual( [[ number * number ]] );
+      } );
+    } );
+
   });
 });
 
 /************************    Parameters and Scopes    *************************/
-// Nate
+
 describe("Parameters and Scopes exercises", function() {
+
   describe("Parameters 1", function() {
     it("should define a function named spaceCubeDetector", function() {
       expect( Exer.parameters1.toString() ).toMatch(/var\s+spaceCubeDetector\s*=\s*function/m);
