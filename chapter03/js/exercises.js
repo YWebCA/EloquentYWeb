@@ -71,28 +71,28 @@ Exer.scopeExample = function() {
   foo = skip();
   scoop(foo); // Scope 3: What value of foo is passed to the function Scoop?
   scrap();
-}
+};
 
 // Place answers as returns in the following functions.
 Exer.scope1 = function() {
   return ;// return value for Scope 1
-}
+};
 
 Exer.scope2 = function() {
   return ;// return value for Scope 2
-}
+};
 
 Exer.scope3 = function() {
   return ;// return value for Scope 3
-}
+};
 
 Exer.scope4 = function() {
   return ;// return value for Scope 4
-}
+};
 
 Exer.scope5 = function() {
   return ;// return value for Scope 5
-}
+};
 
 
 
