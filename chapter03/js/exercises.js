@@ -118,6 +118,13 @@ Exer.scope5 = function() {
 
 
 /*****************************    Nested Scope    *****************************/
+/*
+  For Nest exercises 1-20 go through the following code and find the values for
+  the variables where noted by the comments. Place the corresponding values as
+  returns for the functions Exer.nest[1-20]. Hint: The comments are numbered in
+  the order that their lines are run.
+*/
+
 Exer.nestExample = function() {
   var foo = 2;
   var bar = 5;
