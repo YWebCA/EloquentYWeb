@@ -50,25 +50,29 @@ Exer.defining = function () {  // do not remove or alter
 Exer.parameters1 = function() {
 
 
+
  };  // end Exer.parameters1
 
 
 
+
+/*****************************    Parameters 2    *****************************/
+// Given spaceCubeDetector:
+// Run it once with a length of 3, width of 5, and height of 3.14159265359
+//     and log its return value.
+// Run it once with a length of 7, width of 7, and height of 7 and log its
+//     return value.
+// Run it once with a length of 1, width of 2, and height of 3 and log its
+//    return value.
 //================================================//
 Exer.parameters2 = function(spaceCubeDetector) {  //
 //================================================//
-/*****************************    Parameters 2    *****************************/
-// Given spaceCubeDetector:
-// 1. Run it once with a length of 3, width of 5, and height of 3.14159265359
-//    and log its return.
-// 2. Run it once with a length of 7, width of 7, and height of 7 and log its
-//    return.
-// 3. Run it once with a length of 1, width of 2, and height of 3 and log its
-//    return.
 
 
 
 };  // wrapper end
+
+
 
 //===============================    SCOPE    ================================//
 //  For Scope exercises 1-5, read through the following code and find the     //
@@ -259,7 +263,9 @@ Exer.nest18 = function() {
   return /* answer for Nest 18 */ ;
 };
 
-/*************************    Functions as Values    **************************/
+/*******************************************************************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^    Functions as Values    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************************************************************/
 // Nate
 
 /*************************    Declaration Notation    *************************/
