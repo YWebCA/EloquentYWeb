@@ -21,7 +21,7 @@ describe("Expressions and Statements exercises", function() {
           this.work.splice(i, 1);
         } else { i++; }
       }
-      this.work = this.work.slice(1, length - 1);  // remove function expression wrapper
+      this.work = this.work.slice(1, this.work.length - 1);  // remove function expression wrapper
     });
 
     it("should contain a single statement", function() {
