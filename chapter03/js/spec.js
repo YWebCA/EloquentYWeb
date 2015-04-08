@@ -85,7 +85,9 @@ describe("Parameters and Scopes exercises", function() {
   });
 
   describe("Parameters 2", function() {
-    // Yeah I know this isn't test the order messages are logged in, but it's sane enough for now. Fix in the refactor.
+
+    // Currently does not care what order the different calls to
+    // spaceCubeDetector are made in
 
     beforeAll(function() {
       spyOn(Exer, 'spaceCubeDetector').and.callThrough();
