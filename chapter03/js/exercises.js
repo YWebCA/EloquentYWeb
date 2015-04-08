@@ -40,18 +40,19 @@ Exer.defining = function () {  // do not remove or alter
 ^^^^^^^^^^^^^^^^^^^^^^^^^    Parameters and Scopes    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 *******************************************************************************/
 
-//===============================//
-Exer.parameters1 = function() {  //
-//===============================//
 /*****************************    Parameters 1    *****************************/
-// Create a function named spaceCubeDetector that ccepts a length, width, and a
-//     height.
-// When its length, width, and height are all equal, it should return the
-//    correct string, otherwise the other string.
+// Inside `Exer.parameters1` create a function named `spaceCubeDetector` that
+//     accepts a length, width, and a height.
+// When its length, width, and height are all equal, `spaceCubeDetector` should
+//     return the correct string, otherwise the other string.
+// `parameters1` should return `spaceCubeDetector`
+
+Exer.parameters1 = function() {
 
 
+ };  // end Exer.parameters1
 
- };  // wrapper end
+
 
 //================================================//
 Exer.parameters2 = function(spaceCubeDetector) {  //
