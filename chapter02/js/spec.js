@@ -1291,4 +1291,3 @@ describe("Comments exercises", function () {
 
 } );
 
-jsHintSpec();
