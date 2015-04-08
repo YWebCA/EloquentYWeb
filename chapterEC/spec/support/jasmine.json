@@ -4,9 +4,9 @@
     "js/spec.js"
   ],
   "helpers": [
-    "js/enviroment.js",
+    "js/environment.js",
     "js/exercises.js",
     "../spec/helpers/*.js",
-    "../js/enviroment.js"
+    "../js/environment.js"
   ]
 }
