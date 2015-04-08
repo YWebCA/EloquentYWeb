@@ -12,7 +12,7 @@ if ( weAreInNode() ) {
   window.prompt = function() {
     return "O brave new world, That has no browser in't.";
   };
-  window.comfirm = function() {
+  window.confirm = function() {
     return "cake" == "lie";
   }
 }
