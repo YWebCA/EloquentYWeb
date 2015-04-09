@@ -151,7 +151,7 @@ describe("Parameters and Scopes exercises", function() {
   });
   describe("Scope 4", function() {
     it("should have the correct answer", function() {
-      expect( Exer.scope4() === 4 ).toBeTruthy();
+      expect( Exer.scope4() === 7 ).toBeTruthy();
     });
   });
   describe("Scope 5", function() {
