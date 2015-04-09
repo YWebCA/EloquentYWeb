@@ -28,7 +28,7 @@ Exer.variables1 = function () {
 
    var ten = 10;
   
-  return 10
+  return 10;
 
 
 };
@@ -75,10 +75,10 @@ Exer.variables4 = function ( n ) {
 Exer.variables5 = function ( n ) {
 
   // Declare a new variable and initialize it to the value of `n`.
-  var indent='n';
+  var indent = 'n';
 
   // Return the new variable.
-  return indent=n;
+  return indent;
 
 };
 
@@ -92,7 +92,7 @@ Exer.variables6 = function ( stacys ) {
   // Stacy gives you more apples
   // (the parameter `stacys`)
   var stacysNum=0;
-  return apples + stacys
+  return apples + stacys;
 
 
   // Return the total number of apples you have.
@@ -112,8 +112,8 @@ Exer.variables7 = function ( change ) {
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-change = change + .25;
-change -= .10;
+change = change + '.25';
+change -= '.10';
 
 return "$" + change;
 };
@@ -130,7 +130,6 @@ return "$" + change;
 Exer.keywords1 = function ( fake , two ) {
   var old = 2;
   var candy = two+2;
-  var fake;
   fake += "2";
   var opper= old + candy + fake + two;
   return opper;
@@ -292,7 +291,9 @@ Exer.return5 = function () {
 Exer.prompt1 = function () {
 
   // Your work here
-
+  // var call = prompt("What is the answer to the meaning of life, the universe, and everything?");
+  // return call;
+  return prompt("What is the answer to the meaning of life, the universe, and everything?");
 };
 
 // Confirm 1
@@ -300,7 +301,9 @@ Exer.prompt1 = function () {
 Exer.confirm1 = function () {
 
   // Your work here
-
+  // confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
+  var firm = confirm("Imma let you finish, but Javascript is one of the best programming languages of all time...one of the best programming languages of all time!");
+  return firm;
 };
 
 /*----------------------------    CONTROL FLOW    ----------------------------*/
@@ -309,6 +312,8 @@ Exer.confirm1 = function () {
 Exer.control1 = function () {
 
   // Use prompt to get a number from a user
+  var result = prompt("What's You'r Number?");
+  console.log(result);
 
   // Print that number to the console
 
@@ -318,16 +323,25 @@ Exer.control1 = function () {
 Exer.control2 = function ( bar ) {
 
   // Declare a variable named `foo`.
+  
 
   // Initialize `foo` with a string.
+  var foo = "Hello World.";
 
   // Log `foo` to the console.
+  console.log(foo);
 
   // Concatenate the parameter `bar` to be beginning and end of `foo`
   // Save the result in a new variable called `ding`.
+  var ding =  bar + foo + bar;
 
   // Call `strReverse` and pass it `ding` (as an argument).
+  strReverse(ding);
   // Send the result to the user in a confirm window.
+  var result2 = strReverse(ding);
+  var result3 = confirm(result2);
+  var quux = confirm(result2);
+  return !quux;
   // Save the user's response in a new variable called `quux`.
 
   // Return the opposite of `quux`.
@@ -344,7 +358,9 @@ Exer.condition1 = function ( isSerious ) {
 
   // If `isSerious` is false, output the message:
   //     On second thoughts, let's not go to Camelot. It is a silly place.
-
+  if(isSerious === false){
+    console.log("On second thoughts, let's not go to Camelot. It is a silly place.");
+  }
 };
 
 // Conditional 2
@@ -354,12 +370,17 @@ Exer.condition2 = function ( temperature ) {
   // If temperature is greater than or equal to 70
   // Then output:
   //     Hermit crab warning!
+  if(temperature >= 70){
+  console.log("Hermit crab warning!");
 
   // Otherwise, output
   //     Catch of the day: influenza, $14/lb.
-
+  }else{
+   console.log("Catch of the day: influenza, $14/lb.");
+}
   // In either case, also print
   //     Thanks for visiting Pier One and Three Quarters!
+  console.log("Thanks for visiting Pier One and Three Quarters!");
 
 };
 
@@ -368,15 +389,33 @@ Exer.condition2 = function ( temperature ) {
 Exer.condition3 = function ( whatDay ) {
 
   // Declare and initialize `luckyNumber`
+  var luckyNumber = 7;
 
   // If the length of `whatDay` is 6 or less...
+  if(whatDay.length <= 6){
+  luckyNumber += "!";
+  }
 
   // If `whatDay` is "Mannersday"...
+  if(whatDay === "Mannersday"){
+    luckyNumber += 4;
+  }
   // If `whatDay` is "Foosday"...
+  else if(whatDay === "Foosday"){
+    luckyNumber += 2;
+  }
   // If `whatDay` is "Heyday"...
+  else if(whatDay === "Heyday"){
+    luckyNumber += luckyNumber.charAt(0);
+  }
   // Otherwise...
+  else {
+    luckyNumber = Infinity;
+  }
 
-  // Return `luckyNumber`
+  return luckyNumber;
+//   If whatDay is any other day, set luckyNumber to Infinity.
+// Return luckyNumber.
 
 };
 
@@ -384,14 +423,29 @@ Exer.condition3 = function ( whatDay ) {
 Exer.condition4 = function () {
 
   // Prompt the user
+  
+
+  var input = prompt("Enter today's date, please.");
 
 
 
-  if(input<0){
-    console.log("");
+  if(isNaN(input)){
+    console.log("What do you think this is, bub? Wonderland?");
 
+  }else if(input < 1){
+    console.log("Negativelaaaaaaand~!");
   }
-  // If the user's input is not a number...
+  else if(input > 31){
+    console.log("Are they paying you overtime for this?");
+  } 
+  else if(input >= 29 && input <= 31){
+    console.log("I sure hope it isn't February.");
+  }
+  else{
+    console.log("Did you know? There are exactly " + input + " ways to make today awesome!");
+  }
+
+   // If the user's input is not a number...
   // Otherwise...
     // If the user's input is less than 1...
     // If the user's input is greater than 31...
@@ -405,28 +459,28 @@ Exer.condition4 = function () {
 // While 1
 // Turn the code in the function into a while loop.
 Exer.while1 = function () {
-  console.log("10 sheep");
-  console.log("9 sheep");
-  console.log("8 sheep");
-  console.log("7 sheep");
-  console.log("6 sheep");
-  console.log("5 sheep");
-  console.log("4 sheep");
-  console.log("3 sheep");
-  console.log("2 sheep");
-  console.log("1 sheep");
+
+
+
+var number = 10;
+while (number > 0) {
+    console.log(number + " sheep");
+    number = number - 1;
+}
+
 };
 
 /* jshint ignore:start */
 // While 2
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
-  var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
-    console.log(deadWitch);
-    deadWitch = deadWitch.substr(2);
-  }
-  console.log("What a world!");
+console.log("I'm melting!");
+console.log("m melting!");
+console.log("melting!");
+console.log("lting!");
+console.log("ing!");
+console.log("g!");
+console.log("What a world!");
 };
 /* jshint ignore:end */
 
@@ -434,23 +488,27 @@ Exer.while2 = function () {
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
 Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
+  
+  var i = 0;
+  do {
+  console.log(i % 3);
+     i += 1;
+} while (i < 6);
 };
 
 /* jshint ignore:start */
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-  var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
-};
+  // Train# 7: In flight!?
+  console.log("Train# 1: In flight!?");
+  console.log("Train# 2: In flight!?");
+  console.log("Train# 3: In flight!?");
+  console.log("Train# 4: In flight!?");
+  console.log("Train# 5: In flight!?");
+  console.log("Train# 6: In flight!?");
+  console.log("Train# 7: In flight!?");
+}
 /* jshint ignore:end */
 
 /*---------------------------    INDENTING CODE    ---------------------------*/
@@ -458,13 +516,21 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery"; 
+  var lastName = "Moneypenny"; 
+  if(firstName === "Zachery") { 
+    lastName = "Johnson"; 
+  }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+    var firstName = "Penny"; 
+    var lastName = "Moneywhistle"; 
+    if(firstName === "Penny") { 
+        lastName = "Johnson"; 
+    }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -473,13 +539,13 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
-  console.log( scream );
+console.log("...");
+console.log("    ...AA");
+console.log("        ...AAAA");
+console.log("            ...AAAAAA");
+console.log("                ...AAAAAAAA");
+console.log("                    ...AAAAAAAAAAH!");
+
 
 };
 
