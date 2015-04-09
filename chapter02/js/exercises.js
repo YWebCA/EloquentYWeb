@@ -13,7 +13,7 @@ Exer.expressions1 = function () {
 Exer.statements1 = function () {
 
   // Write a statement that is not undefined.
-  3+4;
+  result = 3+4;
 
 };
 
@@ -95,7 +95,7 @@ Exer.variables6 = function ( stacys ) {
 Exer.variables7 = function ( change ) {
 
   // You find a quarter.
-  change += .25;
+  change += 0.25;
 
   // Then you spend a dime on old fashioned candy.
   change -= 0.10;
@@ -387,11 +387,9 @@ Exer.condition3 = function ( whatDay ) {
     return luckyNumber + luckyNumber.charAt(0);
   } 
   // Otherwise...
-  else{
-    return luckyNumber = Infinity;
+  else{ luckyNumber = Infinity;
   }
-  // Return `luckyNumber`
-
+  return luckyNumber;
 };
 
 // Conditional 4
@@ -485,11 +483,11 @@ Exer.while2 = function () {
 Exer.doWhile1 = function () {
   var i = 0;
 do{
-  console.log(i % 3)
+  console.log(i % 3);
   i += 1;  
 }
 
-while(i < 6)
+while(i < 6);
 
 };
 
@@ -515,9 +513,9 @@ Exer.doWhile2 = function () {
 Exer.indenting1 = function() {
   var firstName = "Zachery"; 
   var lastName = "Moneypenny"; 
-    if(firstName === "Zachery") { 
-          lastName = "Johnson"; 
-      }
+  if(firstName === "Zachery") { 
+    lastName = "Johnson"; 
+  }
 };    
 
 // Indenting 2
@@ -525,9 +523,9 @@ Exer.indenting1 = function() {
 Exer.indenting2 = function() {
     var firstName = "Penny"; 
     var lastName = "Moneywhistle"; 
-        if(firstName === "Penny") { 
-            lastName = "Johnson"; 
-          }
+    if(firstName === "Penny") { 
+        lastName = "Johnson"; 
+    }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -536,38 +534,33 @@ Exer.indenting2 = function() {
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
+  var scream = "...";
+  console.log( scream);
+  scream = "    " + scream + "AA";
+  console.log( scream);
+  scream = "    " + scream + "AA";
+  console.log( scream);
+  scream = "    " + scream + "AA";
+  console.log( scream);
+  scream = "    " + scream + "AA";
+  console.log( scream);
+  scream = "    " + scream + "AA";
   scream += "H!";
-  console.log( scream );
-
+  console.log( scream);
+  
 };
 
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
 
-  for(i=0; i<10; i++){
-    for(i=0; i<10; i++){
-
-      
+for(i=1; i<3; i++){
+    console.log("Hi!");    
+    for(j=1; j<4; j++){ 
+        console.log("My name is");
     }
-
-  }
-
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
+    console.log("Slim Shady");
+}
 
 };
 
@@ -577,6 +570,15 @@ Exer.for2 = function () {
 Exer.for3 = function () {
 
   // Your work here
+  for(var i = 20; i >= 5; i--){
+    if(i % 2 === 0){
+        console.log(i,'even');    
+    }
+    else{
+        console.log(i,'odd');    
+    }
+  }
+
 
 };
 
@@ -587,7 +589,7 @@ Exer.for3 = function () {
 Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
-
+    break;
   }
 
 };
@@ -632,7 +634,7 @@ Exer.succinct1 = function ( kiwis ) {
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10; hippo++ ) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -645,7 +647,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer) );
   }
 
 };
@@ -669,7 +671,21 @@ Exer.switch1 = function ( animal ) {
 
     // default: "ring-a-ding-ding-dingding-ding-a-ding-ding"
 
-  output += '"!';
+    switch (animal) {
+  case "cow":
+    output += "foo";
+    break;
+  case "sheep":
+    output += "bar";
+    break;
+  case "duck":
+    output += "quux";
+    break;
+  default:
+    output += "ring-a-ding-ding-dingding-ding-a-ding-ding";
+  }
+
+  output += '"!' ;
   console.log( output );
 
 };
@@ -679,10 +695,10 @@ Exer.switch1 = function ( animal ) {
 Exer.capitalization1 = function() {
   
   var zero = 0;
-  var happyCat = new String("How did this get here! I'm not good at computer!");
+  var happyCat = String("How did this get here! I'm not good at computer!");
   for (var index = 0; I < happyCat.length; index++) {
-    if (index % 4 == zero) {
-      console.Log(happyCat);
+    if (index % 4 === zero) {
+      console.log(happyCat);
     }
   }
 
@@ -716,3 +732,5 @@ Exer.comments2 = function () {
 /** My Block Comment **/
 
 };
+
+
