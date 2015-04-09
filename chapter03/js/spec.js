@@ -92,7 +92,7 @@ describe("Parameters and Scopes exercises", function() {
     beforeAll(function() {
       spyOn(Exer, 'spaceCubeDetector').and.callThrough();
       spyOn(console, 'log').and.callThrough();
-      Exer.parameters2(Exer.spaceCubeDetector).and.callThrough();
+      Exer.parameters2(Exer.spaceCubeDetector);
     });
 
     it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return", function() {
