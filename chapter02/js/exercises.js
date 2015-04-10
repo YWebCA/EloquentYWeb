@@ -47,7 +47,7 @@ Exer.variables3 = function () {
 
   // Write a statement that declares a variable and initializes it to a string.
    var three = "3";
-   return three 
+   return three; 
 
 
 };
@@ -55,7 +55,7 @@ Exer.variables3 = function () {
 // Variables 4
 Exer.variables4 = function ( n ) {
 
-   return n
+   return n;
 
 
 };
@@ -66,7 +66,7 @@ Exer.variables5 = function ( n ) {
   // Declare a new variable and initialize it to the value of `n`.
 
   var good = n;
-  return good
+  return good;
 };
 
 // Variables 6
@@ -78,10 +78,10 @@ Exer.variables6 = function ( stacys ) {
 
   // Stacy gives you more apples
   // (the parameter `stacys`)
-       "parameter" ;
+       
 
   // Return the total number of apples you have.
- return stacys + apple  
+ return stacys + apple; 
 
 
 };
@@ -92,7 +92,7 @@ Exer.variables7 = function ( change ) {
 
   // You find a quarter
   change +=  + 0.25;
-  change  -=  .1;
+  change  -=  0.1;
   change = "$"+  change;
   return change;
   
@@ -123,7 +123,7 @@ Exer.keywords1 = function ( red, two ) {
   var consti = two+2;
   red += "2";
   var functioning = old + consti + red + two;
-  return functioning
+  return functioning;
 };
 
 
@@ -477,34 +477,48 @@ Exer.while1 = function () {
 // Recreate the code in the function without a loop
 Exer.while2 = function () {
   var deadWitch = "I'm melting!";
-  while(deadWitch.length > 0) {
+   
     console.log(deadWitch);
     deadWitch = deadWitch.substr(2);
-  }
-  console.log("What a world!");
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log (deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log (deadWitch);
+    deadWitch = deadWitch.substr(2);
+    console.log("What a world!");
 };
 /* jshint ignore:end */
+
 
 // doWhile 1
 // Turn the code in the function into a single do while loop.
 // Hint: 0, 1, and 2 are remainders from dividing numbers by 3.
 Exer.doWhile1 = function () {
-  console.log(0);
-  console.log(1);
-  console.log(2);
-  console.log(0);
-  console.log(1);
-  console.log(2);
+  var i = 0;
+  do { 
+   console.log(i % 3);
+   i += 1 ;}
+  while(i < 6);
+  
 };
 
-/* jshint ignore:start */
+ /* jshint ignore:start */
 // doWhile 2
 // Recreate the code in the function without a loop
 Exer.doWhile2 = function () {
-  var trainNum = 1;
-  do {
-    console.log("Train# " + trainNum + ": In flight!?");
-  } while (trainNum++ < 7);
+  console.log("Train# 1: In flight!?");
+console.log("Train# 2: In flight!?");
+console.log("Train# 3: In flight!?");
+console.log("Train# 4: In flight!?");
+console.log("Train# 5: In flight!?");
+console.log("Train# 6: In flight!?");
+console.log("Train# 7: In flight!?");
+
 };
 /* jshint ignore:end */
 
@@ -513,13 +527,21 @@ Exer.doWhile2 = function () {
 // Indenting 1
 // Correctly indent the following code block using TWO spaces for each block
 Exer.indenting1 = function() {
-var firstName = "Zachery"; var lastName = "Moneypenny"; if(firstName === "Zachery") { lastName = "Johnson"; }
+  var firstName = "Zachery"; 
+  var lastName = "Moneypenny";
+  if(firstName === "Zachery") {
+    lastName = "Johnson";
+  }
 };
 
 // Indenting 2
 // Correctly indent the following code block using FOUR spaces for each block
 Exer.indenting2 = function() {
-var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny") { lastName = "Johnson"; }
+    var firstName = "Penny";
+    var lastName = "Moneywhistle";
+    if(firstName === "Penny") { 
+        lastName = "Johnson"; 
+    }
 };
 
 /*-----------------------------    FOR LOOPS    ------------------------------*/
@@ -528,12 +550,18 @@ var firstName = "Penny"; var lastName = "Moneywhistle"; if(firstName === "Penny"
 // Rewrite the loop as a linear sequence of statements.
 Exer.for1 = function () {
 
-  var scream;
-  for ( scream = "..." ; scream.length < 28; scream += "AA" ) {
-    console.log( scream );
-    scream = "    " + scream;
-  }
-  scream += "H!"
+  var scream = "...";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  console.log( scream );
+  scream = "    " + scream + "AA";
+  scream += "H!";
   console.log( scream );
 
 };
@@ -542,28 +570,29 @@ Exer.for1 = function () {
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
+for (i = 1;  i < 3; i++){
 
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-
+  console.log('Hi!');
+  for( l = 1 ; l < 4 ; l++ ){
+    console.log('My name is');
+  }
+    console.log('Slim Shady');
+}
 };
 /* jshint ignore:end */
 
 // For 3
 // Write a loop that counts backwards from 20 to 5 and prints the number and
 // "even" if the number is even and "odd" if the number is odd.
-Exer.for3 = function () {
-
-  // Your work here
-
+Exer.for3 = function () {  // Your work here
+  for(var r = 20; r > 4; r--){
+    if(r % 2 === 0) {    
+     console.log(r,"even");
+     }
+     else {
+      console.log(r,"odd");
+    }
+  }
 };
 
 /*-----------------------    BREAKING OUT OF A LOOP    -----------------------*/
@@ -574,7 +603,8 @@ Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
 
-  }
+ break; 
+}
 
 };
 
@@ -598,14 +628,19 @@ Exer.breaking2 = function(theatre) {
 Exer.succinct1 = function ( kiwis ) {
 
   // Quadruple kiwis.
+  kiwis *= 4;
 
   // Reduce kiwis by 2.
+  kiwis -= 2;
 
   // Halve kiwis.
+  kiwis /= 2;
 
   // Concatenate " handsomely hirsute kiwis" to kiwis.
 
   // Return kiwis.
+  kiwis += " handsomely hirsute kiwis";
+  return kiwis;
 
 };
 
@@ -613,7 +648,7 @@ Exer.succinct1 = function ( kiwis ) {
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10;  hippo++) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -626,7 +661,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer ) );
   }
 
 };
@@ -637,6 +672,22 @@ Exer.succinct3 = function () {
 Exer.switch1 = function ( animal ) {
 
   var output = 'The ' + animal + ' goes "';
+
+    switch(animal){
+    case"cow":
+    output+="foo";
+    break;
+    case "sheep":
+    output+="bar";
+    break;
+    case "duck":
+    output+="quux";
+    break;
+    default:
+    output+=("ring-a-ding-ding-dingding-ding-a-ding-ding");
+
+
+  }
 
   // Create a switch that dispatches on the parameter `animal`.
   // In each case, concatenate the correct response to end of the `output`
@@ -660,11 +711,11 @@ Exer.switch1 = function ( animal ) {
 /* jshint ignore:start */
 Exer.capitalization1 = function() {
 
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
+  var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; I < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.log(happyCat);
     }
   }
 
@@ -677,7 +728,7 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
   if ( war ) {
     if ( missiles ) {
-      missiles.launch();
+     // missiles.launch();
     } else {
       cower();
     }
@@ -687,7 +738,9 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
     } else {
-      brick.buy(2);
+      brick.buy(2); // bandits! are on the loose 
+
+      // wheat is good
     }
   }
 
@@ -695,6 +748,9 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
 Exer.comments2 = function () {
 
-  // your work here
+  
+  /* block */
+
+
 
 };
