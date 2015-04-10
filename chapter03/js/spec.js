@@ -332,7 +332,7 @@ describe("Functions as Values exercises", function() {
 
 /*************************    Declaration Notation    *************************/
 // Annalise
-describe("DeclarationNotation exercises", function() {
+describe("Declaration Notation exercises", function() {
   it("should test a thing");
 });
 
