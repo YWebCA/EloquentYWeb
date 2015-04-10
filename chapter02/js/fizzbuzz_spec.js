@@ -29,5 +29,3 @@ describe("FizzBuzz solution", function() {
   });
 
 });
-
-jsHintSpec("fizzbuzz.js");
