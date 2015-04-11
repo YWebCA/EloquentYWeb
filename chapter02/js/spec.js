@@ -906,7 +906,14 @@ describe("While and dowhile Loops exercises", function() {
       }
     });
     it("should have console.log appear only once", function() {
-      expect( Exer.doWhile1.toString().match(/console\.log/gm).length ).toEqual(1);
+      var work = Exer.doWhile1.toString().split('\n');
+      var check = "";
+      for ( var i = 0; i < work.length; i++ ) {
+        if ( work[i].match(/\s*\/\//) === null ) { // add non-comment rows
+          check += work[i];
+        }
+      }
+      expect( check.match(/console\.log/g).length ).toEqual(1);
     });
   });
 
