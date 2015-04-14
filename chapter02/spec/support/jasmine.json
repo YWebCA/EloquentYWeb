@@ -1,12 +1,12 @@
 {
   "spec_dir": "",
   "spec_files": [
-    "js/*spec.js"
+    "js/spec.js"
   ],
   "helpers": [
-    "../js/environment.js",
-    "js/environment.js",
+    "js/enviroment.js",
+    "js/exercises.js",
     "../spec/helpers/*.js",
-    "js/exercises.js"
+    "../js/enviroment.js"
   ]
 }
