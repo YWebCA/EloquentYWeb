@@ -17,7 +17,7 @@ describe("Expressions and Statements exercises", function() {
     beforeAll(function() {
       this.work = Exer.statements1.toString().match(/^.+?$/mg);  // break into lines
       for ( var i = 0; i < this.work.length; ) {
-        if ( this.work[i].match(/^\s*\/\//) ) {
+        if ( this.work[i].match(/^\s*\/\//) || this.work[i].match(/^\s*$/) ) {
           this.work.splice(i, 1);
         } else { i++; }
       }
