@@ -294,3 +294,5 @@ describe("Short-Circuting exercises", function() {
   });
 
 });
+
+jsHintSpec();
