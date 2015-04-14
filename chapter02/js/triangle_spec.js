@@ -13,5 +13,3 @@ describe("Looping a Triangle solution", function() {
     expect( Triangle.start.toString().match( /^\s*}?\s*while|for/mg ).length ).toEqual(1);
   });
 });
-
-jsHintSpec("triangle.js");

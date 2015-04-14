@@ -609,7 +609,7 @@ Exer.breaking1 = function(yeng) {
 };
 
 // Breaking 2
-// Every time theatre.next() is called it returns a string, break when that string is
+// Every time theatre.current() is called it returns a string, break when that string is
 // "Electric Boogaloo!"
 Exer.breaking2 = function(theatre) {
 
