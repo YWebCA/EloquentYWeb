@@ -75,7 +75,7 @@ Exer.variables4 = function ( n ) {
 Exer.variables5 = function ( n ) {
 
   // Declare a new variable and initialize it to the value of `n`.
-  var indent = 'n';
+  var indent = n;
 
   // Return the new variable.
   return indent;
@@ -87,16 +87,16 @@ Exer.variables6 = function ( stacys ) {
 
   // You have 3 apples
   // (declare a variable named `apples` and initialize it to `3`)
-  var apples=3;
+  var apples = 3;
 
   // Stacy gives you more apples
   // (the parameter `stacys`)
-  var stacysNum=0;
+  var stacysNum = 0;
   return apples + stacys;
 
 
   // Return the total number of apples you have.
-return moreapples;
+  // return moreapples;
 
 };
 
@@ -112,8 +112,9 @@ Exer.variables7 = function ( change ) {
   // Use type coercion to turn your pocket change into a string add a dollar
   // sign to the beginning.
 
-change = change + '.25';
-change -= '.10';
+change = change + 0.25;
+change -= 0.10;
+
 
 return "$" + change;
 };
@@ -553,27 +554,33 @@ console.log("                    ...AAAAAAAAAAH!");
 // For 2
 // Rewrite the repetative code with for loops.
 Exer.for2 = function () {
-
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-  console.log( "Hi!" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "My name is" );
-  console.log( "Slim Shady" );
-
+  for(var line =1;line <= 2;line++){
+      console.log( "Hi!" );
+      for(var line2 = 1;line2 <= 3;line2++){
+        console.log( "My name is" );
+       
+    }
+      console.log( "Slim Shady" );
+  }
 };
 /* jshint ignore:end */
 
 // For 3
 // Write a loop that counts backwards from 20 to 5 and prints the number and
+
 // "even" if the number is even and "odd" if the number is odd.
 Exer.for3 = function () {
 
   // Your work here
+  // Write a loop that counts backwards from 20 to 5 
+  for(var i = 20; i >= 5; i--){
+    if(i % 2 === 0){
+        console.log(i, "even");
+    }
+    else {
+        console.log(i, "odd");
+      }
+  }
 
 };
 
@@ -584,7 +591,7 @@ Exer.for3 = function () {
 Exer.breaking1 = function(yeng) {
 
   while(yeng()) {
-
+    break;
   }
 
 };
@@ -609,14 +616,19 @@ Exer.breaking2 = function(theatre) {
 Exer.succinct1 = function ( kiwis ) {
 
   // Quadruple kiwis.
+  kiwis *= 4;
 
   // Reduce kiwis by 2.
+  kiwis -= 2;
 
   // Halve kiwis.
+  kiwis /= 2;
+
 
   // Concatenate " handsomely hirsute kiwis" to kiwis.
-
+  kiwis += " handsomely hirsute kiwis";
   // Return kiwis.
+  return kiwis;
 
 };
 
@@ -624,7 +636,7 @@ Exer.succinct1 = function ( kiwis ) {
 // Edit the for loop to use the incrementation operator.
 Exer.succinct2 = function () {
 
-  for ( var hippo = 2; hippo <= 10; hippo += 1 ) {
+  for ( var hippo = 2; hippo <= 10; hippo++) {
     console.log( hippo + "! " + hippo + " fluttering hippos! Ah ah ah ah ah!" );
   }
 
@@ -637,7 +649,7 @@ Exer.succinct3 = function () {
   var message = "Reverse me!";
   var pointer = message.length;
   while( pointer > 0 ) {
-    console.log( message.charAt( pointer-- ) );
+    console.log( message.charAt( --pointer ) );
   }
 
 };
@@ -652,14 +664,21 @@ Exer.switch1 = function ( animal ) {
   // Create a switch that dispatches on the parameter `animal`.
   // In each case, concatenate the correct response to end of the `output`
   // string.
+  switch(animal){
+    case "cow": 
+    output += "foo";
+    break;
 
-    // "cow": "foo"
-
-    // "sheep": "bar"
-
-    // "duck": "quux"
-
-    // default: "ring-a-ding-ding-dingding-ding-a-ding-ding"
+    case "sheep": 
+    output += "bar";
+    break;
+    
+    case "duck": 
+    output += "quux"; 
+    break;
+    
+    default: output += "ring-a-ding-ding-dingding-ding-a-ding-ding";
+  }
 
   output += '"!';
   console.log( output );
@@ -668,19 +687,18 @@ Exer.switch1 = function ( animal ) {
 
 /*---------------------------    CAPITALIZATION    ---------------------------*/
 
-/* jshint ignore:start */
+ // jshint ignore:start 
 Exer.capitalization1 = function() {
 
-  var ZeRo = 0;
-  var HAPPYCAT = new string("How did this get here! I'm not good at computer!");
-  for (var Index = 0; I < HAPPYCAT.Length; Index++) {
-    if (Index % 4 == ZeRo) {
-      Console.Log(HAPPYCAT);
+  var zero = 0;
+  var happyCat = new String("How did this get here! I'm not good at computer!");
+  for (var index = 0; i < happyCat.length; index++) {
+    if (index % 4 == zero) {
+      console.log(happyCat);
     }
   }
-
-};
-/* jshint ignore:end */
+  };
+ // jshint ignore:end 
 
 /*------------------------------    COMMENTS    ------------------------------*/
 
@@ -688,7 +706,8 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
   if ( war ) {
     if ( missiles ) {
-      missiles.launch();
+      // missiles.launch();
+      //'I like wheat.'
     } else {
       cower();
     }
@@ -698,7 +717,7 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
     } else if ( sheep ) {
       sheep.trade( wood, 3 );
     } else {
-      brick.buy(2);
+      brick.buy(2); //'bandits!'
     }
   }
 
@@ -706,6 +725,7 @@ Exer.comments1 = function ( war, missiles, wood, sheep, brick ) {
 
 Exer.comments2 = function () {
 
-  // your work here
+  /* There's nothing better in life than to
+  have the love of your life forever and children who adore you always. */
 
 };
