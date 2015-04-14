@@ -17,7 +17,7 @@ describe("Expressions and Statements exercises", function() {
     beforeAll(function() {
       this.work = Exer.statements1.toString().match(/^.+?$/mg);  // break into lines
       for ( var i = 0; i < this.work.length; ) {
-        if ( this.work[i].match(/^\s*\/\//) ) {
+        if ( this.work[i].match(/^\s*\/\//) || this.work[i].match(/^\s*$/) ) {
           this.work.splice(i, 1);
         } else { i++; }
       }
@@ -906,7 +906,14 @@ describe("While and dowhile Loops exercises", function() {
       }
     });
     it("should have console.log appear only once", function() {
-      expect( Exer.doWhile1.toString().match(/console\.log/gm).length ).toEqual(1);
+      var work = Exer.doWhile1.toString().split('\n');
+      var check = "";
+      for ( var i = 0; i < work.length; i++ ) {
+        if ( work[i].match(/\s*\/\//) === null ) { // add non-comment rows
+          check += work[i];
+        }
+      }
+      expect( check.match(/console\.log/g).length ).toEqual(1);
     });
   });
 
