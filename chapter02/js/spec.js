@@ -21,7 +21,7 @@ describe("Expressions and Statements exercises", function() {
           this.work.splice(i, 1);
         } else { i++; }
       }
-      this.work = this.work.slice(1, length - 1);  // remove function expression wrapper
+      this.work = this.work.slice(1, this.work.length - 1);  // remove function expression wrapper
     });
 
     it("should contain a single statement", function() {
@@ -906,7 +906,14 @@ describe("While and dowhile Loops exercises", function() {
       }
     });
     it("should have console.log appear only once", function() {
-      expect( Exer.doWhile1.toString().match(/console\.log/gm).length ).toEqual(1);
+      var work = Exer.doWhile1.toString().split('\n');
+      var check = "";
+      for ( var i = 0; i < work.length; i++ ) {
+        if ( work[i].match(/\s*\/\//) === null ) { // add non-comment rows
+          check += work[i];
+        }
+      }
+      expect( check.match(/console\.log/g).length ).toEqual(1);
     });
   });
 
@@ -1291,4 +1298,3 @@ describe("Comments exercises", function () {
 
 } );
 
-jsHintSpec();
