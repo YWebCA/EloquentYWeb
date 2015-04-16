@@ -217,11 +217,7 @@ describe("Nested Scope exercises", function() {
   console.log(bar); // Nest 2: What value of bar is logged?
   console.log(quux); // Nest 3: What value of quux is logged?
 
-<<<<<<< HEAD
   nest(5318008);
-=======
-  nest(19);
->>>>>>> chapter03
 
   console.log(foo); // Nest 16: What value of foo is logged?
   console.log(bar); // Nest 17: What value of bar is logged?

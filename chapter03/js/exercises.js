@@ -53,12 +53,6 @@ Exer.parameters1 = function() {
 
  };  // end Exer.parameters1
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> chapter03
 /*****************************    Parameters 2    *****************************/
 // Given spaceCubeDetector:
 // Run it once with a length of 3, width of 5, and height of 3.14159265359
@@ -75,11 +69,6 @@ Exer.parameters2 = function(spaceCubeDetector) {  //
 
 };  // wrapper end
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> chapter03
 //===============================    SCOPE    ================================//
 //  For Scope exercises 1-5, read through the following code and find the     //
 //  values for the variables where noted by the comments. Write your asnwers  //
@@ -137,10 +126,6 @@ Exer.scope5 = function() {
   return /* return value for Scope 5 */ ;
 };
 
-<<<<<<< HEAD
-
-=======
->>>>>>> chapter03
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    Nested Scope    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *******************************************************************************/
@@ -206,11 +191,7 @@ Exer.nestExample = function() {
   console.log(bar); // Nest 2: What value of bar is logged?
   console.log(quux); // Nest 3: What value of quux is logged?
 
-<<<<<<< HEAD
   nest(5318008);
-=======
-  nest(19);
->>>>>>> chapter03
 
   console.log(foo); // Nest 16: What value of foo is logged?
   console.log(bar); // Nest 17: What value of bar is logged?
