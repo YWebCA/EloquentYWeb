@@ -217,7 +217,11 @@ describe("Nested Scope exercises", function() {
   console.log(bar); // Nest 2: What value of bar is logged?
   console.log(quux); // Nest 3: What value of quux is logged?
 
+<<<<<<< HEAD
   nest(5318008);
+=======
+  nest(19);
+>>>>>>> chapter03
 
   console.log(foo); // Nest 16: What value of foo is logged?
   console.log(bar); // Nest 17: What value of bar is logged?
@@ -331,10 +335,64 @@ describe("Functions as Values exercises", function() {
 });
 
 /*************************    Declaration Notation    *************************/
-// Annalise
-describe("DeclarationNotation exercises", function() {
-  it("should test a thing");
-});
+describe( "Declaration Notation exercises", function() {
+
+  describe( "Declaration 1", function () {
+    beforeAll( function () {
+      Exer.declaration1();
+    } );
+    it( "should declare a function called testNinja", function () {
+      var work = Exer.declaration1.toString();
+      work = work.match( /^\s*function\s+testNinja\s*\(\s*\)\s*\{$/mg );
+      expect( work ).not.toBeNull();
+    } );
+    it( "should log the correct string in testNinja", function () {
+      console.log( "Declaration 1:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.testNinja();
+      expect( console.log.calls.count() ).toBe(1);
+      expect( console.log.calls.argsFor(0) ).toEqual( [ "You gotta believe!" ] );
+    } );
+  } );
+
+  describe( "Declaration 2", function () {
+    beforeAll( function () {
+      console.log( "Declaration 2:" );
+      spyOn( console, 'log' ).and.callThrough();
+      Exer.declaration2();
+    } );
+    it( "should call trainNinja with the argument \"punch\"", function () {
+      var work = Exer.declaration2.toString();
+      work = work.match( /trainNinja\(\s*"punch"\s*\)/mg );
+      expect( work ).not.toBeNull();
+    } );
+    it( "should log the result of calling trainNinja", function () {
+      expect( console.log ).toHaveBeenCalled();
+      expect( console.log.calls.count() ).toBe(1);
+      expect( console.log.calls.argsFor(0) ).toEqual( ["Kick, punch, block! It's all in the mind!"] );
+    } );
+    it( "should declare a function called trainNinja that takes a parameter move", function () {
+      var work = Exer.declaration2.toString();
+      work = work.match( /^\s*function\s+trainNinja\s*\(\s*move\s*\)\s*\{$/mg );
+      expect( work ).not.toBeNull();
+    } );
+    it( "should call trainNinja above/before the function declaration", function () {
+      var work = Exer.declaration2.toString().split( '\n' );
+      var flag = false;
+      for( var i = 0; i < work.length; i++ ) {
+        var test = work[i].match( /trainNinja\(\s*"punch"\s*\).*;/g );
+        if( test ) {
+          for( i; i < work.length; i++ ) {
+            test = work[i].match( /^\s*function\s+trainNinja\s*\(\s*move\s*\)\s*\{$/g );
+            if( test ) { flag = true; }
+          }
+        }
+      }
+      expect( flag ).toBeTruthy();
+    } );
+  } );
+
+} );
 
 /****************************    The Call Stack    ****************************/
 // Nate
