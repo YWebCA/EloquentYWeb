@@ -265,7 +265,35 @@ Exer.nest18 = function() {
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^^    Declaration Notation    ^^^^^^^^^^^^^^^^^^^^^^^^^^
 *******************************************************************************/
-// Annalise
+
+/****************************    DECLARATION 1    *****************************/
+// Use declaration notation to declare a function called `testNinja` that has no
+//     parameters
+// `testNinja` should log the string "You gotta believe!"
+// Return `testNinja` from `Exer.declaration1`
+//=================================//
+Exer.declaration1 = function () {  //
+//=================================//
+
+
+
+//=============================//
+  Exer.testNinja = testNinja;  //
+};  //=========================//
+
+/****************************    DECLARATION 2    *****************************/
+// 1. Call a function called `trainNinja` with the argument "punch"
+//    Log what `trainNinja` returns
+// 2. Declare a function called `trainNinja` that takes one parameter called
+//        `move`
+//    `trainNinja` should return the correct string
+//=================================//
+Exer.declaration2 = function () {  //
+//=================================//
+
+
+
+};  // wrapper end
 
 /*******************************************************************************
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^    The Call Stack    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
