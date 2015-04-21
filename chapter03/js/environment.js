@@ -1,5 +1,7 @@
 // Provided Resources for Chapter Exercises
-
-Exercises = [];
-
-Exercises.exercise1 = null;
+window.Exer = {
+  defining1: new Function(),
+  defining2: new Function(),
+  defining3: new Function(),
+  spaceCubeDetector: null
+};

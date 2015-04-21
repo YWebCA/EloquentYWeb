@@ -12,7 +12,7 @@ if ( weAreInNode() ) {
   window.prompt = function() {
     return "O brave new world, That has no browser in't.";
   };
-  window.comfirm = function() {
+  window.confirm = function() {
     return "cake" == "lie";
   }
 }
@@ -23,12 +23,10 @@ var jsHintOptions = {
   curly: true,
   white: true,
   indent: 2,
-  maxdepth: 3,
   bitwise: true,
   eqeqeq: true,
   nonew: true,
   newcap: true,
-  maxstatements: 6,
   notypeof: true,
 };
 

@@ -442,12 +442,12 @@
                 <p>You are given a string parameter <code>whatDay</code>.</p>
                 <ol>
                   <li>Declare a variable <code>luckyNumber</code> and initialize it to <code>7</code>.</li>
-                  <li>If the length of <code>whatDay</code> is <code>6</code> or less, concatenate an exclamation point to the end of <code>luckyNumber</code>.</li>
+                  <li>If the length of <code>whatDay</code> is <code>6</code> or less, concatenate an exclamation point to the end of <code>luckyNumber</code>. Otherwise, do nothing.</li>
                   <li>If <code>whatDay</code> is <code>"Mannersday"</code>, add <code>4</code> to <code>luckyNumber</code>.</li>
                   <li>If <code>whatDay</code> is <code>"Foosday"</code>, add <code>2</code> to <code>luckyNumber</code>.</li>
-                  <li>If <code>whatDay</code> is <code>"Heyday"</code>, add the first character of <code>luckyNumber</code> to the end of <code>luckyNumber</code>.</li>
+                  <li>If <code>whatDay</code> is <code>"Heyday"</code>, concatenate the first character contained in <code>luckyNumber</code> to the end of <code>luckyNumber</code>.</li>
                   <li>If <code>whatDay</code> is any other day, set <code>luckyNumber</code> to <code>Infinity</code>.</li>
-                  <li>Return <code>luckyNumber</code>.</li>
+                  <li>In all cases return <code>luckyNumber</code>.</li>
                 </ol>
               </td>
             </tr>
@@ -491,8 +491,66 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>While 1</th>
+              <td>
+                <p>The following code is in the function for this exercise:</p>
+                <pre><code>
+  console.log("10 sheep");
+  console.log("9 sheep");
+  console.log("8 sheep");
+  console.log("7 sheep");
+  console.log("6 sheep");
+  console.log("5 sheep");
+  console.log("4 sheep");
+  console.log("3 sheep");
+  console.log("2 sheep");
+  console.log("1 sheep");
+                </code></pre>
+                <p>Recreate this code using a <code>while</code> loop.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>While 2</th>
+              <td>
+                <p>The following code is in the function for this exercise:</p>
+                <pre><code>
+  var deadWitch = "I'm melting!";
+  while(deadWitch.length > 0) {
+    console.log(deadWitch);
+    deadWitch = deadWitch.substr(2);
+  }
+  console.log("What a world!");
+                </code></pre>
+                <p>Recreate this code using without using a loop.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Do While 1</th>
+              <td>
+                <p>The following code is in the function for this exercise:</p>
+                <pre><code>
+  console.log(0);
+  console.log(1);
+  console.log(2);
+  console.log(0);
+  console.log(1);
+  console.log(2);
+                </code></pre>
+                <p>Recreate this code using a <code>do ... while</code> loop.</p>
+              </td>
+            </tr>
+            <tr>
+              <th>Do While 2</th>
+              <td>
+                <p>The following code is in the function for this exercise:</p>
+                <pre><code>
+  var trainNum = 1;
+  do {
+    console.log("Train# " + trainNum + ": In flight!?");
+  } while (trainNum++ < 7);
+                </code></pre>
+                <p>Recreate this code using without using a loop.</p>
+              </td>
             </tr>
             <tr>
               <th></th>
@@ -549,12 +607,22 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>For 1</th>
+              <td>Rewrite the loop as a linear sequence of statements.</td>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>For 2</th>
+              <td>Rewrite the repetative code with a <code>for</code> loop. Then further refactor to use nested <code>for</code> loops. </td>
+            </tr>
+            <tr>
+              <th>For 3</th>
+              <td>
+                <p>Write a loop that counts backwards from <code>20</code> to <code>5</code> (inclusive) and prints two arguments:</p>
+                <ol>
+                  <li>the number</li>
+                  <li><code>even</code> if the number is even or <code>odd</code> if the number is odd</li>
+                </ol>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -578,8 +646,12 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Breaking 1</th>
+              <td>Yeng made an infinite loop. Place a <code>break</code> in the loop to make it stop.</td>
+            </tr>
+            <tr>
+              <th>Breaking 2</th>
+              <td>Theatre is an object that contains a list of movies. We are checking each movie one by one by calling theatre.next(), which returns the name of the next movie. We are then logging whatever the current movie is with theatre.current(). We don't like the movie Breakin' 2: Electric Boogaloo, so when theatre.current() returns <code>"Electric Boogaloo!"</code> break from the loop, we are done looking at movies.</td>
             </tr>
             <tr>
               <th></th>
@@ -607,12 +679,25 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Succinct 1</th>
+              <td>
+                <p>Use succinct operators to perform the following operations on the parameter <code>kiwis</code>.</p>
+                <ol>
+                  <li>Quadruple <code>kiwis</code>.</li>
+                  <li>Reduce <code>kiwis</code> by <code>2</code>.</li>
+                  <li>Halve <code>kiwis</code>.</li>
+                  <li>Concatenate <code>&nbsp;handsomely hirsute kiwis</code> to <code>kiwis</code> (remember the leading space).</li>
+                  <li>Return <code>kiwis</code>.</li>
+                </ol>
+              </td>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Succinct 2</th>
+              <td>Edit the <code>for</code> loop to use the incrementation operator.</td>
+            </tr>
+            <tr>
+              <th>Succinct 3</th>
+              <td>The code provided contains a logic error. It uses a decrementation operator to walk backwards through a string and print each character, but the current value of <code>pointer</code> is being returned before it is decremented, generating an error. Change the postfixed operator to a prefixed operator to correct the error.</td>
             </tr>
           </tbody>
         </table>
@@ -669,8 +754,8 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Capitalization 1</th>
+              <td>Correct the capitalization for the for variables in the exercise function.</td>
             </tr>
             <tr>
               <th></th>
@@ -698,12 +783,19 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Comments 1</th>
+              <td>
+                <p>Do the following:</p>
+                <ol>
+                  <li>Find and comment out the line that launches missiles.</li>
+                  <li>Create a single-line comment that says something about <code>wheat</code>.</li>
+                  <li>Add a comment to the end of the line that buys brick, and make that comment include <code>bandits!</code>.</li>
+                </ol>
+              </td>
             </tr>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Comments 2</th>
+              <td>Create a block comment and draw a little picture inside.</td>
             </tr>
           </tbody>
         </table>

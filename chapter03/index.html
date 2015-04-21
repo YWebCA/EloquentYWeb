@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Instructions for Chapter XX</title>
+  <title>Instructions for Chapter 3</title>
 
   <link rel="shortcut icon" type="image/png" href="../img/favicon.ico">
 
@@ -32,10 +32,10 @@
       <div class="row-fluid">
         <div class="col-lg-10 col-lg-offset-1 col-xs-12">
           <div class="page-header">
-            <h1>Chapter 1: <small>Values, Types, and Operators</small></h1>
+            <h1>Chapter 3: <small>Functions</small></h1>
           </div>
-          <p class="lead">Welcome to <i>Eloquent JavaScript</i>, Chapter 1!</p>
-          <p>These are the instructions for the exercises in Chapter 1. Remember that all your work will be done in the <code>./js/exercises.js</code> file, and you can check your work by opening the <code>./spec.html</code> file in your browser. Refresh that page to rerun the tests.</p>
+          <p class="lead">Welcome to <i>Eloquent JavaScript</i>, Chapter 3!</p>
+          <p>These are the instructions for the exercises in Chapter 3. Remember that all your work will be done in the <code>./js/exercises.js</code> file, and you can check your work by opening the <a href="./spec.html" target="_blank">opening the <code>./spec.html</code> file in your browser</a>. Refresh that page to rerun the tests.</p>
         </div>
       </div>
     </div>
@@ -43,8 +43,8 @@
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Numbers</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_4qFZuA8nQ3">this section of the text</a>.</p>
+        <h2>Defining a Function</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_pZXHY2QZfp">this section of the text</a>.</p>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -54,20 +54,20 @@
           </thead>
           <tbody>
             <tr>
-              <th>Numbers 1</th>
-              <td>Make the function return a value that is a number.</td>
+              <th>Defining 1</th>
+              <td>Use a function expression to define a function named <code>three</code>. That function should return the value <code>3</code>.</td>
             </tr>
             <tr>
-              <th>Numbers 2</th>
-              <td>Make the function return a value that is a negative number.</td>
+              <th>Defining 2</th>
+              <td>
+                <p>Use a function expression to define a function named <code>myLog</code>. <code>myLog</code> should accept one parameter named <code>message</code>. <code>myLog</code> should output to the console...</p>
+                <pre>The Log Says: {message}</pre>
+                <p>where <code>{message}</code> is the value of the parameter <code>message</code>. Do not include the braces in your output.</p>
+              </td>
             </tr>
             <tr>
-              <th>Numbers 3</th>
-              <td>Make the function return a value that is between 4 and 5.</td>
-            </tr>
-            <tr>
-              <th>Numbers 4</th>
-              <td>Make the function return a value that is between 10e4 and 10e5.</td>
+              <th>Defining 3</th>
+              <td>Use a function expression to define a function named <code>square</code>. <code>square</code> should accept one parameter named <code>number</code>. The function should square <code>number</code> (i.e. multiply it by itself). Output the result to the console. Then return the result.</td>
             </tr>
           </tbody>
         </table>
@@ -80,8 +80,8 @@
     </div>
     <div class="row-fluid">
       <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h3>Arithmetic</h3>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_8KgYC0F1fX">this section of the text</a>.</p>
+        <h2>Parameters and Scopes</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_PmG96omvw7">this section of the text</a>.</p>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -91,8 +91,62 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Parameters 1</th>
+              <td>
+                <ul>
+                  <li>Create a function inside <code>Exer.parameters1</code> named <code>spaceCubeDetector</code>.</li>
+                  <li></code>spaceCubeDetector</code> should accept a <code>length</code>, <code>width</code>, and <code>height</code>.</li>
+                  <li>When length, width, and height are all equal, <code>spaceCubeDetector</code> should return the string value <code>SPACE CUBE DETECTED!!</code></li>
+                  <li>When its length, width, or height is not all equal to each other, it should return the string value <code>THIS IS NO SPACE CUBE!</code></li>
+                  <li><code>Exer.parameters1</code> should return <code>spaceCubeDetector</code>.</li>
+              </td>
+            </tr>
+            <tr>
+              <th>Parameters 2</th>
+              <td>
+                <p><code>Exer.parameters2</code> receives <code>spaceCubeDetector</code> as a paremeter.</p>
+                <ul>
+                  <li>Run <code>spaceCubeDetecor</code> once with a length of <code>3</code>, width of <code>5</code>, and height of <code>3.14159265359</code>. Log its return value.</li>
+                  <li>Run it with a length of <code>7</code>, width of <code>7</code>, and height of <code>7</code> and log its return value.</li>
+                  <li>Run it with a length of <code>1</code>, width of <code>2</code>, and height of <code>3</code> and log its return value.</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <th>Scope 1&ndash;5</th>
+              <td>
+                <p>For Scope exercises 1-5, read through the following code and find the values for the variables where noted by the comments. Write your asnwers as return values for the functions <code>Exer.scope[1-5]</code>.</p>
+<pre>
+Exer.scopeExample = function() {
+
+  var foo = 2;
+  var bar = 7;
+  var quux = 11;
+
+  var skip = function() {
+    var foo = 5;
+    console.log(foo); // Scope 1: What value of foo is logged?
+    quux = foo *  bar;
+    console.log(quux); // Scope 2: What value of quux is logged?
+    return bar;
+  };
+
+  var scoop = function(quux) {
+    console.log(quux); // Scope 4: What value of quux is logged?
+  };
+
+  var scrap = function() {
+    console.log(quux); // Scope 5: What value of quux is logged?
+  };
+
+  foo = skip();
+  scoop(foo); // Scope 3: What value of foo is passed to the function Scoop?
+  scrap();
+
+};
+</pre>
+                <p>This code also appears in <code>./js/exercises.js</code>. You may find the syntax highlighting helpful.</p>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -105,8 +159,8 @@
     </div>
     <div class="row-fluid">
       <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h3>Special Numbers</h3>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_qMmcH3brf3">this section of the text</a>.</p>
+        <h2>Nested Scope</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_xIVEBXHt8p">this section of the text</a>.</p>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -116,8 +170,75 @@
           </thead>
           <tbody>
             <tr>
-              <th></th>
-              <td></td>
+              <th>Nested 1-20</th>
+              <td>
+                <p>For Nested Scope exercises 1-20, read through the following code and find the values for the variables where noted by the comments. Write your answers as the return values for functions Exer.nest[1-20].</p>
+<pre>
+Exer.nestExample = function() {
+
+  var foo = 2;
+  var bar = 5;
+  var quux = 7;
+
+  var nest = function(foo) {
+
+    var bar = 11;
+
+    var finch = function(foo) {
+      console.log(foo); // Nest 8: What value of foo is logged?
+      bar = foo;
+      quux = foo;
+    };
+
+    console.log(bar); // Nest 4: What value of bar is logged?
+    console.log(quux); // Nest 5: What value of quux is logged?
+
+    var robin = function() {
+      var bar = 13;
+      quux = bar;
+      console.log(quux); // Nest 11: What value of quux is logged?
+    };
+
+    console.log(bar); // Nest 6: What value of bar is logged?
+    console.log(quux); // Nest 7: What value of quux is logged?
+
+    var batman = function() {
+      foo = 0;
+      bar = 0;
+      quux = 0;
+      return "I AM THE NIGHT!!";
+    };
+
+    finch(17);
+
+    console.log(bar); // Nest 9: What value of bar is logged?
+    console.log(quux); // Nest 10: What value of quux is logged?
+
+    robin();
+
+    console.log(quux); // Nest 12: What value of quux is logged?
+
+    if (batman()) {
+      console.log(foo); // Nest 13: What value of foo is logged?
+      console.log(bar); // Nest 14: What value of bar is logged?
+      console.log(quux); // Nest 15: What value of quux is logged?
+    }
+  };
+
+  console.log(foo); // Nest 1: What value of foo is logged?
+  console.log(bar); // Nest 2: What value of bar is logged?
+  console.log(quux); // Nest 3: What value of quux is logged?
+
+  nest(19);
+
+  console.log(foo); // Nest 16: What value of foo is logged?
+  console.log(bar); // Nest 17: What value of bar is logged?
+  console.log(quux); // Nest 18: What value of quux is logged?
+
+};
+</pre>
+                <p>This code also appears in <code>./js/exercises.js</code>. You may find the syntax highlighting helpful.</p>
+              </td>
             </tr>
           </tbody>
         </table>
@@ -130,158 +251,8 @@
     </div>
     <div class="row-fluid">
       <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Strings</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_E2lMHg1a0p">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Unary Operators</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_+o5PJ5ubRj">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Boolean Values</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#c_I6DXnYgW4r">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h3>Comparisons</h3>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_6L5kUCK2Lz">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h3>Logical Operators</h3>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_/oU7fPa5Kl">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Undefined Values</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_MQqkekcjA2">this section of the text</a>.</p>
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>Exercise #</th>
-              <th>Goal</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th></th>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <hr />
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Automatic Type Conversion</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_vNLaRBSip6">this section of the text</a>.</p>
+        <h2>Functions as Values</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_uliI/PmHtG">this section of the text</a>.</p>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -305,8 +276,167 @@
     </div>
     <div class="row-fluid">
       <div class="col-lg-10 col-lg-offset-1 col-xs-12">
-        <h2>Short-Circuiting of Logical Operators</h2>
-        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/01_values.html#p_S/opLpHJcU">this section of the text</a>.</p>
+        <h2>Declaration Notation</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_OGu288jvIV">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Declaration 1</th>
+              <td>Use declaration notation to declare a function called <code>testNinja</code> that takes no parameters and logs the string <code>You gotta believe!</code>.</td>
+            </tr>
+            <tr>
+              <th>Declaration 2</th>
+              <td>
+                <ol>
+                  <li>Call a function called <code>trainNinja</code> with the argument <code>"punch"</code> and log what <code>trainNinja</code> returns.</li>
+                  <li>After/below that, use declaration notation to declare the <code>trainNinja</code> function. <code>trainNinja</code> takes one argument called <code>move</code>. <code>trainNinja</code> should use <code>move</code> to return the string <code>Kick, {move}, block! It's all in the mind!</code> (do not include the curly braces in your return string).</li>
+                </ol>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>The Call Stack</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#c_wm1DV2942b">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>Optional Arguments</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#c_d9pZXzK1kY">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>Closure</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#c_rwDFIqBrDl">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>Recursion</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_SZYpNI2fMu">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>Growing Functions</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_acU+LwVT0i">this section of the text</a>.</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Exercise #</th>
+              <th>Goal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th></th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <hr />
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="col-lg-10 col-lg-offset-1 col-xs-12">
+        <h2>Functions and Side Effects</h2>
+        <p class="lead">These exercises correspond to <a href="http://eloquentjavascript.net/03_functions.html#p_EWzoSpSKwh">this section of the text</a>.</p>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -324,5 +454,12 @@
       </div>
     </div>
   </div>
+  <footer class="container-fluid bg-primary">
+    <div class="row-fluid">
+      <div class="col-lg-12">
+        <p class="text-center"><small>created in 2015 by Nathan Stier and Annalise Haynes at Adorable for the YWeb Career Academy</small></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
