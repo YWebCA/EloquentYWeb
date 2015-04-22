@@ -7,6 +7,9 @@
     "../js/environment.js",
     "js/environment.js",
     "../spec/helpers/*.js",
-    "js/exercises.js"
+    "js/exercises.js",
+    "js/chessboard.js",
+    "js/triangle.js",
+    "js/fizzbuzz.js"
   ]
 }
