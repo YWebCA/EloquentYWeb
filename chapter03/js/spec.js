@@ -90,22 +90,23 @@ describe("Parameters and Scopes exercises", function() {
     // spaceCubeDetector are made in
 
     beforeAll(function() {
-      spyOn(Exer, 'spaceCubeDetector').and.callThrough();
+      this.spaceCubeDetector = Exer.spaceCubeDetector || Exer.mockSpaceCubeDetector;
+      spyOn(this, 'spaceCubeDetector').and.callThrough();
       spyOn(console, 'log').and.callThrough();
-      Exer.parameters2(Exer.spaceCubeDetector);
+      Exer.parameters2(this.spaceCubeDetector);
     });
 
     it("should run the given spaceCubeDetector function with the arguments length => 3, width => 5, and height => 3.14159265359 and log the return", function() {
-      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(3, 5, 3.14159265359);
+      expect( this.spaceCubeDetector ).toHaveBeenCalledWith(3, 5, 3.14159265359);
       expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" );
     });
 
     it("should run the given spaceCubeDetector function with the arguments length => 7, width => 7, and height => 7 and log the return", function() {
-      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(7, 7, 7);
+      expect( this.spaceCubeDetector ).toHaveBeenCalledWith(7, 7, 7);
       expect( console.log ).toHaveBeenCalledWith( "SPACE CUBE DETECTED!!" );
     } );
     it("should run the given spaceCubeDetector function with the arguments length => 1, width => 2, and height => 3 and log the return", function() {
-      expect( Exer.spaceCubeDetector ).toHaveBeenCalledWith(1, 2, 3);
+      expect( this.spaceCubeDetector ).toHaveBeenCalledWith(1, 2, 3);
       expect( console.log ).toHaveBeenCalledWith( "THIS IS NO SPACE CUBE!" );
     } );
   } );
