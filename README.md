@@ -1,5 +1,7 @@
 # Eloquent YWeb
 
+**THIS VERSION OF THE YWEB JAVASCRIPT WORKBOOK IS DEPRECATED. PLEASE REFER TO ITS SUCCESSOR:  [YWCA-CLI](https://github.com/YWebCA/ywca-cli).**
+
 A companion workbook for [_Eloquent JavaScript, Second Edition_ by Marijn Haverbeke](http://eloquentjavascript.net/), designed for the [YWeb Career Academy](http://ywebca.org) (whose [living curriculum can be found here](https://github.com/adorableio/YWebCA/wiki)).
 
 This workbook is a true-to-industry environment chock full of exercises to drill beginning JavaScript and practice using common build tools, versioning and source control, and automated testing.
